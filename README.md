@@ -18,6 +18,7 @@ View and Interact with the documentation
 Register to view more details
 They are not allowed access to use until registered
 For Authenticated Users
+
 They are allowed to:
 
 Have Full access to the platform
