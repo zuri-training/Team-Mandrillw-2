@@ -1,5 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
+
+
+
+/* 
+
+* ******* Type Scale References ************
+
+Font Size(fs) 7
+Min: 31.93px	
+Max: 81.06px
+
+Font Size(fs) 6
+Min: 28.38px	
+Max: 64.85px
+
+Font Size(fs) 5
+Min: 25.23px	
+Max: 51.88px
+
+Font Size(fs) 4
+Min: 22.43px	
+Max: 41.50px
+
+Font Size(fs) 3
+Min: 19.93px	
+Max: 33.20px
+
+Font Size(fs) 2
+Min: 17.72px	
+Max: 26.56px
+
+Font Size(fs) 1
+Min: 15.75px	
+Max: 21.25px
+
+Font Size(fs) 0
+Min: 14.00px	
+Max: 17.00px
+
+Font Size(fs) -1
+Min: 12.44px	
+Max: 13.60px
+
+Font Size(fs) -2
+Min: 11.06px	
+Max: 10.88px
+
+
+Font Size(fs) -3
+Min: 9.83px	
+Max: 8.70px
+
+	 */
+
+
+  /* MEdia Query Breakpoints */
+  /* 
+* !!!!!!!!!!! NOTE: USE THE BREAKPOINTS IN Em's NOT Px's  !!!!!!!!!
+
+         Min-width
+
+  Small screens: 576px ===> 36em
+  Medium screens: 768px ===> 48em
+  Large screens: 992px ===> 62em
+  Extra Large screens: 1318px ===> 82.375em
+
+      Max-width
+   Small screens: 575.98px ===> 35.99875 em
+  Medium screens: 767.98px ===> 47.99875 em
+  Large screens: 991.98px ===> 61.99875 em
+  Extra Large screens: 1317.98px ===> 82.37375 em
+
+  */
+
+
 /* ================================== */
 /* CSS RESET AND BOILERPLATE STYLES */
 /* ================================== */
@@ -216,22 +291,13 @@ select {
 
   /* ******** End of Fonts ************ */
 
-  /* MEdia QUery Breakpoints */
-  /* 
-* !!!!!!!!!!! NOTE: USE THE BREAKPOINTS IN Em's NOT Px's  !!!!!!!!!
+}
 
-         Min-width
+/* End of CSS Variables */
 
-  Small screens: 576px ===> 36em
-  Medium screens: 768px ===> 48em
-  Large screens: 992px ===> 62em
-  Extra Large screens: 1318px ===> 82.375em
-
-      Max-width
-   Small screens: 575.98px ===> 35.99875 em
-  Medium screens: 767.98px ===> 47.99875 em
-  Large screens: 991.98px ===> 61.99875 em
-  Extra Large screens: 1317.98px ===> 82.37375 em
-
-  */
+body {
+  font-family: var(--ff-body);
+  line-height: 1.6;
+  background-color: var(--gray-200);
+  font-weight: 400;
 }
