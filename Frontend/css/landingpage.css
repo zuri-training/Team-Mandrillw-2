@@ -1,0 +1,24 @@
+@import "style.css";
+
+
+
+.nex-sec{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    background-color: var(--clr-primary-100);
+}
+.nex-list{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    
+}
+.nex_color{
+    padding-left: 60px;
+    color: var(--gray-1200);
+
+
+}

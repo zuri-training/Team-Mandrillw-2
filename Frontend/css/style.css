@@ -134,6 +134,7 @@ svg {
 a {
   text-decoration: none;
   display: block;
+  color: var( --gray-1200);
 }
 
 /* TYPOGRAPHY UTILITY STYLES */
