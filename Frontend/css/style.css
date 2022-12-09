@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
-
-
-
 /* 
 
 * ******* Type Scale References ************
@@ -54,17 +51,16 @@ Max: 8.70px
 
 	 */
 
-
-  /* MEdia Query Breakpoints */
-  /* 
+/* MEdia Query Breakpoints */
+/* 
 * !!!!!!!!!!! NOTE: USE THE BREAKPOINTS IN Em's NOT Px's  !!!!!!!!!
 
          Min-width
 
-  Small screens: 576px ===> 36em
-  Medium screens: 768px ===> 48em
-  Large screens: 992px ===> 62em
-  Extra Large screens: 1318px ===> 82.375em
+  Small screens: 576px ===> 36em                    Mobile phones          
+  Medium screens: 768px ===> 48em                   Large phones and portrait tables
+  Large screens: 992px ===> 62em                    Landscape tablets and small laptops
+  Extra Large screens: 1318px ===> 82.375em         Laptops and tvs          
 
       Max-width
    Small screens: 575.98px ===> 35.99875 em
@@ -73,7 +69,6 @@ Max: 8.70px
   Extra Large screens: 1317.98px ===> 82.37375 em
 
   */
-
 
 /* ================================== */
 /* CSS RESET AND BOILERPLATE STYLES */
@@ -146,8 +141,7 @@ a {
  ~ Adding accessible line-height
  ~ Improving text rendering */
 body {
-  font-family: var(--font-family-body), sans-serif;
-  line-height: var(--line-height-body);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
   font-weight: 400;
@@ -257,13 +251,17 @@ select {
 
   --shadow-1: 0 0.0625rem 0.3125rem rgba(0, 36, 106, 0.05),
     0 0.0625rem 0.3125rem 0.0625rem rgba(0, 7, 72, 0.05);
+
   --shadow-2: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3),
     0 0.125rem 0.375rem 0.125rem rgba(0, 0, 0, 0.15);
+
   --shadow-3: 0 0.25rem 0.5rem 0.1875rem rgba(0, 0, 0, 0.15),
     0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
+
   --shadow-4: 0 0.375rem 0.625rem 0.25rem rgba(0, 0, 0, 0.15),
     0 0.125rem 0.1875rem rgba(0, 0, 0, 0.3);
-  --shadow-5: 0 0.5rem 0.75 0.375rem rgba(0, 0, 0, 0.1),
+
+  --shadow-5: 0 0.5rem 0.75rem 0.375rem rgba(0, 0, 0, 0.1),
     0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 
   /* ******** End of Shadows ************ */
@@ -291,6 +289,13 @@ select {
 
   /* ******** End of Fonts ************ */
 
+  /* ******** Transiions ************ */
+
+  --easeInOutCubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --easeInOutBack: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --easeElastic: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+  --easeSquish: cubic-bezier(0.5, -0.5, 0.1, 1.5);
+  /* ******** End of Transiions ************ */
 }
 
 /* End of CSS Variables */
@@ -298,6 +303,77 @@ select {
 body {
   font-family: var(--ff-body);
   line-height: 1.6;
-  background-color: var(--gray-200);
+  background-color: var(--gray-100);
   font-weight: 400;
+  color: var(--gray-1200);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+}
+
+/* Utility classez */
+.container {
+  margin-inline: auto;
+  width: min(100% - 2.2rem, 83.5rem);
+}
+
+@media (min-width: 62em) {
+  .container {
+    margin-inline: auto;
+    width: min(60% - 4.2rem, 83.5rem);
+  }
+}
+
+.container--sign-in {
+  margin-inline: auto;
+  width: min(100% - 2.2rem, 90rem);
+}
+
+@media (min-width: 62em) {
+  .container--sign-in {
+    margin-inline: auto;
+    width: min(100% - 4.2rem, 90rem);
+  }
+}
+
+.primary-button {
+  background-color: var(--clr-primary-400);
+  color: var(--gray-100);
+  padding: 1em;
+  border-radius: 0.625rem;
+  border: none;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  background-color: var(--clr-primary-600);
+
+  box-shadow: var(--shadow-5);
+  cursor: pointer;
+  transition: all 300ms var(--easeInOutCubic);
+}
+
+.primary-button:active {
+  background-color: var(--clr-primary-900);
+}
+
+.txt-btn:any-link {
+  font-weight: 400;
+  color: var(--clr-primary-400);
+  display: inline-block;
+}
+
+.txt-btn:hover,
+.txt-btn:focus {
+  color: var(--clr-primary-900);
+}
+.txt-btn:active {
+  color: var(--clr-primary-600);
+}
+/* ENd of Utility classes */
