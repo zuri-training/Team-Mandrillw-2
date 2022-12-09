@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+/* 
+
+* ******* Type Scale References ************
+
+Font Size(fs) 7
+Min: 31.93px	
+Max: 81.06px
+
+Font Size(fs) 6
+Min: 28.38px	
+Max: 64.85px
+
+Font Size(fs) 5
+Min: 25.23px	
+Max: 51.88px
+
+Font Size(fs) 4
+Min: 22.43px	
+Max: 41.50px
+
+Font Size(fs) 3
+Min: 19.93px	
+Max: 33.20px
+
+Font Size(fs) 2
+Min: 17.72px	
+Max: 26.56px
+
+Font Size(fs) 1
+Min: 15.75px	
+Max: 21.25px
+
+Font Size(fs) 0
+Min: 14.00px	
+Max: 17.00px
+
+Font Size(fs) -1
+Min: 12.44px	
+Max: 13.60px
+
+Font Size(fs) -2
+Min: 11.06px	
+Max: 10.88px
+
+
+Font Size(fs) -3
+Min: 9.83px	
+Max: 8.70px
+
+	 */
+
+/* MEdia Query Breakpoints */
+/* 
+* !!!!!!!!!!! NOTE: USE THE BREAKPOINTS IN Em's NOT Px's  !!!!!!!!!
+
+         Min-width
+
+  Small screens: 576px ===> 36em                    Mobile phones          
+  Medium screens: 768px ===> 48em                   Large phones and portrait tables
+  Large screens: 992px ===> 62em                    Landscape tablets and small laptops
+  Extra Large screens: 1318px ===> 82.375em         Laptops and tvs          
+
+      Max-width
+   Small screens: 575.98px ===> 35.99875 em
+  Medium screens: 767.98px ===> 47.99875 em
+  Large screens: 991.98px ===> 61.99875 em
+  Extra Large screens: 1317.98px ===> 82.37375 em
+
+  */
+
+/* ================================== */
+/* CSS RESET AND BOILERPLATE STYLES */
+/* ================================== */
+/* Using a more spontaneous box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removes margin and padding on every element and removes all the default font sizes and font weights */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Setting core body defaults  */
+body {
+  min-height: 100vh;
+}
+
+/* Setting core root defaults 
+  ~ Adding smooth scrolling */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Make media defaults easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Remove underlines from anchor elements */
+a {
+  text-decoration: none;
+  display: block;
+}
+
+/* TYPOGRAPHY UTILITY STYLES */
+/* Setting core body defaults 
+ ~ Adding accessible line-height
+ ~ Improving text rendering */
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  font-weight: 400;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Anchor elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Remove built-in typography styles from forms, form inputs, and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* CSS Variables */
+
+:root {
+  /* ******** Colors ************ */
+
+  --clr-primary-main: #4a975f;
+  --clr-primary-100: #dbeadf;
+  --clr-primary-200: #c3dcca;
+  --clr-primary-300: #a5cbaf;
+  --clr-primary-400: #86ba94;
+  --clr-primary-500: #68a87a;
+  --clr-primary-600: #4a975f;
+  --clr-primary-700: #4a975f;
+  --clr-primary-800: #3e7e4f;
+  --clr-primary-900: #31653f;
+  --clr-primary-1000: #254c30;
+  --clr-primary-1100: #193220;
+  --clr-primary-1200: #0f1e13;
+
+  --clr-secondary-main: #b4b718;
+  --clr-secondary-100: #f0f1d1;
+  --clr-secondary-200: #e6e7b2;
+  --clr-secondary-300: #dadb8c;
+  --clr-secondary-400: #cdcf65;
+  --clr-secondary-500: #c1c33f;
+  --clr-secondary-600: #b4b718;
+  --clr-secondary-700: #b4b718;
+  --clr-secondary-800: #969914;
+  --clr-secondary-900: #787a10;
+  --clr-secondary-1000: #5a5c0c;
+  --clr-secondary-1100: #3c3d08;
+  --clr-secondary-1200: #242505;
+
+  /* ******** Nuetral Colors (Grays) ************ */
+
+  --gray-main: #d1d2d2;
+  --gray-100: #f6f6f6;
+  --gray-200: #f0f0f0;
+  --gray-300: #e8e9e9;
+  --gray-400: #e0e1e1;
+  --gray-500: #d9dada;
+  --gray-600: #d1d2d2;
+  --gray-700: #d1d2d2;
+  --gray-800: #aeafaf;
+  --gray-900: #8b8c8c;
+  --gray-1000: #696969;
+  --gray-1100: #464646;
+  --gray-1200: #2a2a2a;
+  /* ******** End of Nuetral Colors (Grays) ************ */
+
+  /* ******** Alert Colors ************ */
+
+  --clr-error: #e94940;
+  --clr-warning: #b4b718;
+  --clr-success-1: #31653f;
+  --clr-success-2: #4a975f;
+  --clr-disabled: #d1d2d2;
+
+  /* ******** End of Alert Colors ************ */
+
+  /* ******** End of Colors ************ */
+
+  /* ******** Shadows ************ */
+
+  --shadow-1: 0 0.0625rem 0.3125rem rgba(0, 36, 106, 0.05),
+    0 0.0625rem 0.3125rem 0.0625rem rgba(0, 7, 72, 0.05);
+
+  --shadow-2: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3),
+    0 0.125rem 0.375rem 0.125rem rgba(0, 0, 0, 0.15);
+
+  --shadow-3: 0 0.25rem 0.5rem 0.1875rem rgba(0, 0, 0, 0.15),
+    0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
+
+  --shadow-4: 0 0.375rem 0.625rem 0.25rem rgba(0, 0, 0, 0.15),
+    0 0.125rem 0.1875rem rgba(0, 0, 0, 0.3);
+
+  --shadow-5: 0 0.5rem 0.75rem 0.375rem rgba(0, 0, 0, 0.1),
+    0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+
+  /* ******** End of Shadows ************ */
+
+  /* ******** Fonts************ */
+
+  /* ******** Font Sizes ************ */
+
+  --fs--3: clamp(0.54rem, calc(0.63rem + -0.1vw), 0.61rem);
+  --fs--2: clamp(0.68rem, calc(0.69rem + -0.02vw), 0.69rem);
+  --fs--1: clamp(0.78rem, calc(0.76rem + 0.1vw), 0.85rem);
+  --fs-0: clamp(0.88rem, calc(0.82rem + 0.27vw), 1.06rem);
+  --fs-1: clamp(0.98rem, calc(0.89rem + 0.49vw), 1.33rem);
+  --fs-2: clamp(1.11rem, calc(0.95rem + 0.79vw), 1.66rem);
+  --fs-3: clamp(1.25rem, calc(1.01rem + 1.19vw), 2.08rem);
+  --fs-4: clamp(1.4rem, calc(1.06rem + 1.71vw), 2.59rem);
+  --fs-5: clamp(1.58rem, calc(1.1rem + 2.39vw), 3.24rem);
+  --fs-6: clamp(1.77rem, calc(1.12rem + 3.27vw), 4.05rem);
+  --fs-7: clamp(2rem, calc(1.12rem + 4.4vw), 5.07rem);
+
+  /* ******** Font Families ************ */
+
+  --ff-heading: Georgia, "Times New Roman", Times, serif;
+  --ff-body: "Space Grotesk", sans-serif;
+
+  /* ******** End of Fonts ************ */
+
+  /* ******** Transiions ************ */
+
+  --easeInOutCubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --easeInOutBack: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --easeElastic: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+  --easeSquish: cubic-bezier(0.5, -0.5, 0.1, 1.5);
+  /* ******** End of Transiions ************ */
+}
+
+/* End of CSS Variables */
+
+body {
+  font-family: var(--ff-body);
+  line-height: 1.6;
+  background-color: var(--gray-100);
+  font-weight: 400;
+  color: var(--gray-1200);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+}
+
+/* Utility classez */
+.container {
+  margin-inline: auto;
+  width: min(100% - 2.2rem, 83.5rem);
+}
+
+@media (min-width: 62em) {
+  .container {
+    margin-inline: auto;
+    width: min(60% - 4.2rem, 83.5rem);
+  }
+}
+
+.container--sign-in {
+  margin-inline: auto;
+  width: min(100% - 2.2rem, 90rem);
+}
+
+@media (min-width: 62em) {
+  .container--sign-in {
+    margin-inline: auto;
+    width: min(100% - 4.2rem, 90rem);
+  }
+}
+
+.primary-button {
+  background-color: var(--clr-primary-400);
+  color: var(--gray-100);
+  padding: 1em;
+  border-radius: 0.625rem;
+  border: none;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  background-color: var(--clr-primary-600);
+
+  box-shadow: var(--shadow-5);
+  cursor: pointer;
+  transition: all 300ms var(--easeInOutCubic);
+}
+
+.primary-button:active {
+  background-color: var(--clr-primary-900);
+}
+
+.txt-btn:any-link {
+  font-weight: 400;
+  color: var(--clr-primary-400);
+  display: inline-block;
+}
+
+.txt-btn:hover,
+.txt-btn:focus {
+  color: var(--clr-primary-900);
+}
+.txt-btn:active {
+  color: var(--clr-primary-600);
+}
+/* ENd of Utility classes */
