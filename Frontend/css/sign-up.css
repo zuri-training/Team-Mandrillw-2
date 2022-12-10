@@ -7,20 +7,25 @@
   background-color: var(--clr-primary-100);
   display: grid;
   gap: 4.25rem;
-  grid-template-columns: minmax(46rem, 47rem) minmax(44rem, 2fr);
+
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
   padding-inline: 5.25rem 0;
   position: relative;
   margin-block: 5rem;
   box-shadow: var(--shadow-5);
-  /* padding-block-end: 9.5rem; */
+}
+.sign-up__bg {
+  background-color: #fafafa;
+  opacity: 1;
+  background-image: radial-gradient(#4a975f 0.028125rem, #fafafa 0.028125rem);
+  background-size: 0.5625rem 0.5625rem;
 }
 .logo {
   height: 1.5rem;
 }
 .logo--sign-up {
-  margin-block: 3.25rem 2.5rem;
+  margin-block: 4.25rem 2.5rem;
 }
 
 .hero-heading {
@@ -36,21 +41,27 @@
 .hero-text {
   margin-block: 1.75rem;
   font-size: var(--fs-0);
-  max-width: 60ch;
+  max-width: 58ch;
 }
 .sign-up__illustration {
   position: absolute;
-  top: 57%;
+  top: 55%;
   left: -20%;
   max-width: 60%;
+  /* top: clamp( 620px , 57%, 9px); */
+  left: -15.826625rem;
+  top: 36.708375rem;
 }
+
 /* ENd of Sign up hero styles */
 
 /* Sign up text container styles */
+
+.signup-container-mobile {
+  display: none;
+}
 .sign-up__text-container {
   background-color: var(--gray-200);
-  /* border-right: 1px solid;
-  border-top: 1px solid; */
   border-radius: 1.375rem 0 0 1.375rem;
   padding: 4.25rem 4rem;
   display: flex;
@@ -76,9 +87,14 @@
   margin-block-end: 1.25rem;
   width: 80%;
   justify-content: center;
+  background-color: var(--gray-200);
+  border-radius: 0.625rem;
+  border: 0.1rem solid var(--gray-800);
+  background-color: var(--gray-100);
 }
 .continue-to-google:hover {
   cursor: pointer;
+  background-color: var(--gray-300);
 }
 .sign-up-form {
   margin-block-start: 1rem;
@@ -182,5 +198,159 @@
 }
 
 /*ENd of  Animations */
+
+
+/* MEdia QUeries */
+
+/* Styles For  Laptops and tvs */
+
+@media (max-width: 82.375em) {
+  html {
+    font-size: 87.5%;
+  }
+  .sign-up {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  /* Sign up hero styles */
+
+  .sign-up__illustration {
+    top: min(53%, 41.875rem);
+    left: -22%;
+    max-width: 60%;
+  }
+
+  /* ENd of Sign up hero styles */
+  /* .container--sign-in {
+    outline-offset: 1.5rem;
+    outline: 1rem dotted grey;
+  } */
+}
+/* End of Styles For  Laptops and tvs */
+
+/* Styles For  Landscape tablets and small laptops */
+@media (max-width: 62em) {
+  html {
+    font-size: 72%;
+  }
+  .sign-up {
+    padding-inline: 4.25rem 0;
+  }
+
+  /* Sign up hero styles */
+
+  .logo--sign-up {
+    margin-block: 6.25rem 2.5rem;
+  }
+
+  .sign-up__illustration {
+    top: 57%;
+  }
+
+  /* ENd of Sign up hero styles */
+}
+/* End of Styles For  Landscape tablets and small laptops */
+
+/* Styles For Large phones and portrait tables */
+@media (max-width: 48em) {
+  html {
+    font-size: 87.5%;
+  }
+  .sign-up {
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+  }
+  /* Sign up hero styles */
+
+  .sign-up__hero {
+    display: none;
+  }
+
+  /* ENd of Sign up hero styles */
+
+  /* Sign up text container styles */
+  .sign-up__text-container {
+    border-radius: 0;
+    max-width: 100%;
+  }
+  .signup-container-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .logo--sign-up-mobile {
+    height: 2rem;
+    margin-block-end: 1.5rem;
+  }
+  .sign-up__title--desktop {
+    display: none;
+  }
+
+  .sign-up-form > * {
+    width: 85%;
+    margin-inline: auto;
+  }
+  .continue-to-google + p {
+    order: 1;
+    margin-block: 1.5rem;
+  }
+  .continue-to-google {
+    order: 2;
+    background-color: var(--gray-100);
+  }
+  .sign-up__footer {
+    order: 2;
+  }
+
+  /* End Sign up text container styles */
+}
+/* End of Styles For Large phones and portrait tables */
+
+/* Styles For Mobile phones */
+@media (max-width: 36em) {
+  .sign-up-form > * {
+    width: 100%;
+    margin-inline: auto;
+  }
+  .additional-info {
+    width: 90%;
+  }
+  .sign-up__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* place-content: center; */
+    place-items: center;
+  }
+  .sign-up__footer-text {
+    width: 100%;
+    text-align: center;
+  }
+  .sign-up__footer-link {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+    order: -1;
+  }
+  .sign-up__footer-link--one {
+    order: -2;
+  }
+
+  .footer-text--copy {
+    grid-column: 1 / -1;
+  }
+  .mobile-hide {
+    display: none;
+  }
+}
+/* End of Styles For Mobile phones */
+
+/* End ofMEdia QUeries */
+
 
 /* End of Sign up page styles */
