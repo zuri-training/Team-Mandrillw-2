@@ -1,2 +1,2 @@
 
-print("Welcome to Team Mandrillw_2")
+print("Welcome to Team Mandrillw-2")
