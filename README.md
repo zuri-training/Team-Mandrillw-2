@@ -5,8 +5,8 @@ A platform that helps users compare the content of excel files.
 
 ## Project Name
 
-Excel_Comp
 
+[Excel_Comp](https://zuri-training.github.io/Team-Mandrillw-2/Frontend)
 
 ## Documentation
 

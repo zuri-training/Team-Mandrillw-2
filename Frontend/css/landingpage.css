@@ -8,6 +8,9 @@
     align-items: center;
     padding-top: 30px;
     background-color: var(--clr-primary-100);
+    position: fixed;
+    top: 0; 
+    width: 100%; 
 }
 .nex-list{
     display: flex;
@@ -37,14 +40,13 @@
     border: none;
 }
 
-.section_one{
-    
-}
+
 .nex_1{
-  font-size: calc(var(--fs-6) / 1.1);
+  font-size: 64px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 84px;
   max-width: 13ch;
+  margin-left: 60px;
 
 
 }
@@ -52,9 +54,118 @@
     margin-block: 1.75rem;
     font-size: var(--fs-0);
     max-width: 60ch;
+    margin-left: 60px ;
 
 }
 .nex_1--heading{
     color: var(--clr-secondary-600);
 
 }
+.register_nex{
+  border-radius: 8px;
+  padding: 15px 90px 15px 90px;
+  border: none;
+  background-color: var( --clr-primary-900);
+
+}
+.nex_login{
+    border-radius: 8px;
+    padding: 15px 90px 15px 90px;
+    border: 2px solid #31653f;
+    background-color: var(--clr-primary-100);
+    margin-left: 16px;
+
+
+}
+.my-main{
+    background-color: var(--clr-primary-100);
+    display: flex;
+    justify-content: space-around  ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.button-div{
+    margin-left: 60px;
+}
+
+.sec-zero{
+    background-color: var(--gray-100);
+    border-radius: 50px 50px 0px 0px;
+}
+.hill-header{
+    font-family: var(--ff-heading);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+    color: var(--gray-1200);
+    padding-top: 30px;
+
+}
+.upload-nex{
+    font-family: Georgia;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.upload-style{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    border-radius: 8px;
+    background-color: var(--clr-primary-700);
+}
+.upload-para{    
+    font-family: Space Grotesk;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    padding-top: 16px ;
+    color: var(--gray-1100);
+}
+.upload-ink{
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px ;
+    margin-top: 60px;
+}
+.group-upload{
+    margin-left: 40px;
+}
+.amico-img{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.new-section{
+    background-color: #86BA94;
+}
+.section-3{
+    color: var(--gray-100);
+    font-family: Georgia;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 40px;
+
+}
+.text-offer{
+    font-family: Georgia;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--gray-100);
+
+}
+
+/*@media screen and (max-width: 760px) {
+    .sec-zero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }*/
