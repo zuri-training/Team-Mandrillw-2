@@ -44,15 +44,13 @@
           class="logo logo--sign-up"
         />
         <h1 class="hero-heading">
-          Quick <span class="hero-heading--colored">Comparison</span> of <span class="no-wrap">
-            Excel
-            Files
-         </span>
+          Quick <span class="hero-heading--colored">Comparison</span> of
+          <span class="no-wrap"> Excel Files </span>
         </h1>
         <p class="hero-text">
           With the use of user-friendly features, our Excel file comparison
           software enables Users to compare and highlight changes in spreadsheet
-          files. 
+          files.
         </p>
         <img src="assests/sign-up.svg" alt="" class="sign-up__illustration" />
       </div>
@@ -60,11 +58,11 @@
       <div class="sign-up__text-container">
         <div class="sign-up-container-mobile">
           <img
-          src="assests/logo/Excel Comp LOGO.svg"
-          alt="Excel Comp logo"
-          class="logo logo--sign-up-mobile"
-        />
-        <h2 class="sign-up__title">Create an account</h2>
+            src="assests/logo/Excel Comp LOGO.svg"
+            alt="Excel Comp logo"
+            class="logo logo--sign-up-mobile"
+          />
+          <h2 class="sign-up__title">Create an account</h2>
         </div>
         <h2 class="sign-up__title sign-up__title--desktop">Sign up</h2>
         <p class="sign-up__text">It's free and will always be free</p>
@@ -88,6 +86,7 @@
               name="firstName"
               placeholder="John"
               required
+              autofocus
             />
           </div>
 
@@ -122,15 +121,16 @@
           <div class="sign-up-form__input">
             <label> Password </label>
             <input
+            class="sign-in-form__input--pasword"
               type="password"
               title="Must be at least 6 characters"
-              pattern="[a-zA-Z0-9]{8,}"
+              pattern="[a-zA-Z0-9]{6,}"
               id="password"
               name="password"
               placeholder="Enter Password"
               required
             />
-            <!-- <p class="password-hint">Must be at least 6 characters long</p> -->
+            <p class="password-hint">Must be at least 6 characters long</p>
           </div>
 
           <button type="submit" class="sign-up-form__button primary-button">
@@ -147,7 +147,11 @@
             <a class="additional-info__link" href="#">privacy policy</a>
           </p>
           <p class="additional-info__sign-in">
-            Already have an account? &nbsp;<a class="txt-btn" href="#">Sign In</a>
+            Already have an account? &nbsp;<a
+              class="txt-btn"
+              href="sign-in.html"
+              >Sign In</a
+            >
           </p>
         </div>
         <footer class="sign-up__footer">
@@ -156,11 +160,13 @@
           </p>
           <p class="mobile-hide">&boxv;</p>
 
-          <a href="#" class="sign-up__footer-text sign-up__footer-link "
+          <a href="#" class="sign-up__footer-text sign-up__footer-link"
             >Terms & Conditions</a
           >
           <p class="mobile-hide">&boxv;</p>
-          <a href="#" class="sign-up__footer-text sign-up__footer-link sign-up__footer-link--one"
+          <a
+            href="#"
+            class="sign-up__footer-text sign-up__footer-link sign-up__footer-link--one"
             >Privacy Policy</a
           >
         </footer>

@@ -364,6 +364,11 @@ h6 {
   background-color: var(--clr-primary-900);
 }
 
+.primary-button--disabled {
+background-color: var(--clr-disabled);
+pointer-events: none;
+}
+
 .txt-btn:any-link {
   font-weight: 400;
   color: var(--clr-primary-400);

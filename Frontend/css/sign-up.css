@@ -67,6 +67,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
   max-width: 44rem;
 }
 .sign-up__title {
@@ -124,10 +126,17 @@
 .sign-up-form__input > input:focus-within {
   animation: form-input-focus 600ms linear normal forwards;
 }
+.sign-in-form__input--pasword:invalid:focus-within + .password-hint {
+  display: block;
+  font-size: calc(var(--fs--1) / 1.1);color: #B00E0E;margin-block-start: .5rem;
+  }
 
 .sign-up-form__button {
   display: block;
   margin-block: 2.25rem 1rem;
+}
+.password-hint {
+  display: none;
 }
 
 /* ADditional Info */
