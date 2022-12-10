@@ -134,7 +134,7 @@ svg {
 a {
   text-decoration: none;
   display: block;
-  color: var( --gray-1200);
+  color: var(--gray-1200);
 }
 
 /* TYPOGRAPHY UTILITY STYLES */
@@ -376,5 +376,9 @@ h6 {
 }
 .txt-btn:active {
   color: var(--clr-primary-600);
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
 /* ENd of Utility classes */
