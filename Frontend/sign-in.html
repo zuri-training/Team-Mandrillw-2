@@ -8,7 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <link rel="stylesheet" href="css/sign-up.css" />
+    <link rel="stylesheet" href="css/sign-in.css" />
 
     <link
       rel="apple-touch-icon"
@@ -30,44 +30,45 @@
     <link rel="manifest" href="assests/favicon/site.webmanifest" />
     <script src="./index.js" defer></script>
 
-    <title>Sign Up</title>
+    <title>Sign In</title>
   </head>
 
-  <body class="sign-up__bg">
-    <!-- SIgn UP Page -->
+  <body class="sign-in__bg">
+    <!-- SIgn In Page -->
 
-    <section class="sign-up container--sign-in">
-      <div class="sign-up__hero">
+    <section class="sign-in container--sign-in">
+      <div class="sign-in__hero">
         <img
           src="assests/logo/Excel Comp LOGO.svg"
           alt="Excel Comp logo"
-          class="logo logo--sign-up"
+          class="logo logo--sign-in"
         />
         <h1 class="hero-heading">
           Quick <span class="hero-heading--colored">Comparison</span> of <span class="no-wrap">
-            Excel
-            Files
-         </span>
+            
+             Excel
+             Files
+          </span>
         </h1>
         <p class="hero-text">
           With the use of user-friendly features, our Excel file comparison
           software enables Users to compare and highlight changes in spreadsheet
           files. 
         </p>
-        <img src="assests/sign-up.svg" alt="" class="sign-up__illustration" />
+        <img src="assests/sign-up.svg" alt="" class="sign-in__illustration" />
       </div>
 
-      <div class="sign-up__text-container">
-        <div class="sign-up-container-mobile">
+      <div class="sign-in__text-container">
+        <div class="sign-in-container-mobile">
           <img
           src="assests/logo/Excel Comp LOGO.svg"
           alt="Excel Comp logo"
-          class="logo logo--sign-up-mobile"
+          class="logo logo--sign-in-mobile"
         />
-        <h2 class="sign-up__title">Create an account</h2>
+        <h2 class="sign-in__title">Sign In</h2>
         </div>
-        <h2 class="sign-up__title sign-up__title--desktop">Sign up</h2>
-        <p class="sign-up__text">It's free and will always be free</p>
+        <h2 class="sign-in__title sign-in__title--desktop">Sign In</h2>
+        <p class="sign-in__text">It's free and will always be free</p>
 
         <button class="continue-to-google">
           <!-- TODO: CHange to actual google oauth when the website is hosted and has a domain name -->
@@ -77,34 +78,12 @@
 
         <p>Or</p>
         <!-- TODO: Add an "action" and "method" to ther form when the backend people do their thing -->
-        <!-- SIgn UP Form -->
-        <form action="" class="sign-up-form">
-          <!-- Sign Up Form Names-->
-          <div class="sign-up-form__input">
-            <label> First Name </label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              placeholder="John"
-              required
-            />
-          </div>
+        <!-- SIgn In Form -->
+        <form action="" class="sign-in-form">
+         
 
-          <div class="sign-up-form__input">
-            <label> Last Name </label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              placeholder="Doe"
-              required
-            />
-          </div>
-          <!-- End of Sign Up Form Names -->
-
-          <!-- Sign Up Form Email  -->
-          <div class="sign-up-form__input">
+          <!-- Sign In Form Email  -->
+          <div class="sign-in-form__input">
             <label> Email Address </label>
             <input
               type="email"
@@ -116,10 +95,10 @@
             />
           </div>
 
-          <!-- End of Sign Up Form Email -->
+          <!-- End of Sign In Form Email -->
 
-          <!-- Sign Up Form Password -->
-          <div class="sign-up-form__input">
+          <!-- Sign In Form Password -->
+          <div class="sign-in-form__input">
             <label> Password </label>
             <input
               type="password"
@@ -131,41 +110,38 @@
               required
             />
             <!-- <p class="password-hint">Must be at least 6 characters long</p> -->
+            <a href="#" class="forgot-password txt-btn">Forgot your Password?</a>
           </div>
 
-          <button type="submit" class="sign-up-form__button primary-button">
-            Sign Up
+          <button type="submit" class="sign-in-form__button primary-button">
+            Sign In
           </button>
 
-          <!-- End of Sign Up Form Password -->
+          <!-- End of Sign In Form Password -->
         </form>
-        <!-- ENd of SIgn UP Form -->
+        <!-- ENd of SIgn In Form -->
         <div class="additional-info">
-          <p class="additional-info__terms">
-            By creating an account, you agree to our
-            <a class="additional-info__link" href="#">terms of use</a> and
-            <a class="additional-info__link" href="#">privacy policy</a>
-          </p>
+         
           <p class="additional-info__sign-in">
-            Already have an account? &nbsp;<a class="txt-btn" href="#">Sign In</a>
+            Don't have an account yet? &nbsp;<a class="txt-btn" href="#">Sign Up</a>
           </p>
         </div>
-        <footer class="sign-up__footer">
-          <p class="sign-up__footer-text footer-text--copy">
+        <footer class="sign-in__footer">
+          <p class="sign-in__footer-text footer-text--copy">
             Excel Comp 2022. All right reserved
           </p>
           <p class="mobile-hide">&boxv;</p>
 
-          <a href="#" class="sign-up__footer-text sign-up__footer-link "
+          <a href="#" class="sign-in__footer-text sign-in__footer-link "
             >Terms & Conditions</a
           >
           <p class="mobile-hide">&boxv;</p>
-          <a href="#" class="sign-up__footer-text sign-up__footer-link sign-up__footer-link--one"
+          <a href="#" class="sign-in__footer-text sign-in__footer-link sign-in__footer-link--one"
             >Privacy Policy</a
           >
         </footer>
       </div>
     </section>
-    <!-- End of SIgn UP Page -->
+    <!-- End of SIgn In Page -->
   </body>
 </html>
