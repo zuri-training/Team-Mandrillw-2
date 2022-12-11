@@ -1,0 +1,41 @@
+@import "style.css";
+
+
+  
+.nex-sec{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    background-color: var(--clr-primary-100);
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+}
+.nex-list{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    
+}
+.nex_color{
+    padding-left: 60px;
+    color: var(--gray-1200);
+}
+
+.nex_button1{
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid #cdcf65;
+    background-color: var(--clr-primary-100);
+    color: var(--clr-secondary-900);
+
+}
+.nex_button2{
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-left: 16px;
+    background-color: var( --clr-primary-400);
+    border: none;
+}
