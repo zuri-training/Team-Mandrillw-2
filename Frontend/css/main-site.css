@@ -1,0 +1,136 @@
+@import "style.css";
+
+/* STyles for the main EXcel comp  */
+body {
+  background-color: var(--clr-primary-100);
+}
+/* HEader styles */
+
+.logo {
+  max-height: 2rem;
+}
+
+.header-nav__wrapper {
+  background-color: var(--clr-primary-100);
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+  gap: 1rem;
+}
+
+/* End of HEader styles */
+
+/* FIle upload works section */
+.hero {
+  display: grid;
+  place-items: center;
+  margin-block-start: 2rem;
+}
+.hero-title {
+  font-size: calc(var(--fs-6) / 1.1);
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 18ch;
+  text-align: center;
+}
+.hero-heading--colored {
+  color: var(--clr-secondary-600);
+}
+
+.hero-text {
+  margin-block: 1.75rem;
+  font-size: var(--fs-1);
+  max-width: 58ch;
+}
+.file-upload__section {
+  min-height: 37.5rem;
+}
+/* ENd of FIle upload works section */
+
+/* HOw it works section */
+.how-it-works__wrapper {
+  background-color: var(--gray-100);
+  border-radius: 3.125rem 3.125rem 0 0;
+  padding-block: 3rem 6rem;
+}
+.how-it-works__title {
+  font-size: calc(var(--fs-4) / 1.1);
+  font-weight: 600;
+  margin-block-end: 4rem;
+  text-align: center;
+}
+.how-it-works__card {
+  display: flex;
+  gap: 1.5rem;
+
+  /* margin-inline: auto;
+   margin-block-end: 2rem;
+   width: fit-content; */
+}
+.how-it-works__card-container {
+  display: grid;
+  gap: 2rem;
+  width: fit-content;
+  margin-inline: auto;
+}
+.how-it-works__icon-container {
+  background-color: var(--clr-primary-700);
+  border-radius: 0.625rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.how-it-works__card-text-container {
+  max-width: 70ch;
+}
+.how-it-works__card-title {
+  font-size: var(--fs-2);
+  margin-block-end: 0.75rem;
+  font-weight: 600;
+}
+.how-it-works__illustration {
+  position: absolute;
+  transform: translate(42rem, -20rem);
+  max-width: 35%;
+}
+/* ENd of HOw it works section */
+/* footer */
+.footer {
+  padding-block: 4rem;
+}
+.footer__nav-title {
+  font-size: calc(var(--fs-1) / 1.1);
+  font-weight: 600;
+  margin-block-end: 1rem;
+}
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  place-items: center;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 2.5rem;
+}
+.footer__socials {
+  display: flex;
+  gap: 1.5rem;
+
+}
+
+.footer__socials > *:hover {
+   filter: grayscale(100%);
+}
+/* End of footer */
+/* End of STyles for the main EXcel comp  */
