@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      id="email"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="{% static 'css/sign_in.css' %}" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'assets/favicon/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'assets/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'assets/favicon/favicon-16x16.png' %}"
+    />
+    <link rel="manifest" href="{% static 'assets/favicon/site.webmanifest' %}" />
+    <script src="{% static 'js/index.js' %}" defer></script>
+
+    <title>Sign In</title>
+  </head>
+
+  <body class="sign-in__bg">
+    <!-- SIgn In Page -->
+
+    <section class="sign-in container--sign-in">
+      <div class="sign-in__hero">
+        <img
+          src="{% static 'assets/logo/Excel_Comp_LOGO.svg' %}"
+          alt="Excel Comp logo"
+          class="logo logo--sign-in"
+        />
+        <h1 class="hero-heading">
+          Quick <span class="hero-heading--colored">Comparison</span> of <span class="no-wrap">
+            
+             Excel
+             Files
+          </span>
+        </h1>
+        <p class="hero-text">
+          With the use of user-friendly features, our Excel file comparison
+          software enables Users to compare and highlight changes in spreadsheet
+          files. 
+        </p>
+        <img src="{% static 'assets/sign-up.svg' %}" alt="" class="sign-in__illustration" />
+      </div>
+
+      <div class="sign-in__text-container">
+        <div class="sign-in-container-mobile">
+          <img
+          src="{% static 'assets/logo/Excel_Comp_LOGO.svg' %}"
+          alt="Excel Comp logo"
+          class="logo logo--sign-in-mobile"
+        />
+        <h2 class="sign-in__title">Sign In</h2>
+        </div>
+        <h2 class="sign-in__title sign-in__title--desktop">Sign In</h2>
+        <p class="sign-in__text">It's free and will always be free</p>
+
+        <button class="continue-to-google">
+          <!-- TODO: CHange to actual google oauth when the website is hosted and has a domain name -->
+          <img src="{% static 'assets/Icons/google.svg' %}" alt="" />
+          <p>Continue to Google</p>
+        </button>
+
+        <p>Or</p>
+        <!-- TODO: Add an "action" and "method" to ther form when the backend people do their thing -->
+        <!-- SIgn In Form -->
+        <form method="POST" action="{% url 'login' %}" class="sign-in-form">
+          {% csrf_token %}
+         
+
+          <!-- Sign In Form Email  -->
+          <div class="sign-in-form__input">
+            <label> Username </label>
+            <input
+              type="username"
+              id="email"
+              placeholder="@zuri"
+              name="username"
+              required
+              autofocus
+            />
+          </div>
+
+          <!-- End of Sign In Form Email -->
+
+          <!-- Sign In Form Password -->
+          <div class="sign-in-form__input">
+            <label> Password </label>
+            <input
+            class="sign-in-form__input--pasword"
+              type="password"
+              title="Must be at least 6 characters"
+              pattern="[a-zA-Z0-9]{6,}"
+              id="password"
+              name="password"
+              placeholder="Enter Password"
+              required
+            />
+            <p class="password-hint">Must be at least 6 characters long</p>
+            <a href="password-forgot.html" class="forgot-password txt-btn">Forgot your Password?</a>
+          </div>
+
+          <button type="submit" class="sign-in-form__button primary-button">
+            Sign In
+          </button>
+
+          <!-- End of Sign In Form Password -->
+        </form>
+        <!-- ENd of SIgn In Form -->
+        <div class="additional-info">
+         
+          <p class="additional-info__sign-in">
+            Don't have an account yet? &nbsp;<a class="txt-btn" href="{% url 'signup' %}">Sign Up</a>
+          </p>
+        </div>
+        <footer class="sign-in__footer">
+          <p class="sign-in__footer-text footer-text--copy">
+            Excel Comp 2022. All right reserved
+          </p>
+          <p class="mobile-hide">&boxv;</p>
+
+          <a href="#" class="sign-in__footer-text sign-in__footer-link "
+            >Terms & Conditions</a
+          >
+          <p class="mobile-hide">&boxv;</p>
+          <a href="#" class="sign-in__footer-text sign-in__footer-link sign-in__footer-link--one"
+            >Privacy Policy</a
+          >
+        </footer>
+      </div>
+    </section>
+    <!-- End of SIgn In Page -->
+  </body>
+</html>
