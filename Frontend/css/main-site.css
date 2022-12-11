@@ -9,6 +9,31 @@ body {
 .logo {
   max-height: 2rem;
 }
+.header__profile-section {
+  display: flex;
+gap: 1.25rem;
+align-items: center;
+}
+.avatar > svg {
+  height: 4rem;
+  width: 4rem;
+  fill: var(--gray-1100);
+  }
+.avatar {
+  border-radius: 50%;
+background-color: var(--gray-100);
+width: fit-content;
+}
+.header__profile-section-text-container {
+  order: -1;
+  text-align: right;
+}
+.profile-name {
+font-size: var(--fs-1);
+color: var(--clr-primary-700);
+font-weight: 600;
+
+}
 
 .header-nav__wrapper {
   background-color: var(--clr-primary-100);
@@ -98,8 +123,8 @@ body {
 }
 .how-it-works__illustration {
   position: absolute;
-  transform: translate(42rem, -20rem);
-  max-width: 35%;
+  transform: translate(42rem, -17rem);
+  max-width: 30%;
 }
 /* ENd of HOw it works section */
 /* footer */
