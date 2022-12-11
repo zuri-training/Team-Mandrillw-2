@@ -30,122 +30,242 @@
     <title>Excel Comp | The fastest spreadsheet comparator around</title>
   </head>
   <body>
-    <header>
-      <nav class="nex-sec">
+    <header class="header__wrapper">
+      <nav class="header">
         <div class="nex-image">
           <img src="./assets/logo/Excel Comp LOGO.svg" alt="logo_image" />
         </div>
-        <ul class="nex-list">
-          <li class="nex_color"><a href="#home">Home</a></li>
-          <li class="nex_color"><a href="#about">About</a></li>
-          <li class="nex_color"><a href="./contactus.html">Contact</a></li>
-          <li class="nex_color"><a href="#faq">Faq</a></li>
+        <ul class="header__nav-list" role="list">
+          <li class="nex_color"><a href="#home" class="txt-btn--gray txt-btn--gray--darker">Home</a></li>
+          <li class="nex_color"><a href="Aboutus.html" class="txt-btn--gray txt-btn--gray--darker">About</a></li>
+          <li class="nex_color"><a href="contactus.html" class="txt-btn--gray txt-btn--gray--darker">Contact</a></li>
+          <li class="nex_color"><a href="faq.html" class="txt-btn--gray txt-btn--gray--darker">Faq</a></li>
         </ul>
-        <div class="nex-button">
-          <button class="nex_button1">
-            <a href="./sign-in.html" style="color: #787a10">Sign in</a>
-          </button>
-          <button class="nex_button2">
-            <a href="./sign-up.html" style="color: white">Sign up</a>
-          </button>
+        <div class="cta-section">
+          
+            <a href="sign-in.html" class="outlined-button--small">Sign in</a>
+        
+          
+            <a href="sign-up.html" class="primary-button--small">Sign up</a>
+          
         </div>
       </nav>
     </header>
     <main>
-      <section class="my-main">
-        <div class="section_one">
-          <h1 class="nex_1">
-            Quick <span class="nex_1--heading">Comparison</span> of Excel Files
-          </h1>
-          <p class="nex_2">
-            With the use of user-friendly features, our Excel file comparison
-            software enables Users to compare and highlight changes in
-            spreadsheet.
+      <!-- HEro Section -->
+      <section class="hero__wrapper">
+        
+        <div class="hero container">
+          <div class="hero__text-container">
+            <h1 class="nex_1">
+              Quick <span class="nex_1--heading">Comparison</span> of Excel Files
+            </h1>
+            <p class="nex_2">
+              With the use of user-friendly features, our Excel file comparison
+              software enables Users to compare and highlight changes in
+              spreadsheet.
+            </p>
+            <div class="button-div">
+              
+                <a href="sign-up.html" class="primary-button">Register</a>
+             
+              
+                <a href="sign-in.html">Login</a>
+            
+            </div>
+          </div>
+          <div>
+            <img src="./assets/sign-up.svg" alt="incase-you dont view" />
+          </div>
+        </div>
+
+      </section>
+<!-- How it works section -->
+<article class="how-it-works__wrapper" id="how-it-works">
+  <div class="how-it-works container">
+    <h2 class="how-it-works__title">HOW IT WORKS</h2>
+
+    <div class="how-it-works__card-container">
+      <!-- CArd one -->
+
+      <section class="how-it-works__card">
+        <div class="how-it-works__icon-container">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.1968 14.3437C16.1734 14.3138 16.1435 14.2897 16.1094 14.2731C16.0753 14.2564 16.0379 14.2478 15.9999 14.2478C15.962 14.2478 15.9245 14.2564 15.8904 14.2731C15.8563 14.2897 15.8264 14.3138 15.803 14.3437L12.303 18.7718C12.2742 18.8087 12.2563 18.8529 12.2514 18.8995C12.2465 18.946 12.2548 18.993 12.2753 19.035C12.2958 19.0771 12.3278 19.1125 12.3675 19.1373C12.4072 19.162 12.4531 19.1751 12.4999 19.175H14.8093V26.75C14.8093 26.8875 14.9218 27 15.0593 27H16.9343C17.0718 27 17.1843 26.8875 17.1843 26.75V19.1781H19.4999C19.7093 19.1781 19.8249 18.9375 19.6968 18.775L16.1968 14.3437Z"
+              fill="#fff"
+            />
+            <path
+              d="M25.3563 11.4594C23.925 7.68438 20.2781 5 16.0063 5C11.7344 5 8.0875 7.68125 6.65625 11.4563C3.97813 12.1594 2 14.6 2 17.5C2 20.9531 4.79687 23.75 8.24687 23.75H9.5C9.6375 23.75 9.75 23.6375 9.75 23.5V21.625C9.75 21.4875 9.6375 21.375 9.5 21.375H8.24687C7.19375 21.375 6.20312 20.9562 5.46562 20.1969C4.73125 19.4406 4.34063 18.4219 4.375 17.3656C4.40313 16.5406 4.68437 15.7656 5.19375 15.1125C5.71562 14.4469 6.44688 13.9625 7.25938 13.7469L8.44375 13.4375L8.87813 12.2937C9.14688 11.5812 9.52187 10.9156 9.99375 10.3125C10.4596 9.71471 11.0114 9.18922 11.6313 8.75313C12.9156 7.85 14.4281 7.37187 16.0063 7.37187C17.5844 7.37187 19.0969 7.85 20.3813 8.75313C21.0031 9.19063 21.5531 9.71562 22.0187 10.3125C22.4906 10.9156 22.8656 11.5844 23.1344 12.2937L23.5656 13.4344L24.7469 13.7469C26.4406 14.2031 27.625 15.7437 27.625 17.5C27.625 18.5344 27.2219 19.5094 26.4906 20.2406C26.132 20.6013 25.7054 20.8873 25.2355 21.082C24.7656 21.2768 24.2618 21.3763 23.7531 21.375H22.5C22.3625 21.375 22.25 21.4875 22.25 21.625V23.5C22.25 23.6375 22.3625 23.75 22.5 23.75H23.7531C27.2031 23.75 30 20.9531 30 17.5C30 14.6031 28.0281 12.1656 25.3563 11.4594Z"
+              fill="#fff"
+            />
+          </svg>
+        </div>
+
+        <div class="how-it-works__card-text-container">
+          <h2 class="how-it-works__card-title">Upload</h2>
+
+          <p class="how-it-works__card-text">
+            Select the necessary sheet and upload the two Excel files to
+            be compared separately. Select the target sheets and upload
+            the same file repeatedly if you want to compare sheets inside
+            the same file.
           </p>
-          <div class="button-div">
-            <button class="register_nex">
-              <a style="color: white">Register</a>
-            </button>
-            <button class="nex_login">
-              <a style="color: #31653f">Login</a>
-            </button>
-          </div>
-        </div>
-        <div>
-          <img src="./assets/sign-up.svg" alt="incase-you dont view" />
         </div>
       </section>
+      <!-- eNd CArd one -->
 
-      <section class="sec-zero">
-        <h2 class="hill-header">How it works</h2>
+      <!-- CArd two -->
 
-        <div class="upload-ink">
-          <div>
-            <img src="./assets/UPLOAD ICON.svg" alt="upload logo" />
-          </div>
-          <div class="group-upload">
-            <h4 class="upload-nex">Upload</h4>
-            <p class="upload-para">
-              Select the necessary sheet and upload the two Excel files to be
-              compared separately. Select<br />
-              the target sheets and upload the same file repeatedly if you want
-              to compare sheets inside the same file.
-            </p>
-          </div>
+      <section class="how-it-works__card">
+        <div class="how-it-works__icon-container">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.9998 4.79999C7.15111 4.79999 6.33718 5.13713 5.73706 5.73725C5.13695 6.33736 4.7998 7.1513 4.7998 7.99999V11.2C4.7998 12.0487 5.13695 12.8626 5.73706 13.4627C6.33718 14.0628 7.15111 14.4 7.9998 14.4H11.1998C12.0485 14.4 12.8624 14.0628 13.4625 13.4627C14.0627 12.8626 14.3998 12.0487 14.3998 11.2V7.99999C14.3998 7.1513 14.0627 6.33736 13.4625 5.73725C12.8624 5.13713 12.0485 4.79999 11.1998 4.79999H7.9998ZM7.9998 17.6C7.15111 17.6 6.33718 17.9371 5.73706 18.5372C5.13695 19.1374 4.7998 19.9513 4.7998 20.8V24C4.7998 24.8487 5.13695 25.6626 5.73706 26.2627C6.33718 26.8628 7.15111 27.2 7.9998 27.2H11.1998C12.0485 27.2 12.8624 26.8628 13.4625 26.2627C14.0627 25.6626 14.3998 24.8487 14.3998 24V20.8C14.3998 19.9513 14.0627 19.1374 13.4625 18.5372C12.8624 17.9371 12.0485 17.6 11.1998 17.6H7.9998ZM17.5998 7.99999C17.5998 7.1513 17.9369 6.33736 18.5371 5.73725C19.1372 5.13713 19.9511 4.79999 20.7998 4.79999H23.9998C24.8485 4.79999 25.6624 5.13713 26.2625 5.73725C26.8627 6.33736 27.1998 7.1513 27.1998 7.99999V11.2C27.1998 12.0487 26.8627 12.8626 26.2625 13.4627C25.6624 14.0628 24.8485 14.4 23.9998 14.4H20.7998C19.9511 14.4 19.1372 14.0628 18.5371 13.4627C17.9369 12.8626 17.5998 12.0487 17.5998 11.2V7.99999ZM17.5998 20.8C17.5998 19.9513 17.9369 19.1374 18.5371 18.5372C19.1372 17.9371 19.9511 17.6 20.7998 17.6H23.9998C24.8485 17.6 25.6624 17.9371 26.2625 18.5372C26.8627 19.1374 27.1998 19.9513 27.1998 20.8V24C27.1998 24.8487 26.8627 25.6626 26.2625 26.2627C25.6624 26.8628 24.8485 27.2 23.9998 27.2H20.7998C19.9511 27.2 19.1372 26.8628 18.5371 26.2627C17.9369 25.6626 17.5998 24.8487 17.5998 24V20.8Z"
+              fill="#fff"
+            />
+          </svg>
         </div>
 
-        <div class="upload-ink">
-          <div>
-            <img src="./assets/Frame 54.svg" alt="upload logo" />
-          </div>
-          <div class="group-upload">
-            <h4 class="upload-nex">Criteria Selection</h4>
-            <p class="upload-para">
-              Choose the important inputs and a course of action that reflect
-              the type of comparison you are<br />
-              about to make. You can come back to this screen and choose again.
-            </p>
-          </div>
-        </div>
+        <div class="how-it-works__card-text-container">
+          <h2 class="how-it-works__card-title">Criteria Selection</h2>
 
-        <div class="upload-ink">
-          <div>
-            <img src="./assets/Frame 1000001026.svg" alt="upload logo" />
-          </div>
-          <div class="group-upload">
-            <h4 class="upload-nex">Click to Compare</h4>
-            <p class="upload-para">
-              The action will be taken when you click the "COMPARE" button
-              below.
-            </p>
-          </div>
-        </div>
-
-        <div class="upload-ink">
-          <div>
-            <img src="./assets/Frame 53.svg" alt="upload logo" />
-          </div>
-          <div class="group-upload">
-            <h4 class="upload-nex">Download or Save result</h4>
-            <p class="upload-para">
-              Save your comparison result for later or download it now.
-            </p>
-          </div>
-        </div>
-
-        <div class="upload-ink">
-          <div>
-            <img src="./assets/Frame 1000001027.svg" alt="upload logo" />
-          </div>
-          <div class="group-upload">
-            <h4 class="upload-nex">File size</h4>
-            <p class="upload-para">File sizes shouldn't exceed 10MB.</p>
-          </div>
-        </div>
-        <div class="amico-img">
-          <img src="./assets/amico.png" />
+          <p class="how-it-works__card-text">
+            Choose the important inputs and a course of action that
+            reflect the type of comparison you are about to make. You can
+            come back to this screen and choose again.
+          </p>
         </div>
       </section>
+      <!-- End CArd two -->
+      <!-- CArd three -->
+
+      <section class="how-it-works__card">
+        <div class="how-it-works__icon-container">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.667 14C18.667 13.4696 18.8777 12.9609 19.2528 12.5858C19.6279 12.2107 20.1366 12 20.667 12C21.1974 12 21.7061 12.2107 22.0812 12.5858C22.4563 12.9609 22.667 13.4696 22.667 14V16M10.667 17.3333V6C10.667 5.46957 10.8777 4.96086 11.2528 4.58579C11.6279 4.21071 12.1366 4 12.667 4C13.1974 4 13.7061 4.21071 14.0812 4.58579C14.4563 4.96086 14.667 5.46957 14.667 6V16L10.667 17.3333ZM14.667 15.3333V12.6667C14.667 12.1362 14.8777 11.6275 15.2528 11.2525C15.6279 10.8774 16.1366 10.6667 16.667 10.6667C17.1974 10.6667 17.7061 10.8774 18.0812 11.2525C18.4563 11.6275 18.667 12.1362 18.667 12.6667V16L14.667 15.3333Z"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M20 8.00002H21.3333M22.6667 15.3334C22.6667 14.8029 22.8774 14.2942 23.2525 13.9191C23.6275 13.5441 24.1362 13.3334 24.6667 13.3334C25.1971 13.3334 25.7058 13.5441 26.0809 13.9191C26.456 14.2942 26.6667 14.8029 26.6667 15.3334V21.3334C26.6667 23.4551 25.8238 25.4899 24.3235 26.9902C22.8232 28.4905 20.7884 29.3334 18.6667 29.3334H16H16.2773C14.9524 29.3336 13.6482 29.0047 12.4818 28.3764C11.3154 27.748 10.3234 26.8398 9.59467 25.7334L9.33333 25.3334C8.91733 24.6947 7.45733 22.1494 4.952 17.696C4.6966 17.2421 4.62838 16.7064 4.76184 16.2029C4.89531 15.6994 5.21993 15.2679 5.66667 15C6.1425 14.7145 6.7001 14.5962 7.25088 14.6638C7.80166 14.7315 8.31405 14.9812 8.70667 15.3734L10.6667 17.3334L22.6667 15.3334ZM6.66667 4.00002L5.33333 2.66669L6.66667 4.00002ZM5.33333 9.33335H4H5.33333ZM18.6667 4.00002L20 2.66669L18.6667 4.00002Z"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <div class="how-it-works__card-text-container">
+          <h2 class="how-it-works__card-title">Click to Compare</h2>
+          <p class="how-it-works__card-text">
+            The action will be taken when you click the "COMPARE" button
+            below.
+          </p>
+        </div>
+      </section>
+      <!-- End CArd three -->
+      <!-- CArd four -->
+
+      <section class="how-it-works__card">
+        <div class="how-it-works__icon-container">
+          <svg
+            width="32"
+            height="32"
+            color="white"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16 9.8125C16 9.63016 15.9276 9.4553 15.7986 9.32636C15.6697 9.19743 15.4948 9.125 15.3125 9.125C15.1302 9.125 14.9553 9.19743 14.8264 9.32636C14.6974 9.4553 14.625 9.63016 14.625 9.8125V17.375C14.625 17.4962 14.6571 17.6152 14.718 17.72C14.7788 17.8248 14.8663 17.9116 14.9715 17.9718L19.784 20.7218C19.9419 20.8071 20.127 20.8273 20.2996 20.778C20.4722 20.7287 20.6187 20.6139 20.7078 20.458C20.7969 20.3022 20.8214 20.1176 20.7762 19.9439C20.7311 19.7702 20.6197 19.621 20.466 19.5282L16 16.9763V9.8125Z"
+              fill="#fff"
+            />
+            <path
+              d="M16 27C18.9174 27 21.7153 25.8411 23.7782 23.7782C25.8411 21.7153 27 18.9174 27 16C27 13.0826 25.8411 10.2847 23.7782 8.22183C21.7153 6.15893 18.9174 5 16 5C13.0826 5 10.2847 6.15893 8.22183 8.22183C6.15893 10.2847 5 13.0826 5 16C5 18.9174 6.15893 21.7153 8.22183 23.7782C10.2847 25.8411 13.0826 27 16 27ZM25.625 16C25.625 18.5527 24.6109 21.0009 22.8059 22.8059C21.0009 24.6109 18.5527 25.625 16 25.625C13.4473 25.625 10.9991 24.6109 9.1941 22.8059C7.38906 21.0009 6.375 18.5527 6.375 16C6.375 13.4473 7.38906 10.9991 9.1941 9.1941C10.9991 7.38906 13.4473 6.375 16 6.375C18.5527 6.375 21.0009 7.38906 22.8059 9.1941C24.6109 10.9991 25.625 13.4473 25.625 16Z"
+              fill="#fff"
+            />
+          </svg>
+        </div>
+
+        <div class="how-it-works__card-text-container">
+          <h2 class="how-it-works__card-title">
+            Download or Save result
+          </h2>
+
+          <p class="how-it-works__card-text">
+            Save your comparison result for later or download it now.
+          </p>
+        </div>
+      </section>
+      <!-- End CArd four -->
+      <!-- CArd five -->
+
+      <section class="how-it-works__card">
+        <div class="how-it-works__icon-container">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 14C10.7348 14 10.4804 14.1054 10.2929 14.2929C10.1054 14.4804 10 14.7348 10 15C10 15.2652 10.1054 15.5196 10.2929 15.7071C10.4804 15.8946 10.7348 16 11 16H21C21.2652 16 21.5196 15.8946 21.7071 15.7071C21.8946 15.5196 22 15.2652 22 15C22 14.7348 21.8946 14.4804 21.7071 14.2929C21.5196 14.1054 21.2652 14 21 14H11ZM10 19C10 18.7348 10.1054 18.4804 10.2929 18.2929C10.4804 18.1054 10.7348 18 11 18H21C21.2652 18 21.5196 18.1054 21.7071 18.2929C21.8946 18.4804 22 18.7348 22 19C22 19.2652 21.8946 19.5196 21.7071 19.7071C21.5196 19.8946 21.2652 20 21 20H11C10.7348 20 10.4804 19.8946 10.2929 19.7071C10.1054 19.5196 10 19.2652 10 19ZM10 23C10 22.7348 10.1054 22.4804 10.2929 22.2929C10.4804 22.1054 10.7348 22 11 22H15C15.2652 22 15.5196 22.1054 15.7071 22.2929C15.8946 22.4804 16 22.7348 16 23C16 23.2652 15.8946 23.5196 15.7071 23.7071C15.5196 23.8946 15.2652 24 15 24H11C10.7348 24 10.4804 23.8946 10.2929 23.7071C10.1054 23.5196 10 23.2652 10 23Z"
+              fill="#fff"
+            />
+            <path
+              d="M19 0H8C6.93913 0 5.92172 0.421427 5.17157 1.17157C4.42143 1.92172 4 2.93913 4 4V28C4 29.0609 4.42143 30.0783 5.17157 30.8284C5.92172 31.5786 6.93913 32 8 32H24C25.0609 32 26.0783 31.5786 26.8284 30.8284C27.5786 30.0783 28 29.0609 28 28V9L19 0ZM19 2V6C19 6.79565 19.3161 7.55871 19.8787 8.12132C20.4413 8.68393 21.2044 9 22 9H26V28C26 28.5304 25.7893 29.0391 25.4142 29.4142C25.0391 29.7893 24.5304 30 24 30H8C7.46957 30 6.96086 29.7893 6.58579 29.4142C6.21071 29.0391 6 28.5304 6 28V4C6 3.46957 6.21071 2.96086 6.58579 2.58579C6.96086 2.21071 7.46957 2 8 2H19Z"
+              fill="#fff"
+            />
+          </svg>
+        </div>
+
+        <div class="how-it-works__card-text-container">
+          <h2 class="how-it-works__card-title">
+            Download or Save result
+          </h2>
+
+          <p class="how-it-works__card-text">
+            Save your comparison result for later or download it now.
+          </p>
+        </div>
+      </section>
+      <!-- End CArd five -->
+    </div>
+
+    <img
+      src="assets/how-it-works-illustration.svg"
+      alt=""
+      class="how-it-works__illustration"
+    />
+  </div>
+</article>
+
+      <!-- End if how it works -->
+      <!-- What we offer -->
       <section class="new-section">
         <div>
           <h4 class="section-3">What we offer</h4>
@@ -169,6 +289,7 @@
           </div>
         </div>
       </section>
+      <!-- End if what we offer -->
 
       <section class="section_4">
         <h3 class="hill-header">Additional Features</h3>
@@ -220,12 +341,69 @@
         </h2>
         <div class="get-started">
           <button class="get_button">
-            <a style="color: white">Get Started</a>
+            <a href="sign-in.html">Get Started</a>
           </button>
         </div>
       </section>
 
-      <footer></footer>
+      
     </main>
+    <footer>
+      <div class="container footer">
+        <nav class="footer__nav">
+          <ul class="footer__nav-list" role="list">
+            <h5 class="footer__nav-title">Product</h5>
+            <li>
+              <a href="#how-it-works" class="txt-btn--gray">How it Works</a>
+            </li>
+          </ul>
+
+          <ul class="footer__nav-list" role="list">
+            <h5 class="footer__nav-title">Support</h5>
+            <li><a href="#" class="txt-btn--gray">Help Center</a></li>
+            <li><a href="faq.html" class="txt-btn--gray">FAQ</a></li>
+          </ul>
+
+          <ul class="footer__nav-list" role="list">
+            <h5 class="footer__nav-title">Company</h5>
+            <li><a href="Aboutus.html" class="txt-btn--gray">About Us</a></li>
+            <li><a href="faq.html" class="txt-btn--gray">Customer Care</a></li>
+            <li>
+              <a href="mailto:info@excelcomp.io" class="txt-btn--gray"
+                >Email us: info@excelcomp.io</a
+              >
+            </li>
+          </ul>
+
+          <ul class="footer__nav-list" role="list">
+            <h5 class="footer__nav-title">Legal</h5>
+            <li>
+              <a href="privacy.html" class="txt-btn--gray">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="terms.html" class="txt-btn--gray"
+                >Terms and conditions</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__bottom">
+          <a href="#"
+            ><img src="assets/logo/Excel Comp LOGO.svg" alt="Excel Comp Logo"
+          /></a>
+
+          <div class="footer__socials">
+            <a href="#"
+              ><img src="assets/Icons/facebook.svg" alt="facebook"
+            /></a>
+            <a href="#"
+              ><img src="assets/Icons/instagram.svg" alt="instagram"
+            /></a>
+            <a href="#"><img src="assets/Icons/twitter.svg" alt="twitter" /></a>
+            <a href="#"><img src="assets/Icons/linkdn.svg" alt="linkdn" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
