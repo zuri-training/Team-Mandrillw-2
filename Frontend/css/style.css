@@ -327,7 +327,7 @@ h6 {
 @media (min-width: 62em) {
   .container {
     margin-inline: auto;
-    width: min(60% - 4.2rem, 83.5rem);
+    width: min(85% - 4.2rem, 83.5rem);
   }
 }
 
@@ -343,7 +343,28 @@ h6 {
   }
 }
 
+
+.container--terms-and-cond {
+  margin-inline: auto;
+  width: min(100% - 2.2rem, 90rem);
+}
+
+@media (min-width: 62em) {
+  .container--terms-and-cond {
+    margin-inline: auto;
+    width: min(100% - 4.2rem, 90rem);
+  }
+}
+/* PRimary buttons styyles */
 .primary-button {
+  background-color: var(--clr-primary-400);
+  color: var(--gray-100);
+  padding: 1em;
+  border-radius: 0.625rem;
+  border: none;
+}
+
+.primary-button:any-link {
   background-color: var(--clr-primary-400);
   color: var(--gray-100);
   padding: 1em;
@@ -364,11 +385,16 @@ h6 {
   background-color: var(--clr-primary-900);
 }
 
-/* .primary-button--disabled {
-background-color: var(--clr-disabled);
-pointer-events: none;
-} */
+.primary-button--disabled {
+  background-color: var(--clr-disabled);
+  pointer-events: none;
+}
 
+.active-btn + .primary-button {
+  pointer-events: auto;
+  background-color: var(--clr-primary-400);
+}
+/* Text button styles */
 .txt-btn:any-link {
   font-weight: 400;
   color: var(--clr-primary-400);
@@ -381,6 +407,104 @@ pointer-events: none;
 }
 .txt-btn:active {
   color: var(--clr-primary-600);
+}
+.txt-btn--gray:any-link {
+  font-weight: 400;
+  color: var(--gray-1000);
+  display: inline-block;
+}
+
+.txt-btn--gray:hover,
+.txt-btn--gray:focus {
+  color: var(--clr-primary-900);
+}
+.txt-btn--gray:active {
+  color: var(--clr-primary-600);
+}
+
+/* SMall primary button */
+
+.primary-button--small {
+  background-color: var(--clr-primary-400);
+  color: var(--gray-100);
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.primary-button--small:any-link {
+  background-color: var(--clr-primary-400);
+  color: var(--gray-100);
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.primary-button--small:hover,
+.primary-button--small:focus {
+  background-color: var(--clr-primary-600);
+
+  box-shadow: var(--shadow-5);
+  cursor: pointer;
+  transition: all 300ms var(--easeInOutCubic);
+}
+
+.primary-button--small:active {
+  background-color: var(--clr-primary-900);
+}
+
+.primary-button--small--disabled {
+  background-color: var(--clr-disabled);
+  pointer-events: none;
+}
+
+.active-btn + .primary-button--small {
+  pointer-events: auto;
+  background-color: var(--clr-primary-400);
+}
+
+/* SMall Outlined BUttons */
+
+.outlined-button--small {
+  background-color: transparent;
+  color: var(--clr-secondary-900);
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  border: 0.125rem solid var(--clr-secondary-400);
+}
+
+.outlined-button--small:any-link {
+  background-color: transparent;
+  color: var(--clr-secondary-900);
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  border: 0.125rem solid var(--clr-secondary-400);
+}
+
+.outlined-button--small:hover,
+.outlined-button--small:focus {
+  border: 0.125rem solid var(--clr-primary-500);
+  color: var(--clr-primary-700);
+  cursor: pointer;
+  transition: all 300ms var(--easeInOutCubic);
+}
+
+.outlined-button--small:active {
+  border: 0.125rem solid var(--clr-primary-1000);
+  color: var(--clr-primary-1000);
+}
+
+.outlined-button--small--disabled {
+  border: 0.125rem solid var(--clr-disabled);
+  color: var(--gray-1000);
+
+  pointer-events: none;
+}
+
+.active-btn + .outlined-button--small {
+  pointer-events: auto;
+  border: 0.125rem solid var(--clr-secondary-400);
+  color: var(--clr-secondary-400);
 }
 
 .no-wrap {
