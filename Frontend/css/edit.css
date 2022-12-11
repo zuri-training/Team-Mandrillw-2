@@ -1,0 +1,59 @@
+@import "style.css";
+
+/* STyles for the main EXcel comp  */
+body {
+  background-color: var(--clr-gray-100);
+}
+/* HEader styles */
+.header {
+  background-color: var(--clr-primary-100);
+
+}
+.logo {
+  max-height: 2rem;
+}
+.header__profile-section {
+  display: flex;
+gap: 1.25rem;
+align-items: center;
+}
+.avatar > svg {
+  height: 4rem;
+  width: 4rem;
+  fill: var(--gray-1100);
+  }
+.avatar--my-profile > svg {
+  height: 8rem;
+  width: 8rem;
+  fill: var(--gray-1100);
+  }
+.avatar {
+  border-radius: 50%;
+background-color: var(--gray-100);
+width: fit-content;
+}
+.header__profile-section-text-container {
+  order: -1;
+  text-align: right;
+}
+.profile-name {
+font-size: var(--fs-1);
+color: var(--clr-primary-700);
+font-weight: 600;
+
+}
+
+.header-nav__wrapper {
+  background-color: var(--clr-primary-100);
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+  gap: 1rem;
+}
+
+/* End of HEader styles */
