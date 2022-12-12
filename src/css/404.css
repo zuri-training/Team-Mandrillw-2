@@ -1,0 +1,32 @@
+@import "style.css";
+
+/* Terms and conditions STyles */
+.header {
+  position: sticky;
+  top: 0;
+}
+.logo {
+  max-height: 2rem;
+}
+
+.header-nav__wrapper {
+  background-color: var(--clr-primary-100);
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+  gap: 1rem;
+}
+
+.error-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-text{
+
+}

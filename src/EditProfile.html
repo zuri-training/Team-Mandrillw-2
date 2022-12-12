@@ -8,66 +8,16 @@
     <title>Edit Profile</title>
 </head>
 <body>
-    <form action="" class="sign-up-form">
-        <!-- Sign Up Form Names-->
-        <div class="sign-up-form__input">
-          <label> First Name </label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            placeholder="John"
-            required
-            autofocus
-          />
-        </div>
+  <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-        <div class="sign-up-form__input">
-          <label> Last Name </label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            placeholder="Doe"
-            required
-          />
-        </div>
-        <!-- End of Sign Up Form Names -->
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
-        <!-- Sign Up Form Email  -->
-        <div class="sign-up-form__input">
-          <label> Email Address </label>
-          <input
-            type="email"
-            pattern="[a-zA-Z0-9._+-?^%]+@[a-zA-Z0-9._+-]+\.[a-z]{2,}"
-            id="email"
-            name="email"
-            placeholder="maria.ishimwe@gmail.com"
-            required
-          />
-        </div>
-
-        <!-- End of Sign Up Form Email -->
-
-        <!-- Sign Up Form Password -->
-        <div class="sign-up-form__input">
-          <label> Password </label>
-          <input
-            class="sign-in-form__input--pasword"
-            type="password"
-            title="Must be at least 6 characters"
-            pattern="[a-zA-Z0-9]{6,}"
-            id="password"
-            name="password"
-            placeholder="Enter Password"
-            required
-          />
-          <p class="password-hint">Must be at least 6 characters long</p>
-        </div>
-
-        <button type="submit" class="sign-up-form__button primary-button">
-          Sign Up
-        </button>
-    </form>
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+  
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
 </body>
 </html>
