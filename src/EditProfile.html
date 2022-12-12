@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/EditProfile.css">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <form action="" class="sign-in-form">
+        <!-- Sign In Form Email  -->
+        <div class="sign-in-form__input">
+          <label> Email Address </label>
+          <input
+            type="email"
+            pattern="[a-zA-Z0-9._+-?^%]+@[a-zA-Z0-9._+-]+\.[a-z]{2,}"
+            id="email"
+            name="email"
+            placeholder="maria.ishimwe@gmail.com"
+            required
+            autofocus
+          />
+        </div>
+
+        <!-- End of Sign In Form Email -->
+
+        <!-- Sign In Form Password -->
+        <div class="sign-in-form__input">
+          <label> Password </label>
+          <input
+            class="sign-in-form__input--pasword"
+            type="password"
+            title="Must be at least 6 characters"
+            pattern="[a-zA-Z0-9]{6,}"
+            id="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+          />
+          <p class="password-hint">Must be at least 6 characters long</p>
+          <a href="password-forgot.html" class="forgot-password txt-btn"
+            >Forgot your Password?</a
+          >
+        </div>
+
+        <button type="submit" class="sign-in-form__button primary-button">
+          Sign In
+        </button>
+    </form>    
+    
+</body>
+</html>
