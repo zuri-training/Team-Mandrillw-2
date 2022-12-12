@@ -57,3 +57,44 @@ font-weight: 600;
 }
 
 /* End of HEader styles */
+
+/* PRofile styles */
+.my-profile__title {
+  font-size: var(--fs-5);
+  font-weight: 500;
+  /* text-align: center; */
+  margin-block:  3.25rem;
+
+}
+
+.my-profile__card {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border: .125rem solid var(--clr-primary-900);
+  box-shadow: var(--shadow-1);
+  border-radius: 1.5rem;
+  padding: 3rem 1rem;
+place-items: center;
+}
+.my-profile__text-title {
+  font-size: calc(var(--fs-1) * 1.2);
+
+}
+.my-profile__text-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-block-end:1rem;
+font-size: var(--fs-1);
+}
+.my-profile__btn 
+{
+  background-color: transparent;
+  border: none;
+  cursor: pointer ;
+margin-block-start: 1.5rem;
+}
+.my-profile__btn-container {
+  text-align: center;
+}
+/* PRofile styles */
