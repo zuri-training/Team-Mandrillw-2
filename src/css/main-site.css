@@ -73,8 +73,90 @@ font-weight: 600;
   max-width: 58ch;
 }
 .file-upload__section {
-  min-height: 37.5rem;
+  margin-block: 6rem;
+  /* min-height: 37.5rem; */
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 4rem;
 }
+.file-upload__name-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+}
+.file-upload__name {
+  font-size: calc(var(--fs-2) / 1.1);
+  font-weight: 600;
+
+}
+.file-upload__form {
+position: relative;
+
+}
+.file-upload__label-wrapper {
+  margin-block-start: 2rem;
+  background-color: var(--gray-100);
+  padding: 4rem 2rem;
+  border: .1875rem dashed var(--clr-primary-300);
+  border-radius: 1.5rem;
+  /* display: flex; */
+}
+.file-upload__cancel {
+  position: absolute;
+  top: .5rem;
+  right: 0.5rem;
+  background-color: transparent;
+  border: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+.active-btn + .file-upload__cancel {
+  visibility: visible;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.file-upload__icon-container {
+  margin-inline: auto;
+  width: fit-content;
+  text-align: center;
+  pointer-events: none;
+
+}
+.file-upload__label {
+  /* height: 100px; */
+  display: block;
+  /* background-color: red; */
+  cursor: pointer;
+  /* color: transparent; */
+}
+.file-upload__label > input {
+  /* display: none; */
+}
+.file-upload__icon {
+  border-radius: 50%;
+  background-color: white;
+  width: fit-content;
+  margin-block-end: 1.25rem;
+  
+
+}
+.file-upload__icon > svg {
+width: 12rem;
+height: 12rem;
+}
+
+.file-upload__icon-text {
+font-size: var(--fs-1);
+}
+.file-upload__submit {
+  margin-block: 2rem;
+  display: block;
+  margin-inline: auto;
+  width: 25%;
+
+}
+
 /* ENd of FIle upload works section */
 
 /* HOw it works section */
@@ -141,6 +223,8 @@ font-weight: 600;
   grid-template-columns: repeat(4, 1fr);
   place-content: center;
   place-items: center;
+  align-items: start;
+
 }
 
 .footer__bottom {
@@ -159,3 +243,15 @@ font-weight: 600;
 }
 /* End of footer */
 /* End of STyles for the main EXcel comp  */
+
+
+
+
+
+
+
+
+
+.test-div {
+  background-color: white;
+}
