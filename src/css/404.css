@@ -28,5 +28,35 @@
     align-items: center;
 }
 .error-text{
+    font-family: Georgia;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    color: #47474A;
+
+}
+.error-paragraph{
+    font-family: Space Grotesk;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    color: #47474A;
+    
+}
+.error-button{
+    border-radius: 8px;
+    padding: 15px 90px 15px 90px;
+    border: none;
+    background-color:#86BA94;
+  
+    
+
+}
+.button-main{
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
 
 }
