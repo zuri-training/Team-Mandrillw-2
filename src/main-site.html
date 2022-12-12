@@ -24,7 +24,8 @@
       href="assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <script src="js/main.js" defer></script>
+    <!-- <script src="js/main.js" defer></script> -->
+    <script src="js/file-upload.js" defer></script>
 
     <title>Excel Comp</title>
   </head>
@@ -76,10 +77,11 @@
           <div class="file-upload__component">
             <div class="file-upload__name-container">
               <img src="assets/Icons/add-file.svg" alt="" />
-              <h3 class="file-upload__name" id="fileName">File Name</h3>
+              <h3 class="file-upload__name change_name" id="fileName">File Name</h3>
             </div>
 
             <form class="file-upload__form">
+
               <div class="file-upload__label-wrapper">
                 <label for="file-upload-input" class="file-upload__label">
                   <figure class="file-upload__icon-container">
@@ -97,28 +99,29 @@
                         />
                       </svg>
                     </div>
-                    <figcaption class="file-upload__icon-text" id="fileName">
+                    <figcaption class="file-upload__icon-text change_name" id="fileName">
                       Choose Files
                     </figcaption>
                   </figure>
-
                   <input
                     type="file"
-                    class="file-upload__input input-field"
+                    class="file-upload__input input-field inputfile"
                     id="inpFile"
                     multiple
+                    data-multiple-caption="{count} files selected"
                   />
-                </label>
-              </div>
-              <button class="file-upload__cancel" type="reset">
-                <img src="assets/Icons/iconoir_cancel.svg" alt="" />
-              </button>
-
-              <button
+                 
+                  </label>
+                </div>
+                <button class="file-upload__cancel" type="reset">
+                  <img src="assets/Icons/iconoir_cancel.svg" alt="" />
+                </button>
+                
+                <button
                 class="file-upload__submit primary-button"
                 id="btnUpload"
                 type="submit"
-              >
+                >
                 Compare
               </button>
             </form>
@@ -367,19 +370,7 @@
       </div>
     </footer>
 
-    <script>
-      //  Fucntion to upload 2 files
-      const inpFile = document.getElementById("inpFile");
-      const btnUpload = document.getElementById("btnUpload");
-
-      btnUpload.addEventListener("click", function () {
-        const formData = new FormData();
-
-        console.log(inpFile.files);
-      });
-
-      // End of Fucntion to  upload 2 files
-    </script>
+  
   </body>
 </html>
 
