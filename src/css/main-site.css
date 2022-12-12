@@ -11,28 +11,27 @@ body {
 }
 .header__profile-section {
   display: flex;
-gap: 1.25rem;
-align-items: center;
+  gap: 1.25rem;
+  align-items: center;
 }
 .avatar > svg {
   height: 4rem;
   width: 4rem;
   fill: var(--gray-1100);
-  }
+}
 .avatar {
   border-radius: 50%;
-background-color: var(--gray-100);
-width: fit-content;
+  background-color: var(--gray-100);
+  width: fit-content;
 }
 .header__profile-section-text-container {
   order: -1;
   text-align: right;
 }
 .profile-name {
-font-size: var(--fs-1);
-color: var(--clr-primary-700);
-font-weight: 600;
-
+  font-size: var(--fs-1);
+  color: var(--clr-primary-700);
+  font-weight: 600;
 }
 
 .header-nav__wrapper {
@@ -80,31 +79,32 @@ font-weight: 600;
   gap: 4rem;
 }
 .file-upload__name-container {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 .file-upload__name {
   font-size: calc(var(--fs-2) / 1.1);
   font-weight: 600;
-
 }
 .file-upload__form {
-position: relative;
-
+  position: relative;
 }
 .file-upload__label-wrapper {
   margin-block-start: 2rem;
   background-color: var(--gray-100);
   padding: 4rem 2rem;
-  border: .1875rem dashed var(--clr-primary-300);
+  border: 0.1875rem dashed var(--clr-primary-300);
   border-radius: 1.5rem;
+  /* background-color: rgba(255, 255, 255, 0.167); */
   /* display: flex; */
+  /* pointer-events: none; */
+  /* position: relative; */
 }
 .file-upload__cancel {
   position: absolute;
-  top: .5rem;
+  top: 0.5rem;
   right: 0.5rem;
   background-color: transparent;
   border: none;
@@ -121,40 +121,56 @@ position: relative;
   width: fit-content;
   text-align: center;
   pointer-events: none;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* grid-column: 1 / -1; */
 }
 .file-upload__label {
   /* height: 100px; */
-  display: block;
+  position: relative;
+  display: grid;
   /* background-color: red; */
   cursor: pointer;
   /* color: transparent; */
 }
-.file-upload__label > input {
-  /* display: none; */
-}
+/* .file-upload__label > * {
+  grid-column: 1 / -1;
+  place-items: center;
+} */
+
 .file-upload__icon {
   border-radius: 50%;
   background-color: white;
   width: fit-content;
   margin-block-end: 1.25rem;
-  
-
 }
 .file-upload__icon > svg {
-width: 12rem;
-height: 12rem;
+  width: 12rem;
+  height: 12rem;
 }
 
 .file-upload__icon-text {
-font-size: var(--fs-1);
+  font-size: var(--fs-1);
 }
 .file-upload__submit {
   margin-block: 2rem;
   display: block;
   margin-inline: auto;
   width: 25%;
+}
+.file-upload__input {
+  background: #000;
+  display: block;
+  /* height: 100%; */
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
 
+  /* grid-column: 1 / -1; */
+  /* z-index: -1; */
 }
 
 /* ENd of FIle upload works section */
@@ -224,7 +240,6 @@ font-size: var(--fs-1);
   place-content: center;
   place-items: center;
   align-items: start;
-
 }
 
 .footer__bottom {
@@ -235,22 +250,13 @@ font-size: var(--fs-1);
 .footer__socials {
   display: flex;
   gap: 1.5rem;
-
 }
 
 .footer__socials > *:hover {
-   filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 /* End of footer */
 /* End of STyles for the main EXcel comp  */
-
-
-
-
-
-
-
-
 
 .test-div {
   background-color: white;

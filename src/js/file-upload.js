@@ -1,4 +1,70 @@
+// Get the input element for file upload
+const input = document.querySelector('input[type="file"]');
 
+// Listen for the change event on the input element
+input.addEventListener("change", () => {
+  // Get the name of the uploaded file
+  const fileName = input.files[0].name;
+
+  // Get all of the elements with the "change_namr" class on the page
+  const pElements = document.querySelectorAll(".change_name");
+
+  // Loop through each element and update the text to the file name
+  pElements.forEach((p) => {
+    p.textContent = fileName;
+  });
+});
+
+
+// Get the input element for file upload
+// const input = document.querySelector('input[type="file"]');
+
+// Set the "accept" and "max" attributes to limit the user's file selection
+input.setAttribute("accept", "*");
+input.setAttribute("max", 2);
+
+// Listen for the change event on the input element
+input.addEventListener("change", () => {
+  // Get the selected files
+  const files = input.files;
+
+  // Check if two files were selected
+  if (files.length === 2) {
+    // Do something with the two selected files
+    // ...
+    console.log(input.files[0].name);
+  }
+});
+
+
+
+
+
+// // Get the file input element and the p element
+// const fileInput = document.querySelector('input[type="file"]');
+// const pElement = document.querySelector('p');
+
+// // Add an event listener to the file input element that listens for when a file is selected
+// fileInput.addEventListener('change', () => {
+//   // Get the file that was selected
+//   const file = fileInput.files[0];
+
+//   // Use the innerHTML property to change the text of the p element to the name of the file
+//   pElement.innerHTML = file.name;
+// });
+// You can also use this approach to change the text of any other element on the page, not just a p element.
+
+//  Fucntion to upload 2 files
+// const inpFile = document.getElementById("inpFile");
+// const btnUpload = document.getElementById("btnUpload");
+
+// btnUpload.addEventListener("click", function () {
+//   const formData = new FormData();
+
+//   console.log(inpFile.files);
+// });
+
+// End of Fucntion to  upload 2 files
 
 // Fucntion to change names when files are uploaded
 
@@ -18,8 +84,6 @@
 // });
 
 // End of Fucntion to change names when files are uploaded
-
-
 
 // // Function to enable and disable a button
 
