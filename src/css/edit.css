@@ -76,6 +76,12 @@ font-weight: 600;
   padding: 3rem 1rem;
 place-items: center;
 }
+.my-profile__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .my-profile__text-title {
   font-size: calc(var(--fs-1) * 1.2);
 
@@ -85,7 +91,7 @@ place-items: center;
   gap: 1rem;
   align-items: center;
   margin-block-end:1rem;
-font-size: var(--fs-1);
+font-size: calc(var(--fs-1) / 1.1);
 }
 .my-profile__btn 
 {
@@ -98,3 +104,37 @@ margin-block-start: 1.5rem;
   text-align: center;
 }
 /* PRofile styles */
+
+/* footer */
+.footer {
+  padding-block: 4rem;
+}
+.footer__nav-title {
+  font-size: calc(var(--fs-1) / 1.1);
+  font-weight: 600;
+  margin-block-end: 1rem;
+}
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  place-items: center;
+  align-items: start;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 2.5rem;
+}
+.footer__socials {
+  display: flex;
+  gap: 1.5rem;
+
+}
+
+.footer__socials > *:hover {
+   filter: grayscale(100%);
+}
+
+/* End of footer */
