@@ -1,0 +1,96 @@
+@import "style.css";
+
+/* Terms and conditions STyles */
+.header {
+  position: sticky;
+  top: 0;
+}
+.logo {
+  max-height: 2rem;
+}
+
+.header-nav__wrapper {
+  background-color: var(--clr-primary-100);
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+  gap: 1rem;
+}
+
+.about-us{  
+  font-family: Georgia;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+  padding-top: 72px;
+  color: #2A2A2A;
+}
+
+.background-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+
+
+
+
+
+
+.terms-footer__wrapper {
+  min-height: 17.5rem;
+  background-color: var(--clr-primary-100);
+  margin-block-start: 5rem;
+}
+.terms-footer {
+  display: grid;
+  min-height: 17.5rem;
+  padding-block-start: 3rem;
+}
+.terms-footer__top {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 2rem;
+}
+.logo--footer {
+  place-self: start;
+}
+.footer-nav__list {
+  display: flex;
+  gap: 2.5rem;
+}
+.footer-nav__link:any-link {
+  font-weight: 700;
+  font-size: var(--fs-1);
+}
+.terms-footer__bottom {
+  border-top: 0.0625rem solid var(--clr-primary-300);
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+
+  color: var(--clr-primary-900);
+}
+.terms-footer__bottom-left {
+  display: flex;
+  gap: 0.75rem;
+}
+.terms-footer__bottom-left > * {
+  height: fit-content;
+}
+.terms-footer__bottom-left > *:last-child {
+  border-left: 0.1rem solid var(--clr-primary-1000);
+
+  padding-inline-start: 0.75rem;
+}
+/* ENd of Footer 

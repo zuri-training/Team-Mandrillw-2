@@ -1,45 +1,40 @@
 @import "style.css";
 
+/* TODO: Change all px to rems*/
+/* TODO: MAke font sizes responsive*/
+/* TODO: Fix hero image*/
+/* TODO: Fix additional features icons and font size*/
 
-  
-.nex-sec{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 30px;
-    background-color: var(--clr-primary-100);
-    position: fixed;
-    top: 0; 
-    width: 100%; 
+/* HEader and navbar styles */
+.header__wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
-.nex-list{
+  
+.header{
     display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    background-color: var(--clr-primary-100);
+}
+
+.header__nav-list{
+    display: flex;
+    justify-content: space-evenly;
+    width: 33%;
+    
     
 }
-.nex_color{
-    padding-left: 60px;
-    color: var(--gray-1200);
-}
 
-.nex_button1{
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid #cdcf65;
-    background-color: var(--clr-primary-100);
-    color: var(--clr-secondary-900);
-
+.txt-btn--gray--darker:any-link {
+color: var(--gray-1100);
 }
-.nex_button2{
-    padding: 8px 16px;
-    border-radius: 8px;
-    margin-left: 16px;
-    background-color: var( --clr-primary-400);
-    border: none;
+.cta-section {
+    display: flex;
+    gap: 1rem;
 }
-
 
 .nex_1{
   font-size: 64px;
@@ -77,20 +72,90 @@
 
 
 }
-.my-main{
-    background-color: var(--clr-primary-100);
-    display: flex;
-    justify-content: space-around  ;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.button-div{
-    margin-left: 60px;
-}
 
+/* End of HEader and navbar styles */
+/*  HEro section styles */
+
+.hero__wrapper{
+    background-color: var(--clr-primary-100);
+    padding-block: 3rem 5rem;
+}
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+.hero__text-container {
+    flex: 1;
+}
+/* End of HEro section styles */
+
+/* HOw it works section */
+.how-it-works__wrapper {
+    background-color: var(--gray-100);
+    border-radius: 3.125rem 3.125rem 0 0;
+    padding-block: 3rem 6rem;
+  }
+  .how-it-works__title {
+    font-size: calc(var(--fs-4) / 1.1);
+    font-weight: 600;
+    margin-block-end: 4rem;
+    text-align: center;
+  }
+  .how-it-works__card {
+    display: flex;
+    gap: 1.5rem;
+  
+    /* margin-inline: auto;
+     margin-block-end: 2rem;
+     width: fit-content; */
+  }
+  .how-it-works__card-container {
+    display: grid;
+    gap: 2rem;
+    width: fit-content;
+    margin-inline: auto;
+  }
+  .how-it-works__icon-container {
+    background-color: var(--clr-primary-700);
+    border-radius: 0.625rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .how-it-works__card-text-container {
+    max-width: 70ch;
+  }
+  .how-it-works__card-title {
+    font-size: var(--fs-2);
+    margin-block-end: 0.75rem;
+    font-weight: 600;
+  }
+  .how-it-works__illustration {
+    position: absolute;
+    transform: translate(42rem, -17rem);
+    max-width: 30%;
+  }
+  /* ENd of HOw it works section */
+
+.button-div{
+   display: flex;
+   gap: 2rem;
+   align-items: center;
+   width: 60%;
+   margin-inline: auto;
+   
+}
+.button-div > * {
+    width: 50%;
+    text-align: center;
+}
 .sec-zero{
     background-color: var(--gray-100);
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 3.125rem 50px 0px 0px;
 }
 .hill-header{
     font-family: var(--ff-heading);
@@ -109,13 +174,6 @@
     line-height: 40px;
 }
 
-.upload-style{
-    width: 48px;
-    height: 48px;
-    display: flex;
-    border-radius: 8px;
-    background-color: var(--clr-primary-700);
-}
 .upload-para{    
     font-family: Space Grotesk;
     font-size: 24px;
@@ -141,6 +199,7 @@
 }
 .new-section{
     background-color: #86BA94;
+    padding-block: 4rem 8rem;
 }
 .section-3{
     color: var(--gray-100);
@@ -149,7 +208,7 @@
     font-weight: 700;
     line-height: 40px;
     text-align: center;
-    padding-top: 40px;
+    
 
 }
 .text-offer{
@@ -158,8 +217,112 @@
     font-weight: 700;
     line-height: 48px;
     color: var(--gray-100);
+    text-align: center;
+}
+.offer-page{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 69px;
+    flex-wrap: wrap;
+}
+
+.section_4{
+    padding-top: 30px;
+    background-color: var(--clr-primary-100);
+}
+.section-4{
+    display: flex;
+    margin: 60px;
+}
+
+.text{
+    margin-left: 20px;
+    margin-top: -15px;
+    
+}
+
+.Additional-Features{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;    
+}
+.section_5{
+    background-color: var(  --clr-primary-1000);
+    padding-block: 3rem; 
+}
+.section-5{
+    font-family: Georgia;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    color: var(--gray-100);
+    
+}
+.get-started{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+.get_button{
+    height: 48px;
+    width: 247px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--clr-secondary-main);
+    box-shadow: 0px 1px 5px rgba(0, 36, 106, 0.05);
+}
+
+.section_6{
+    background-color: var(--clr-primary-100);
 
 }
+
+/* footer */
+.footer {
+    padding-block: 4rem;
+  }
+  .footer__nav-title {
+    font-size: calc(var(--fs-1) / 1.1);
+    font-weight: 600;
+    margin-block-end: 1rem;
+  }
+  .footer__nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+    place-items: center;
+    align-items: start;
+  }
+  
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 2.5rem;
+  }
+  .footer__socials {
+    display: flex;
+    gap: 1.5rem;
+  
+  }
+  
+  .footer__socials > *:hover {
+     filter: grayscale(100%);
+  }
+  /* End of footer */
+
+/*.section{
+    background-color: #fff;
+    height: 533px;
+    width: 1296px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
+
+}*/
 
 /*@media screen and (max-width: 760px) {
     .sec-zero{

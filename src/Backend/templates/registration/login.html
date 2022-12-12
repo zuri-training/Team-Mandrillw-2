@@ -34,6 +34,7 @@
     <title>Sign In</title>
   </head>
 
+
   <body class="sign-in__bg">
     <!-- SIgn In Page -->
 
@@ -80,6 +81,10 @@
         <p>Or</p>
         <!-- TODO: Add an "action" and "method" to ther form when the backend people do their thing -->
         <!-- SIgn In Form -->
+
+          {% for message in messages %}
+          <h1> {{ message }} </h1>
+          {% endfor %}
         <form method="POST" action="{% url 'login' %}" class="sign-in-form">
           {% csrf_token %}
          

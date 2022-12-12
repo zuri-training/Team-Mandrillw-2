@@ -4,8 +4,32 @@ from django.contrib import auth, messages
 
 
 
-def Landing_page(request):
-    return render(request, 'landingpage.html')
+def index(request):
+    return render(request, 'index.html')
+
+def edit(request):
+    return render(request, 'edit.html')
+
+def About(request):
+    return render(request, 'About_us.html')
+
+
+
+def Contact(request):
+    return render(request, 'Contact_us.html')
+
+def terms(request):
+    return render(request, 'terms.html')
+
+def faq(request):
+    return render(request, 'faq.html')
+
+
+def Compare(request):
+    return render(request, 'main_site.html')
+
+def privacy(request):
+    return render(request, 'privacy.html' )
 
 
 def Signup(request):
@@ -29,7 +53,8 @@ def Signup(request):
             else:
                 user = User.objects.create_user(first_name=firstname, last_name=lastName, email=email, username=username, password=password) 
                 user.save()
-                return redirect("/")
+                messages.info(request, "Account Created Succesfully! ")
+                return redirect("login")
                 
         else:
             messages.info(request, "Password Don't Match")

@@ -2,6 +2,13 @@ from django.urls import path
 from . import views 
 
 urlpatterns = [
-    path("", views.Landing_page, name="landing_page"), 
-    path('accounts/signup/', views.Signup, name="signup")
+    path("", views.index, name="index"), 
+    path('accounts/signup/', views.Signup, name="signup"),
+    path("about/", views.About, name="about_us"),
+    path("contact/", views.Contact, name="contact_us"),
+    path("faq/", views.faq, name="faq"),
+    path("file/compare/", views.Compare, name="compare"),
+    path("privacy/", views.privacy, name="privacy"),
+    path("terms/", views.terms, name="terms"),
+    path("accounts/profile/edit", views.edit, name="edit"),
 ]
