@@ -1,0 +1,42 @@
+@import "style.css";
+
+sign-up-form {
+  margin-block-start: 1rem;
+  width: 100%;
+}
+.sign-up-form > * {
+  width: 90%;
+  margin-inline: auto;
+}
+.sign-up-form__input {
+  margin-block-end: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.sign-up-form__input > input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.625rem;
+  height: 3rem;
+  border: 0.1rem solid var(--gray-800);
+  /* Note: Gray 300 won't work because of the background */
+  margin-block-start: 0.5rem;
+}
+.sign-up-form__input > input:focus {
+  outline: none;
+}
+
+.sign-up-form__input > input:focus-within {
+  animation: form-input-focus 600ms linear normal forwards;
+}
+.sign-in-form__input--pasword:invalid:focus-within + .password-hint {
+  display: block;
+  font-size: calc(var(--fs--1) / 1.1);color: #B00E0E;margin-block-start: .5rem;
+  }
+
+.sign-up-form__button {
+  display: block;
+  margin-block: 2.25rem 1rem;
+}
+.password-hint {
+  display: none;
+}
