@@ -8,9 +8,34 @@
     <title>Edit Profile</title>
 </head>
 <body>
-    <form action="" class="sign-in-form">
-        <!-- Sign In Form Email  -->
-        <div class="sign-in-form__input">
+    <form action="" class="sign-up-form">
+        <!-- Sign Up Form Names-->
+        <div class="sign-up-form__input">
+          <label> First Name </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="John"
+            required
+            autofocus
+          />
+        </div>
+
+        <div class="sign-up-form__input">
+          <label> Last Name </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Doe"
+            required
+          />
+        </div>
+        <!-- End of Sign Up Form Names -->
+
+        <!-- Sign Up Form Email  -->
+        <div class="sign-up-form__input">
           <label> Email Address </label>
           <input
             type="email"
@@ -19,14 +44,13 @@
             name="email"
             placeholder="maria.ishimwe@gmail.com"
             required
-            autofocus
           />
         </div>
 
-        <!-- End of Sign In Form Email -->
+        <!-- End of Sign Up Form Email -->
 
-        <!-- Sign In Form Password -->
-        <div class="sign-in-form__input">
+        <!-- Sign Up Form Password -->
+        <div class="sign-up-form__input">
           <label> Password </label>
           <input
             class="sign-in-form__input--pasword"
@@ -39,15 +63,11 @@
             required
           />
           <p class="password-hint">Must be at least 6 characters long</p>
-          <a href="password-forgot.html" class="forgot-password txt-btn"
-            >Forgot your Password?</a
-          >
         </div>
 
-        <button type="submit" class="sign-in-form__button primary-button">
-          Sign In
+        <button type="submit" class="sign-up-form__button primary-button">
+          Sign Up
         </button>
-    </form>    
-    
+    </form>
 </body>
 </html>
