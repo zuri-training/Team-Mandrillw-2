@@ -294,6 +294,7 @@ color: var(--gray-1100);
     grid-template-columns: repeat(4, 1fr);
     place-content: center;
     place-items: center;
+    align-items: start;
   }
   
   .footer__bottom {

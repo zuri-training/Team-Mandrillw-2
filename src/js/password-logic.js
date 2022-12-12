@@ -22,6 +22,9 @@ const parent = element.parentElement;
 // Get a reference to the parent of the parent element
 const grandparent = parent.parentElement;
 
+// Get a reference to the parent of the parent of the parent element
+const greatgrandparent = grandparent.parentElement;
+
 // Select the input and button elements
 const input = document.querySelector(".input-field");
 const button = document.querySelector("#submit");

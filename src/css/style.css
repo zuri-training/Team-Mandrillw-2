@@ -344,15 +344,15 @@ h6 {
 }
 
 
-.container--terms-and-cond {
+.container--main-site {
   margin-inline: auto;
   width: min(100% - 2.2rem, 90rem);
 }
 
 @media (min-width: 62em) {
-  .container--terms-and-cond {
+  .container--main-site {
     margin-inline: auto;
-    width: min(100% - 4.2rem, 90rem);
+    width: min(90% - 4.2rem, 90rem);
   }
 }
 /* PRimary buttons styyles */
