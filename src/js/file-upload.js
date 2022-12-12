@@ -1,44 +1,70 @@
-// Get the input element for file upload
 const input = document.querySelector('input[type="file"]');
 
-// Listen for the change event on the input element
-input.addEventListener("change", () => {
-  // Get the name of the uploaded file
-  const fileName = input.files[0].name;
+const pElements = document.querySelectorAll(".change_name");
 
-  // Get all of the elements with the "change_namr" class on the page
-  const pElements = document.querySelectorAll(".change_name");
+// Change name to the name of the uploaded files
 
-  // Loop through each element and update the text to the file name
-  pElements.forEach((p) => {
-    p.textContent = fileName;
+document.querySelectorAll(".change_name").forEach(function (element) {
+
+  input.addEventListener("change", function () {
+    let file1 = input.files[0];
+    let file2 = input.files[1];
+
+    element.textContent = file1.name + "and " + file2.name;
   });
 });
 
 
-// Get the input element for file upload
-// const input = document.querySelector('input[type="file"]');
 
-// Set the "accept" and "max" attributes to limit the user's file selection
-input.setAttribute("accept", "*");
-input.setAttribute("max", 2);
-
-// Listen for the change event on the input element
-input.addEventListener("change", () => {
-  // Get the selected files
-  const files = input.files;
-
-  // Check if two files were selected
-  if (files.length === 2) {
-    // Do something with the two selected files
-    // ...
-    console.log(input.files[0].name);
-  }
-});
+// pElements.forEach(function(element) {
+//    if (!element.closest('[data-uploader]')) {
+//      element.addEventListener('change', function() {
+//        let file1 = input.files[0];
+//        let file2 = input.files[1];
+//        element.textContent = file1.name + ', ' + file2.name;
+//      });
+//    }
+//  });
 
 
 
 
+
+// // Get the input element for file upload
+
+// // Listen for the change event on the input element
+// input.addEventListener("change", () => {
+//   // Get the name of the uploaded file
+//   const fileName = input.files[0].name;
+
+//   // Get all of the elements with the "change_namr" class on the page
+//   const pElements = document.querySelectorAll(".change_name");
+
+//   // Loop through each element and update the text to the file name
+//   pElements.forEach((p) => {
+//     p.textContent = fileName;
+//   });
+// });
+
+// // Get the input element for file upload
+// // const input = document.querySelector('input[type="file"]');
+
+// // Set the "accept" and "max" attributes to limit the user's file selection
+// input.setAttribute("accept", "*");
+// input.setAttribute("max", 2);
+
+// // Listen for the change event on the input element
+// input.addEventListener("change", () => {
+//   // Get the selected files
+//   const files = input.files;
+
+//   // Check if two files were selected
+//   if (files.length === 2) {
+//     // Do something with the two selected files
+//     // ...
+//     console.log(input.files[0].name);
+//   }
+// });
 
 // // Get the file input element and the p element
 // const fileInput = document.querySelector('input[type="file"]');

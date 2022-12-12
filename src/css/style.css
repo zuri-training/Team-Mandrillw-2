@@ -395,6 +395,11 @@ h6 {
   background-color: var(--clr-primary-400);
 }
 /* Text button styles */
+.txt-btn {
+  font-weight: 400;
+  color: var(--clr-primary-400);
+  display: inline-block;
+}
 .txt-btn:any-link {
   font-weight: 400;
   color: var(--clr-primary-400);
@@ -407,6 +412,11 @@ h6 {
 }
 .txt-btn:active {
   color: var(--clr-primary-600);
+}
+.txt-btn--gray {
+  font-weight: 400;
+  color: var(--gray-1000);
+  display: inline-block;
 }
 .txt-btn--gray:any-link {
   font-weight: 400;
