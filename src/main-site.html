@@ -25,8 +25,8 @@
     />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
     <!-- <script src="js/main.js" defer></script> -->
-    <script src="js/file-upload.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jexcel/1.8.0/js/jexcel.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jexcel/1.8.0/js/jexcel.min.js"></script> -->
+  <!-- <script src="js/test.js" defer></script> -->
     <title>Excel Comp</title>
   </head>
   <body>
@@ -80,7 +80,7 @@
               <h3 class="file-upload__name change_name" id="fileName">File Name</h3>
             </div>
 
-            <form class="file-upload__form">
+            <form class="file-upload__form" id="file-upload__form">
 
               <div class="file-upload__label-wrapper">
                 <label for="file-upload-input" class="file-upload__label">
@@ -108,7 +108,7 @@
                     class="file-upload__input input-field inputfile"
                     id="inpFile"
                     multiple
-                    data-multiple-caption="{count} files selected"
+                    max="2"
                   />
                  
                   </label>
@@ -371,9 +371,50 @@
       </div>
     </footer>
 
-  
+    <script src="../dist/main.js"></script>
+
   </body>
 </html>
+
+
+<!-- const workbook1 = new ExcelJS.Workbook();
+const workbook2 = new ExcelJS.Workbook();
+Use the readFile() method to read the contents of the excel files and load them into the workbook objects:
+Copy code
+workbook1.readFile('file1.xlsx');
+workbook2.readFile('file2.xlsx');
+Use the getWorksheet() method to get the worksheet objects from the workbook objects:
+Copy code
+const worksheet1 = workbook1.getWorksheet(1);
+const worksheet2 = workbook2.getWorksheet(1); 
+for (let row = 1; row <= worksheet1.rowCount; row++) {
+  for (let col = 1; col <= worksheet1.columnCount; col++) {
+    if (worksheet1.getCell(row, col).value !== worksheet2.getCell(row, col).value) {
+      console.log(`Cell ${row},${col} does not match`);
+    }
+  }
+}
+Use the writeFile() method to write the changes made to the workbook objects back to the excel files:
+Copy code
+workbook1.writeFile('file1.xlsx');
+workbook2.writeFile('file2.xlsx');
+-->
+
+<!-- 
+  Import the necessary libraries, such as ExcelJS and FileSaver.js, into your JavaScript code.
+
+Use the FileReader API to read the data from the Excel files that were uploaded by the user.
+
+Use the ExcelJS or SheetJS library to parse the data from the Excel files and store it in variables or arrays.
+
+Compare the data from the two Excel files, using JavaScript comparison operators or other methods.
+
+Generate a new Excel file with the comparison results, using the ExcelJS or SheetJS library.
+
+Use the saveAs function from the FileSaver.js library to download the new Excel file to the user's device. -->
+
+
+
 
 <!-- To upload and display an Excel file using JavaScript, you can use the following steps:
 
