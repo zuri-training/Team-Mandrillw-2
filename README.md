@@ -14,14 +14,13 @@ A platform that helps users compare the content of excel files.
 - To view the mood boards click [here](https://www.figma.com/file/98h7suM7wfURAnfceLHGhP/Moodboards?node-id=0%3A1&t=XU2oA9btKkVKzH67-1)
 - To explore the data schema click [here](https://drawsql.app/teams/biscode/diagrams/zuri-data-schema)
 
-## Features
-
 ## Technologies used
-Design - Figma Python
-Frontend - HTML5 HTML5 CSS3 CSS Javascript Javascript
-Backend - Stack: Python Python
-Framework - Django Django
+- Design - Figma Python
+- Frontend - HTML5 HTML5 CSS3 CSS Javascript Javascript
+- Backend - Stack: Python Python
+- Framework - Django Django
 
+## Features
 
 ### For **Unauthenticated** Users
 They are allowed to:
