@@ -1,33 +1,205 @@
+// const ExcelJS = require('exceljs');
+// import FileSaver from 'file-saver';
+
+// Import the ExcelJS library
+import ExcelJS from "exceljs";
+
 const input = document.querySelector('input[type="file"]');
 
-const pElements = document.querySelectorAll(".change_name");
+// const pnts = document.querySelectorAll(".change_name");
 
 // Change name to the name of the uploaded files
 
 document.querySelectorAll(".change_name").forEach(function (element) {
-
   input.addEventListener("change", function () {
-    let file1 = input.files[0];
-    let file2 = input.files[1];
+    let file_1 = input.files[0];
+    let file_2 = input.files[1];
 
-    element.textContent = file1.name + " and " + file2.name;
+    element.textContent = file_1.name + " and " + file_2.name;
   });
 });
 
 
 
+// Get a reference to the file input element
+
+// Listen for changes to the file input
+input.addEventListener('change', () => {
+  // Get the selected files
+  const files = input.files;
+
+  // Loop through the files and read their data using ExcelJS
+  for (const file of files) {
+
+    if (file !== undefined && file !== null) {
+      const workbook = new ExcelJS.Workbook();
+    workbook.xlsx.readFile(file)
+      .then(() => {
+        // Get the first worksheet in the workbook
+        const worksheet = workbook.getWorksheet(1);
+
+        // Get the cell at the first row and first column
+        const cell = worksheet.getCell('B6');
+
+        // Use the cell object to access the cell's value, data type, and other properties
+        console.log(cell.value);
+        console.log(cell.type);
+      });
+    }
+    
+
+    
+  }
+});
+
+
+
+// const input1 = document.getElementById('input1');
+// const input2 = document.getElementById('input2');
+
+// input1.addEventListener('change', handleFileSelect);
+// input2.addEventListener('change', handleFileSelect);
+
+// function handleFileSelect(event) {
+//   const files = event.target.files;
+
+//   if (files.length) {
+//     // Get the first file in the list
+//     const file = files[0];
+
+//     // Read the file using ExcelJS
+//     const workbook = new ExcelJS.Workbook();
+//     workbook.xlsx.readFile(file)
+//       .then(() => {
+//         // Use the workbook object to read data from the file
+//       });
+//   }
+// }
+
+// input.addEventListener('change', (event) => {
+//   const file = event.target.files[0];
+//   const workbook = new ExcelJS.Workbook();
+
+//   // Read the file data
+//   workbook.xlsx.readFile(file)
+//       .then(() => {
+//           console.log(workbook.xlsx.readFile(file));
+//       });
+
+// });
+
+// document.getElementById('file-upload__form').addEventListener('submit', (event) => {
+//   // Prevent the form from actually submitting
+//   event.preventDefault();
+
+//   // Get the file input element
+//   const fileInput = document.querySelector('input[type="file"]');
+
+//   // Read the file data from the input element
+//   const fileinp = fileInput.files[0];
+
+//   // Create a new workbook
+//   const workbook = new ExcelJS.Workbook();
+
+//   // Read the file data into the workbook object
+//   workbook.xlsx.readFile(fileinp)
+//     .then(() => {
+//       // Use the workbook object to read data from the file
+//       console.log(workbook.xlsx.readFile(fileinp));
+//     });
+// });
+
+// function uploadFile() {
+//   // Prompt the user to select a file
+//   const fileInput = document.createElement('input');
+//   fileInput.type = 'file';
+
+//   // When a file is selected, read the data using the excelJS library
+
+//   // Trigger the file selection prompt
+//   fileInput.click();
+// }
+
+// Excel things
+
+// // Create a new workbook and load the first file
+// const workbook1 = new ExcelJS.Workbook();
+// workbook1.xlsx.readFile(file1)
+//   .then(() => {
+//     // Create a new workbook and load the second file
+//     const workbook2 = new ExcelJS.Workbook();
+//     workbook2.xlsx.readFile(file2)
+//       .then(() => {
+//         // Compare the two files by looping through all of their sheets
+//         // and comparing the values in each cell
+//         workbook1.eachSheet((worksheet1, sheetId) => {
+//           const worksheet2 = workbook2.getWorksheet(sheetId);
+//           worksheet1.eachRow((row1, rowNumber) => {
+//             const row2 = worksheet2.getRow(rowNumber);
+//             row1.eachCell((cell1, colNumber) => {
+//               const cell2 = row2.getCell(colNumber);
+//               if (cell1.value !== cell2.value) {
+//                 console.log(`Values do not match in cell ${colNumber} on row ${rowNumber}`);
+//               }
+//             });
+//           });
+//         });
+//       });
+//   });
+
+// // Read the first Excel file
+// const workbook1 = new ExcelJS.Workbook();
+// workbook1.xlsx.readFile('file1.xlsx')
+//   .then(() => {
+//     // Read the second Excel file
+//     const workbook2 = new ExcelJS.Workbook();
+//     workbook2.xlsx.readFile('file2.xlsx')
+//       .then(() => {
+//         // Compare the data in the two files
+//         const differences = [];
+
+//         workbook1.eachSheet((sheet1, sheetId1) => {
+//           const sheet2 = workbook2.getWorksheet(sheetId1);
+//           sheet1.eachRow((row1, rowNumber) => {
+//             const row2 = sheet2.getRow(rowNumber);
+//             row1.eachCell((cell1, colNumber) => {
+//               const cell2 = row2.getCell(colNumber);
+//               if (cell1.value !== cell2.value) {
+//                 differences.push({
+//                   sheet: sheetId1,
+//                   row: rowNumber,
+//                   column: colNumber,
+//                   value1: cell1.value,
+//                   value2: cell2.value,
+//                 });
+//               }
+//             });
+//           });
+//         });
+
+//         // Create a new workbook with the comparison results
+//         const resultWorkbook = new ExcelJS.Workbook();
+//       //  resultWorkbook.
+
+// const workbook1 = new ExcelJS.Workbook();
+// const workbook2 = new ExcelJS.Workbook();
+
+// workbook1.xlsx.load(file1);
+// workbook2.xlsx.load(file2);
+
+// workbook1.eachSheet(sheet1 => {
+//   // Read the data from the sheet...
+// });
+
+// workbook2.eachSheet(sheet2 => {
+//   // Read the data from the sheet...
+// });
+
 // var iframe = document.createElement('iframe');
 // iframe.src = file1;
 // document.body.appendChild(iframe);
 
-
-
-
-
-
-
-// const workbook1 = new ExcelJS.Workbook();
-// const workbook2 = new ExcelJS.Workbook();
+// Website to upload two excel files compare them and download the result
 
 // workbook1.readFile(file1);
 // workbook2.readFile(file2);
@@ -45,10 +217,9 @@ document.querySelectorAll(".change_name").forEach(function (element) {
 
 // //  workbook1.writeFile('file1.xlsx');
 // //  workbook2.writeFile('file2.xlsx');
- 
+
 // const fileReader1 = new FileAPI.FileReader();
 // const fileReader2 = new FileAPI.FileReader();
-
 
 // fileReader1.onload = function() {
 //    // load the excel file into a workbook object
@@ -60,7 +231,7 @@ document.querySelectorAll(".change_name").forEach(function (element) {
 //      compareWorksheets(worksheet1, worksheet2);
 //    });
 //  }
- 
+
 //  fileReader2.onload = function() {
 //    // load the excel file into a workbook object
 //    const workbook2 = new ExcelJS.Workbook();
@@ -71,11 +242,6 @@ document.querySelectorAll(".change_name").forEach(function (element) {
 //      compareWorksheets(worksheet1, worksheet2);
 //    });
 //  }
-
- 
- 
-
-
 
 // // await workbook1.xlsx.readFile(file1);
 // await workbook2.xlsx.readFile(file2);
@@ -89,7 +255,6 @@ document.querySelectorAll(".change_name").forEach(function (element) {
 //   const worksheet2 = workbook2.getWorksheet(1);
 //   // Do something with the data from worksheet2
 // });
-
 
 // // Create a FileReader object for each file
 // const reader1 = new FileReader();
@@ -126,8 +291,6 @@ document.querySelectorAll(".change_name").forEach(function (element) {
 //   }
 // }
 
-
-
 // pElements.forEach(function(element) {
 //    if (!element.closest('[data-uploader]')) {
 //      element.addEventListener('change', function() {
@@ -137,8 +300,6 @@ document.querySelectorAll(".change_name").forEach(function (element) {
 //      });
 //    }
 //  });
-
-
 
 // // Get the file that was uploaded by the user
 // const excelFile = document.getElementById('excelFileInput').files[0];
@@ -156,7 +317,6 @@ document.querySelectorAll(".change_name").forEach(function (element) {
 
 // // Start reading the Excel file
 // reader.readAsArrayBuffer(excelFile);
-
 
 // // Get the input element for file upload
 
