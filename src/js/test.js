@@ -1,58 +1,248 @@
 // const ExcelJS = require('exceljs');
 // import FileSaver from 'file-saver';
 
-// Import the ExcelJS library
-import ExcelJS from "exceljs";
+// Import the sheetJS library
+import * as ExcelJS from "exceljs";
+import * as XLSX from "xlsx";
 
-const input = document.querySelector('input[type="file"]');
-
-// const pnts = document.querySelectorAll(".change_name");
+const input_1 = document.querySelector(".inputfile_1");
+const input_2 = document.querySelector(".inputfile_2");
 
 // Change name to the name of the uploaded files
 
-document.querySelectorAll(".change_name").forEach(function (element) {
-  input.addEventListener("change", function () {
-    let file_1 = input.files[0];
-    let file_2 = input.files[1];
+// INput 1
 
-    element.textContent = file_1.name + " and " + file_2.name;
+document.querySelectorAll(".change_name_1").forEach(function (element) {
+  input_1.addEventListener("change", function () {
+    if (this.files && this.files.length > 0) {
+      element.innerText = this.files[0].name;
+    }
   });
 });
 
+// INput 2
 
-
-// Get a reference to the file input element
-
-// Listen for changes to the file input
-input.addEventListener('change', () => {
-  // Get the selected files
-  const files = input.files;
-
-  // Loop through the files and read their data using ExcelJS
-  for (const file of files) {
-
-    if (file !== undefined && file !== null) {
-      const workbook = new ExcelJS.Workbook();
-    workbook.xlsx.readFile(file)
-      .then(() => {
-        // Get the first worksheet in the workbook
-        const worksheet = workbook.getWorksheet(1);
-
-        // Get the cell at the first row and first column
-        const cell = worksheet.getCell('B6');
-
-        // Use the cell object to access the cell's value, data type, and other properties
-        console.log(cell.value);
-        console.log(cell.type);
-      });
+document.querySelectorAll(".change_name_2").forEach(function (element) {
+  input_2.addEventListener("change", function () {
+    if (this.files && this.files.length > 0) {
+      element.innerText = this.files[0].name;
     }
-    
+  });
+});
 
+// End of Change name to the name of the uploaded files
+
+//
+//
+//
+//
+//
+//
+//
+//
+
+// ACTual excel COmparison function
+// INput 1
+
+input_1.addEventListener("change", function () {
+  // Check if a file was selected
+  if (this.files && this.files.length > 0) {
+    // Get the first file in the list of files
+    var file = this.files[0];
+
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      // Read the Excel file and extract the data
+
+      // Create a new instance of the ExcelJS Workbook class
+
+      var workbook = new ExcelJS.Workbook();
+      workbook.xlsx.load(reader.result) .then(() => {
+        // Use the getWorksheet method to access the worksheets in the workbook
+        const worksheet = workbook.getWorksheet('Sheet1');
     
+        // Use the eachRow method to iterate through the rows in the worksheet
+        worksheet.eachRow(row => {
+          // Use the values property to access the cell values in the row
+          const values = row.values;
+          console.log(values);
+        });
+      });
+    };
+    reader.readAsArrayBuffer(file);
+
+    // Read the file data into the workbook
   }
 });
 
+// INput 2
+input_2.addEventListener("change", function () {
+  // Check if a file was selected
+  if (this.files && this.files.length > 0) {
+    // Get the first file in the list of files
+    var file = this.files[0];
 
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      // Read the Excel file and extract the data
+
+      // Create a new instance of the ExcelJS Workbook class
+
+      var workbook = new ExcelJS.Workbook();
+      workbook.xlsx.load(reader.result) .then(() => {
+        // Use the getWorksheet method to access the worksheets in the workbook
+        const worksheet = workbook.getWorksheet('Sheet1');
+    
+        // Use the eachRow method to iterate through the rows in the worksheet
+        worksheet.eachRow(row => {
+          // Use the values property to access the cell values in the row
+          const values = row.values;
+          console.log(values);
+        });
+      });
+    };
+    reader.readAsArrayBuffer(file);
+
+    // Read the file data into the workbook
+  }
+});
+
+// End of ACTual excel COmparison function
+
+
+
+
+
+
+
+
+
+
+
+
+
+// input_1.addEventListener('change', function() {
+//   // Check if a file was selected
+//   if (this.files && this.files.length > 0) {
+//     // Get the first file in the list of files
+//     var file = this.files[0];
+
+//     // Create a new instance of the ExcelJS Workbook class
+//     var workbook = new ExcelJS.Workbook();
+
+//     // Read the file data into the workbook
+//     workbook.xlsx.readFile(file).then(function() {
+//       // Get the first worksheet in the workbook
+//       var worksheet = workbook.getWorksheet(1);
+
+//       // Loop through all the rows in the worksheet
+//       worksheet.eachRow(function(row, rowNumber) {
+//         // Loop through all the cells in the row
+//         row.eachCell(function(cell, colNumber) {
+//           // Log the cell value to the console
+//           console.log(cell.value);
+//         });
+//       });
+//     });
+//   }
+// });
+
+// // Handle the change event on the file input
+// input.addEventListener('change', () => {
+//   // Get the selected files
+//   const files = input.files;
+
+//   // Loop through the selected files
+//   for (let i = 0; i < files.length; i++) {
+//     // Read the Excel file using SheetJS
+//    // Read the Excel file
+// const workbook = XLSX.readFile(files[i]);
+
+// // Get the first worksheet in the workbook
+// const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+
+// // Get the data from the worksheet
+// const data = XLSX.utils.sheet_to_json(worksheet);
+
+//         // Access the data in the worksheet
+//         console.log(data);
+//         console.log(cellValue.value);
+//   }
+// });
+
+// // Listen for changes to the file input
+// input.addEventListener("change", () => {
+//   // Get the selected files
+//   const files = input.files;
+//   let file_1 = input.files[0];
+//   let file_2 = input.files[1];
+
+//   // Loop through the files and read their data using ExcelJS
+//   for (const file of files) {
+//     if (file !== undefined && file !== null) {
+//       // Read the Excel file
+//       for (let i = 0; i < file.length; i++) {
+//         // Read the Excel file using the File object
+//         const workbook = XLSX.readFile(file[i]);
+
+//         // Get the first worksheet in the workbook
+//         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+
+//         // Get the data from the worksheet
+//         const data = XLSX.utils.sheet_to_json(worksheet);
+
+//         // Access the data in the worksheet
+//         console.log(data);
+//         console.log(cellValue.value);
+//       }
+//     }
+//   }
+// });
+
+// const form = document.getElementById('file-upload__form');
+// form.addEventListener('btnUpload', handleSubmit);
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+
+//   // Get the selected files
+//   const file = event.target.files;
+//   const files = input.files;
+
+//   // Read each file using SheetJS
+//   for (let i = 0; i < files.length; i++) {
+//     // Read the Excel file using the File object
+//     const workbook = XLSX.readFile(files[i]);
+
+//     // Get the first worksheet in the workbook
+//     const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+
+//     // Get the data from the worksheet
+//     const data = XLSX.utils.sheet_to_json(worksheet);
+
+//       // Access the data in the worksheet
+//       console.log(data);
+//       console.log(cellValue.value);
+//     }
+//   };
+
+// const workbook = new ExcelJS.Workbook();
+// console.log(file);
+
+//   workbook.xlsx.readFile(file)
+//   .then(() => {
+//     // Get the first worksheet in the workbook
+//     const worksheet = workbook.getWorksheet(1);
+// console.log(worksheet);
+//   // Get the cell at the first row and first column
+//   const cell = worksheet.getCell('B6');
+
+//   // Use the cell object to access the cell's value, data type, and other properties
+//   console.log(cell.value);
+//   console.log(cell.type);
+// });
+
+// npm install xlsx
 
 // const input1 = document.getElementById('input1');
 // const input2 = document.getElementById('input2');
@@ -427,4 +617,14 @@ input.addEventListener('change', () => {
 //     // Otherwise, remove the "active-btn" class from the grandparent
 //     grandparent.classList.remove("active-btn");
 //   }
+// });
+
+// document.querySelectorAll(".change_name_1").forEach(function (element) {
+//   input_1.addEventListener("change", function () {
+//     let file_1 = this.files[0];
+//     // let file_2 = input.files[1];
+
+//     element.textContent = file_1.name;
+//     // element.textContent = file_1.name + " and " + file_2.name;
+//   });
 // });

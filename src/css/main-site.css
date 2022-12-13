@@ -89,8 +89,11 @@ body {
   font-weight: 600;
 }
 .file-upload__form {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
 }
+
 .file-upload__label-wrapper {
   margin-block-start: 2rem;
   background-color: var(--gray-100);
@@ -158,6 +161,7 @@ body {
   display: block;
   margin-inline: auto;
   width: 25%;
+  grid-column: 1 / -1;
 }
 .file-upload__input {
   background: #000;
