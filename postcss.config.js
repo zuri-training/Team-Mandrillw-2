@@ -1,13 +1,19 @@
 const purgecss = require("@fullhuman/postcss-purgecss");
+const pxtorem = require("postcss-pixels-to-rem");
 
 module.exports = {
   plugins: [
     // require("cssnano"),
     require("autoprefixer"),
     require("postcss-focus"),
+    pxtorem({
+      unit: "rem",
+      // css: ["./src/css/landingpage.css"],
+      // variables: true
+    }),
     purgecss({
-      content: ["./public/**/*.html"],
-      css: ["./public/css/var.css"],
+      content: ["./src/index.html"],
+      css: ["./src/css/landingpage.css"],
       variables: true
     }),
     // require("postcss-font-magician")({

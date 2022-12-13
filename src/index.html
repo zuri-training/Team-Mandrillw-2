@@ -53,7 +53,7 @@
     </header>
     <main>
       <!-- HEro Section -->
-      <section class="hero__wrapper">
+      <section class="hero__wrapper" id="home">
         
         <div class="hero container">
           <div class="hero__text-container">
@@ -70,12 +70,13 @@
                 <a href="sign-up.html" class="primary-button">Register</a>
              
               
-                <a href="sign-in.html">Login</a>
+                <a href="sign-in.html" class="outlined-button">Login</a>
             
             </div>
           </div>
-          <div>
-            <img src="./assets/sign-up.svg" alt="incase-you dont view" />
+          <div class="hero__img">
+            <img src="assets/hero-illustration.svg" alt="Hero-img" class="hero__img-background">
+            <img src="assets/hero-img.svg" alt="Hero-img" class="hero__img-item">
           </div>
         </div>
 
@@ -245,11 +246,11 @@
 
         <div class="how-it-works__card-text-container">
           <h2 class="how-it-works__card-title">
-            Download or Save result
+             File Size
           </h2>
 
           <p class="how-it-works__card-text">
-            Save your comparison result for later or download it now.
+            File sizes shouldn't exceed 10MB.
           </p>
         </div>
       </section>
@@ -265,11 +266,16 @@
 </article>
 
       <!-- End if how it works -->
+
       <!-- What we offer -->
-      <section class="new-section">
-        <div>
-          <h4 class="section-3">What we offer</h4>
-        </div>
+      <section class="what-we-offer__wrapper ">
+        <div class="what-we-offer container--sign-in">
+          <div class="what-we-offer__header-container">
+            <img src="assets/Line-7.svg" alt="" class="what-we-offer__header-img what-we-offer__header-img--left">
+            <h4 class="what-we-offer__header">What we offer</h4>
+            <img src="assets/Line-7.svg" alt="" class="what-we-offer__header-img what-we-offer__header-img--right">
+
+          </div>
         <div class="offer-page">
           <div>
             <h3 class="text-offer">Extract</h3>
@@ -288,52 +294,163 @@
             <div><img src="./assets/what-we-offer-3.svg"/ alt="extract-1"></div>
           </div>
         </div>
+      </div>
+
       </section>
       <!-- End if what we offer -->
-
-      <section class="section_4">
-        <h3 class="hill-header">Additional Features</h3>
-        <div class="Additional-Features">
-          <div>
-            <div class="section-4">
-              <img src="./assets/Group 45 (1).svg" alt="new_image-1" />
-              <p class="upload-para text">
-                File uploading using Dropbox and Google Drive.
-              </p>
-            </div>
-            <div class="section-4">
-              <img src="./assets/Group 25.svg" alt="new_image-1" />
-              <p class="upload-para text">
-                Emphasising and/or deleting empty cells
-              </p>
-            </div>
-            <div class="section-4">
-              <img src="./assets/Group 26.svg" alt="new_image-1" />
-              <p class="upload-para text">Integrating two documents into one</p>
-            </div>
-            <div class="section-4">
-              <img src="./assets/Group 27.svg" alt="new_image-1" />
-              <p class="upload-para text">
-                Permit one or two Files to be exported
-              </p>
-            </div>
-            <div class="section-4">
-              <img src="./assets/Group 28.svg" alt="new_image-1" />
-              <p class="upload-para text">
-                Emphasize and eliminate repetitions
-              </p>
-            </div>
+<!-- Additional Features -->
+      <section class="additional-features__wrapper">
+        <div class="additional-features container--sign-in">
+          <h3 class="additional-features__header">Additional Features</h3>
+            
+          <div class="additional-features__info">
+            <div class="additional-features__card-container how-it-works__card-container">
+            
+                  <!-- CArd one -->
+            
+                  <section class="additional-features__card">
+                    <div class="additional-features__icon-container">
+                      <svg
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.1968 14.3437C16.1734 14.3138 16.1435 14.2897 16.1094 14.2731C16.0753 14.2564 16.0379 14.2478 15.9999 14.2478C15.962 14.2478 15.9245 14.2564 15.8904 14.2731C15.8563 14.2897 15.8264 14.3138 15.803 14.3437L12.303 18.7718C12.2742 18.8087 12.2563 18.8529 12.2514 18.8995C12.2465 18.946 12.2548 18.993 12.2753 19.035C12.2958 19.0771 12.3278 19.1125 12.3675 19.1373C12.4072 19.162 12.4531 19.1751 12.4999 19.175H14.8093V26.75C14.8093 26.8875 14.9218 27 15.0593 27H16.9343C17.0718 27 17.1843 26.8875 17.1843 26.75V19.1781H19.4999C19.7093 19.1781 19.8249 18.9375 19.6968 18.775L16.1968 14.3437Z"
+                          fill="#fff"
+                        />
+                        <path
+                          d="M25.3563 11.4594C23.925 7.68438 20.2781 5 16.0063 5C11.7344 5 8.0875 7.68125 6.65625 11.4563C3.97813 12.1594 2 14.6 2 17.5C2 20.9531 4.79687 23.75 8.24687 23.75H9.5C9.6375 23.75 9.75 23.6375 9.75 23.5V21.625C9.75 21.4875 9.6375 21.375 9.5 21.375H8.24687C7.19375 21.375 6.20312 20.9562 5.46562 20.1969C4.73125 19.4406 4.34063 18.4219 4.375 17.3656C4.40313 16.5406 4.68437 15.7656 5.19375 15.1125C5.71562 14.4469 6.44688 13.9625 7.25938 13.7469L8.44375 13.4375L8.87813 12.2937C9.14688 11.5812 9.52187 10.9156 9.99375 10.3125C10.4596 9.71471 11.0114 9.18922 11.6313 8.75313C12.9156 7.85 14.4281 7.37187 16.0063 7.37187C17.5844 7.37187 19.0969 7.85 20.3813 8.75313C21.0031 9.19063 21.5531 9.71562 22.0187 10.3125C22.4906 10.9156 22.8656 11.5844 23.1344 12.2937L23.5656 13.4344L24.7469 13.7469C26.4406 14.2031 27.625 15.7437 27.625 17.5C27.625 18.5344 27.2219 19.5094 26.4906 20.2406C26.132 20.6013 25.7054 20.8873 25.2355 21.082C24.7656 21.2768 24.2618 21.3763 23.7531 21.375H22.5C22.3625 21.375 22.25 21.4875 22.25 21.625V23.5C22.25 23.6375 22.3625 23.75 22.5 23.75H23.7531C27.2031 23.75 30 20.9531 30 17.5C30 14.6031 28.0281 12.1656 25.3563 11.4594Z"
+                          fill="#fff"
+                        />
+                      </svg>
+                    </div>
+            
+                    <div class="additional-features__card-text-container">
+            
+            
+                      <p class="additional-features__card-text">
+                        File uploading using Dropbox and Google Drive.
+                      </p>
+                    </div>
+                  </section>
+                  <!-- eNd CArd one -->
+            
+                  <!-- CArd two -->
+            
+                  <section class="additional-features__card">
+                    <div class="additional-features__icon-container">
+                      <svg width="32" height="32" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_18)">
+                        <path d="M8.12253 0.652161L8.12315 2.55835C9.22018 2.69704 10.2399 3.19671 11.0217 3.97866C11.8036 4.76061 12.3031 5.78041 12.4416 6.87746H14.3478V8.12252L12.4416 8.12314C12.303 9.22008 11.8034 10.2397 11.0216 11.0216C10.2398 11.8034 9.22009 12.303 8.12315 12.4416L8.12253 14.3478H6.87747V12.4416C5.78042 12.3031 4.76062 11.8036 3.97867 11.0217C3.19672 10.2399 2.69706 9.22017 2.55836 8.12314L0.652176 8.12252V6.87746H2.55836C2.69693 5.78031 3.19654 4.76044 3.9785 3.97848C4.76046 3.19652 5.78033 2.69691 6.87747 2.55835V0.652161H8.12253ZM7.5 3.76481C6.50937 3.76481 5.55931 4.15834 4.85883 4.85882C4.15835 5.5593 3.76482 6.50936 3.76482 7.49999C3.76482 8.49062 4.15835 9.44067 4.85883 10.1412C5.55931 10.8416 6.50937 11.2352 7.5 11.2352C8.49063 11.2352 9.44069 10.8416 10.1412 10.1412C10.8417 9.44067 11.2352 8.49062 11.2352 7.49999C11.2352 6.50936 10.8417 5.5593 10.1412 4.85882C9.44069 4.15834 8.49063 3.76481 7.5 3.76481ZM7.5 6.25493C7.83021 6.25493 8.1469 6.3861 8.38039 6.6196C8.61389 6.85309 8.74506 7.16978 8.74506 7.49999C8.74506 7.8302 8.61389 8.14688 8.38039 8.38038C8.1469 8.61387 7.83021 8.74505 7.5 8.74505C7.16979 8.74505 6.85311 8.61387 6.61961 8.38038C6.38612 8.14688 6.25494 7.8302 6.25494 7.49999C6.25494 7.16978 6.38612 6.85309 6.61961 6.6196C6.85311 6.3861 7.16979 6.25493 7.5 6.25493Z" fill="#F6F6F6"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1_18">
+                        <rect width="15" height="15" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+            
+                    </div>
+            
+                    <div class="additional-features__card-text-container">
+            
+            
+                      <p class="additional-features__card-text">
+            
+                        Emphasising and/or deleting empty cells
+                      </p>
+                    </div>
+                  </section>
+                  <!-- End CArd two -->
+                  <!-- CArd three -->
+            
+                  <section class="additional-features__card">
+                    <div class="additional-features__icon-container">
+                      <svg width="32" height="32" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_24)">
+                        <path d="M3.33333 3V0.749999C3.33333 0.551087 3.42113 0.360322 3.57741 0.21967C3.73369 0.0790175 3.94565 0 4.16667 0H14.1667C14.3877 0 14.5996 0.0790175 14.7559 0.21967C14.9122 0.360322 15 0.551087 15 0.749999V11.25C15 11.4489 14.9122 11.6397 14.7559 11.7803C14.5996 11.921 14.3877 12 14.1667 12H11.6667V14.25C11.6667 14.664 11.2917 15 10.8275 15H0.839167C0.729272 15.0006 0.620331 14.9816 0.518602 14.9442C0.416873 14.9068 0.324361 14.8517 0.246382 14.782C0.168403 14.7123 0.106494 14.6294 0.0642119 14.5381C0.0219297 14.4468 0.000107812 14.3489 0 14.25L0.00250002 3.75C0.00250002 3.336 0.3775 3 0.840833 3H3.33333ZM1.66833 4.5L1.66667 13.5H10V4.5H1.66833ZM5 3H11.6667V10.5H13.3333V1.5H5V3ZM3.33333 6.74999H8.33333V8.24999H3.33333V6.74999ZM3.33333 9.74999H8.33333V11.25H3.33333V9.74999Z" fill="#F6F6F6"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1_24">
+                        <rect width="15" height="15" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+            
+                    </div>
+            
+                    <div class="additional-features__card-text-container">
+            
+                      <p class="additional-features__card-text">
+            
+                        Integrating two documents into one
+                      </p>
+                    </div>
+                  </section>
+                  <!-- End CArd three -->
+                  <!-- CArd four -->
+            
+                  <section class="additional-features__card">
+                    <div class="additional-features__icon-container">
+                      <svg width="32" height="32" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5 5.66667V17.3333H17.5V5.66667H5.5ZM4.75 4H18.25C18.4489 4 18.6397 4.0878 18.7803 4.24408C18.921 4.40036 19 4.61232 19 4.83333V18.1667C19 18.3877 18.921 18.5996 18.7803 18.7559C18.6397 18.9122 18.4489 19 18.25 19H4.75C4.55109 19 4.36032 18.9122 4.21967 18.7559C4.07902 18.5996 4 18.3877 4 18.1667V4.83333C4 4.61232 4.07902 4.40036 4.21967 4.24408C4.36032 4.0878 4.55109 4 4.75 4V4ZM13.75 7.33333L16.375 9.83333L13.75 12.3333V10.6667H10.75V9H13.75V7.33333ZM9.25 15.6667L6.625 13.1667L9.25 10.6667V12.3333H12.25V14H9.25V15.6667Z" fill="#F6F6F6"/>
+                        </svg>
+            
+                    </div>
+            
+                    <div class="additional-features__card-text-container">
+            
+            
+                      <p class="additional-features__card-text">
+            
+                        Permit one or two Files to be exported
+                      </p>
+                    </div>
+                  </section>
+                  <!-- End CArd four -->
+                  <!-- CArd five -->
+            
+                  <section class="additional-features__card">
+                    <div class="additional-features__icon-container">
+                      <svg width="32" height="32" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.1691 13.7674L12.5234 15.1769L20.6437 6.72573L22 8.13726L12.5234 18L6.41929 11.6471L7.77556 10.2356L9.81379 12.3569L11.1691 13.7664V13.7674ZM11.171 10.9443L15.9208 6L17.2732 7.40754L12.5234 12.3519L11.171 10.9443ZM8.45944 16.5895L7.10414 18L1 11.6471L2.35626 10.2356L3.71156 11.6461L3.71061 11.6471L8.45944 16.5895V16.5895Z" fill="white"/>
+                        </svg>
+            
+                    </div>
+            
+                    <div class="additional-features__card-text-container">
+            
+            
+            
+                      <p class="additional-features__card-text">
+            
+                        Emphasize and eliminate repetitions
+                      </p>
+                    </div>
+                  </section>
+                  <!-- End CArd five -->
+            
+            
+              </div>
+            
+                <img
+                  src="./assets/additional-features.svg"
+            
+                  alt="additional features img"
+                  class="additional-features__hero-img"
+            
+                />
           </div>
-          <div>
-            <img
-              src="./assets/additional-features.svg"
-              height="436px"
-              alt="additional features "
-            />
-          </div>
+        
         </div>
       </section>
+<!-- End of Additional Features -->
 
+
+      <!-- cta section -->
       <section class="section_5">
         <h2 class="section-5">
           Are you set to easily compare your<br />
@@ -345,6 +462,7 @@
           </button>
         </div>
       </section>
+<!-- end of cta section -->
 
       
     </main>
