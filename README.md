@@ -16,7 +16,7 @@ A platform that helps users compare the content of excel files.
 
 ## Features
 
-##Technologies Used
+## Technologies used
 Design - Figma Python
 Frontend - HTML5 HTML5 CSS3 CSS Javascript Javascript
 Backend - Stack: Python Python
