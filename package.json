@@ -17,7 +17,7 @@
       "relo": "browser-sync reload --port 3021",
       "start": "npm-run-all copy --parallel watch serve",
       "build": "npm-run-all copy:html build:*",
-      "postbuild": "postcss public/css/*.css -r --no-map"
+      "postbuild": "postcss ./src/css/landingpage.css -r --no-map"
    },
    "author": "",
    "license": "ISC",
@@ -36,6 +36,7 @@
       "postcss-cli": "^10.0.0",
       "postcss-focus": "^5.0.1",
       "postcss-font-magician": "^3.0.0",
+      "postcss-pixels-to-rem": "^0.8.0",
       "sass": "^1.55.0",
       "stylelint": "^14.13.0"
    }
