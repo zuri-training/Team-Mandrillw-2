@@ -162,19 +162,27 @@ submitButton.addEventListener("click", () => {
 
                 workbook.xlsx.writeBuffer().then(function(buffer) {
                   // use the `buffer` variable to write the Excel file to a file or send it to a client.
-                  // use the fs module to write the file to disk:
-                  // const fs = require('fs');
-                  // const fs = require('fs');
-
+                  // use the file saver module to write the file to disk:
+                  const filePath = 'comparison-results.xlsx';
+                  
+                  const blob = new Blob([buffer], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+                  filesave.saveAs(blob, filePath);
+                  
+                  
+                  // workbook.xlsx.writeBuffer().then(function(data) {
+                    // });
 
                   // fs.writeFileSync('comparison-results.xlsx', buffer);
                   // console.log('Excel file saved!');
-                  const filePath = 'comparison-results.pdf';
-                  const objectData = JSON.stringify(buffer);
+                 
+                 
+                 
+                 
+                  // const objectData = JSON.stringify(buffer);
                   
-                  const file = new Blob([objectData], { type: "application/json" });
+                  // const file = new Blob([objectData], { type: "application/json" });
 
-                  filesave.saveAs(file, filePath);
+                  // filesave.saveAs(file, filePath);
 
                   // fs.writeFileSync(filePath,  buffer, (err) => {
                   //   if (err) {
@@ -195,6 +203,12 @@ submitButton.addEventListener("click", () => {
     // Read the file data into the workbook
   }
 });
+
+
+// workbook.xlsx.writeBuffer().then(function(data) {
+//   const blob = new Blob([data], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+//   filesave.saveAs(blob, "my-excel-file.xlsx");
+// });
 
 // Check if element with class "equal-file-info" exists
 
