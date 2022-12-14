@@ -176,7 +176,16 @@ body {
   /* grid-column: 1 / -1; */
   /* z-index: -1; */
 }
-
+.equal-file-info {
+  font-size: var(--fs-1);
+  color: var(--clr-error);
+grid-column: 1 / -1;
+place-self: center;
+}
+.file-upload__warning {
+  color: var(--clr-error);
+  grid-column: 1 / -1;
+}
 /* ENd of FIle upload works section */
 
 /* HOw it works section */

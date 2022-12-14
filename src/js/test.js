@@ -1,9 +1,10 @@
 // const ExcelJS = require('exceljs');
-// import FileSaver from 'file-saver';
 
 // Import the sheetJS library
-import * as ExcelJS from "exceljs";
 import * as XLSX from "xlsx";
+import * as ExcelJS from "exceljs";
+import filesave from 'file-saver';
+// import fse from "fs-extra";
 
 const input_1 = document.querySelector(".inputfile_1");
 const input_2 = document.querySelector(".inputfile_2");
@@ -81,6 +82,8 @@ submitButton.addEventListener("click", () => {
         const workbook1 = new ExcelJS.Workbook();
         workbook1.xlsx.load(firstExcelFile).then(function () {
           // Check if a file was selected
+          const worksheet1 = workbook1.getWorksheet(1);
+
           if (input_files_2 && input_files_2.length > 0) {
             // Get the first file in the list of files
             var file2 = input_files_2[0];
@@ -97,28 +100,91 @@ submitButton.addEventListener("click", () => {
               const workbook2 = new ExcelJS.Workbook();
 
               workbook2.xlsx.load(secondExcelFile).then(function () {
-                
-
-                const worksheet1 = workbook1.getWorksheet(1);
                 const worksheet2 = workbook2.getWorksheet(1);
-               
 
-// // Compare the two workbooks using the 'compare' method
-// const comparison = worksheet1.compare(worksheet2);
+                // const excel = new ExcelJS.Workbook();
 
-// // Output the comparison results
-// console.log(worksheet1, worksheet2);
+                // const result = {};
 
-                  // Get the cell at the first row and first column
-                  const cell1 = worksheet1.getCell('B6');
-                  const cell2 = worksheet2.getCell('B6');
+                // let i;
+                // let j;
+
+                // import * as ExcelJS from "exceljs";
+
+                const comparisonResults = {};
+
+                for (let i = 1; i <= worksheet1.rowCount; i++) {
+                  for (let j = 1; j <= worksheet2.columnCount; j++) {
+                    const cellAddress = `${i}${j}`;
+
+                    if (
+                      worksheet1.getCell(i, j).value !==
+                      worksheet2.getCell(i, j).value
+                    ) {
+                      comparisonResults[cellAddress] = {
+                        firstFileName: input_files_1[0].name,
+                        firstFile: `${worksheet1.getCell(i, j).value}`,
+                        secondFileName: input_files_2[0].name,
+                        secondFile: `${worksheet2.getCell(i, j).value}`,
+                      };
+
+                      console.log(comparisonResults[cellAddress]);
+                    }
+                    if (Object.keys(comparisonResults).length === 0) {
+                      const equalFileInfoElement =
+                        document.querySelector(".equal-file-info");
+                      if (equalFileInfoElement) {
+                        equalFileInfoElement.textContent =
+                          "These files are equal!";
+                      }
+                    }
+                  }
+                }
+
+                // const data_file = comparisonResults[cellAddress];
+
+                // const cellAddress = `${i}${j}`;
+
+                // const data = comparisonResults[cellAddress];
+
+                const workbook = new ExcelJS.Workbook();
+                const worksheet = workbook.addWorksheet("Sheet1");
+
+                for (const cellAddress in comparisonResults) {
+                  const data_file = comparisonResults[cellAddress];
+                  worksheet.addRow([
+                    data_file.firstFileName,
+                    data_file.firstFile,
+                    data_file.secondFileName,
+                    data_file.secondFile,
+                  ]);
+                }
+
+                workbook.xlsx.writeBuffer().then(function(buffer) {
+                  // use the `buffer` variable to write the Excel file to a file or send it to a client.
+                  // use the fs module to write the file to disk:
+                  // const fs = require('fs');
+                  // const fs = require('fs');
+
+
+                  // fs.writeFileSync('comparison-results.xlsx', buffer);
+                  // console.log('Excel file saved!');
+                  const filePath = 'comparison-results.pdf';
+                  const objectData = JSON.stringify(buffer);
+                  
+                  const file = new Blob([objectData], { type: "application/json" });
+
+                  filesave.saveAs(file, filePath);
+
+                  // fs.writeFileSync(filePath,  buffer, (err) => {
+                  //   if (err) {
+                  //     console.error(err);
+                  //   } else {
+                  //     console.log('Excel file saved!');
+                  //   }
+                  // });
                 
-                  // Use the cell object to access the cell's value, data type, and other properties
-                  console.log(cell1.value);
-                  console.log(cell1.type);
-                  console.log(cell2.value);
-                  console.log(cell2.type);
-
+                });
               });
             };
           }
@@ -130,17 +196,22 @@ submitButton.addEventListener("click", () => {
   }
 });
 
+// Check if element with class "equal-file-info" exists
+
 // Use the ExcelJS library to parse the contents of the uploaded files into JavaScript objects
 
 // var Excel = require('exceljs');
 
-// Create a HTML form that allows users to select and upload the two Excel files.
+// Read the data from the second file
 
-// Use the ExcelJS library to parse the contents of the uploaded files into JavaScript objects.
+// const workbook2 = new ExcelJS.Workbook();
+// workbook2.xlsx.readFile('file2.xlsx')
+//   .then(() => {
+//     const worksheet2 = workbook2.getWorksheet(1);
 
-// Use the FileReader API to read the contents of the uploaded files as binary data.
+//     // Compare the data in the two worksheets
 
-// Store the data from the Excel files in variables using the objects created in step 2 and the binary data from step 3.
+//   });
 
 //
 //
