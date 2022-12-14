@@ -5,48 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/Aboutus.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
     <title>About Us</title>
   </head>
   <body>
-    <header class="header">
-      <section class="header-nav__wrapper">
-        <img
-          src="assets/logo/Excel Comp LOGO.svg"
-          alt="Excel Comp logo"
-          class="logo"
-        />
-        <nav class="header-nav">
-          <ul class="header-nav__list" role="list">
-            <li class="header-nav__list-item">
-              <a href="sign-in.html" class="outlined-button--small">Sign In</a>
-            </li>
-            <li class="header-nav__list-item">
-              <a href="sign-up.html" class="primary-button--small">Sign Up</a>
-            </li>
-          </ul>
-        </nav>
-      </section>
+    <header class="header__wrapper">
+      <nav class="header">
+        <div class="nex-image">
+          <img src="./assets/logo/Excel Comp LOGO.svg" alt="logo_image" />
+        </div>
+        <ul class="header__nav-list" role="list">
+          <li class="nex_color"><a href="index.html" class="txt-btn--gray txt-btn--gray--darker">Home</a></li>
+          <li class="nex_color"><a href="#" class="txt-btn--gray txt-btn--gray--darker">About</a></li>
+          <li class="nex_color"><a href="Contactus.html" class="txt-btn--gray txt-btn--gray--darker">Contact</a></li>
+          <li class="nex_color"><a href="faq.html" class="txt-btn--gray txt-btn--gray--darker">Faq</a></li>
+        </ul>
+        <div class="cta-section">
+          
+            <a href="sign-in.html" class="outlined-button--small">Sign in</a>
+        
+          
+            <a href="sign-up.html" class="primary-button--small">Sign up</a>
+          
+        </div>
+      </nav>
     </header>
     <main>
       <section class="aboutus-section">
-        <h2 class="about-us">About Us</h2>
-        <p class="background-content">
-          Background<br />
-
-          Excel Comp is a platform that was created by a team of developers and
-          designers in <br />
-          fulfillment of the Zuri training requirement. The platform was created
-          to provide <br />
-          a simple user friendly solution for comparing excel/spreadsheet files
-          easily. It is targeted <br />
-          at users who regularly work with excel files and need a simple way to
-          compare files or <br />
-          documents with similar contents, check for differences and make simple
-          changes like<br />
-          remove duplicates, remove empty cells, merge two files into one and
-          download or save <br />
-          the file for future use.
-        </p>
+        <div class="container">
+          <h1 class="about-us__heading">About Us</h1>
+          <div class="about-us__content">
+            <h3 class="about-us__content-heading">
+              Background</h3>
+            <p>
+              Excel Comp is a platform that was created by a team of developers and
+              designers in fulfillment of the Zuri training requirement. The platform was created
+              to provide a simple user friendly solution for comparing excel/spreadsheet files
+              easily. It is targeted at users who regularly work with excel files and need a simple way to compare files or documents with similar contents, check for differences and make simple
+              changes likeremove duplicates, remove empty cells, merge two files into one and
+              download or save the file for future use.
+            </p>
+          </div>
+        </div>
       </section>
 
       <footer class="terms-footer__wrapper">
@@ -61,14 +80,14 @@
               <ul class="footer-nav__list" role="list">
                 <li class="footer-nav__list-item">
                   <a
-                    href="index.html#home"
+                    href="index.html"
                     class="txt-btn--gray footer-nav__link"
                     >Home</a
                   >
                 </li>
                 <li class="footer-nav__list-item">
                   <a
-                    href="index.html#about"
+                    href="#"
                     class="txt-btn--gray footer-nav__link"
                     >About</a
                   >
@@ -80,7 +99,7 @@
                 </li>
                 <li class="footer-nav__list-item">
                   <a
-                    href="index.html#contact"
+                    href="Contactus.html"
                     class="txt-btn--gray footer-nav__link"
                     >Contact</a
                   >
