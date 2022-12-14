@@ -1,24 +1,50 @@
 @import "style.css";
+
+/* HEader STyles */
 .header {
-    position: sticky;
-    top: 0;
-  }
-  .logo {
-    max-height: 2rem;
-  }
+  position: sticky;
+  top: 0;
+}
+.logo {
+  max-height: 2rem;
+}
+
+
+.header__wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: var(--clr-primary-100);
+}
+
+.header__nav-list{
+  display: flex;
+  justify-content: space-evenly;
+  width: 33%;
   
-  .header-nav__wrapper {
-    background-color: var(--clr-primary-100);
-    padding: 1rem 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   
-  .header-nav__list {
-    display: flex;
-    gap: 1rem;
-  }
+}
+
+.txt-btn--gray--darker:-moz-any-link {
+color: var(--gray-1100);
+}
+
+.txt-btn--gray--darker:any-link {
+color: var(--gray-1100);
+}
+.cta-section {
+  display: flex;
+  gap: 1rem;
+}
+
+/* End of HEader and navbar styles */
 
 .Contact-us{
     font-family: Georgia;
@@ -47,16 +73,27 @@
     color: #2A2A2A;
 }
 .card{
-    height: 204px;
-    width: 295px;
+    /* height: 204px;
+    width: 295px; */
     border-radius: 16px;
     background-color: white;
-    box-shadow: 0px 4px 4px 0px #0000001A;
-    box-shadow: 0px 4px 4px 0px #0000001A;
+    box-shadow: var(--shadow-1);
+
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 3.25rem;
+}
+
+.card > * {
+margin-block-end: 1rem;
+}
+.card:hover {
+    box-shadow: var(--shadow-3);
+    transform: translateY(-0.1875rem);
+
 }
 
 .general-Card{

@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/404.css">
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    
     <title>404 Page</title>
 </head>
 <body>
@@ -19,18 +39,14 @@
         
     </header>
 
-    <main>
-        <div class="error-image">
-            <img src="./assets/Page Not Found.svg" alt="page not found"/>
-        </div>
+    <main class="container">
+            <img src="./assets/Page Not Found.svg" alt="Error 404 page not found" class="error-image"/>
+
         <h2 class="error-text">Oops!</h2>
         <p class="error-paragraph">Sorry, we can't find the page you're looking for. <br>
             Let's help you back home
         </p>
-        <div class="button-main">
-            <button class="error-button"><a href="./index.html" style="color: white;">Go home</a></button>
-
-        </div>
+        <a href="./index.html" class="primary-button error-button">Go home</a>
     </main>
 
     
