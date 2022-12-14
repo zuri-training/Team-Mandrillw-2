@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/Contactus.css">
+    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    
     <title>Contact us</title>
 </head>
 <body>
@@ -30,8 +50,8 @@
     </nav>
   </header>
     <main>
-        <section>
-            <h2 class="Contact-us">Contact Us</h2>
+        <section class="container--sign-in">
+            <h2 class="contact__heading">Contact Us</h2>
             <p class="contact-paragraph">Get in touch with us</p>
 
             <div class="general-Card">
@@ -39,8 +59,8 @@
                     <div>
                         <img src="./assets/Icons/Phone.svg" alt="phone-icon"/>
                     </div>
-                    <p class="phone">+234 456 789 0123</p>
-                    <p class="phone">Get response immediately</p>
+                    <a href="tel:+2344567890123" class="contact__card-text">+234 456 789 0123</a>
+                    <p class="contact__card-text">Get response immediately</p>
 
                 </div>
 
@@ -48,8 +68,8 @@
                     <div>
                         <img src="./assets/Icons/Vector.svg" alt="phone-icon"/>
                     </div>
-                    <p class="phone">info@excelcomp.io</p>
-                    <p class="phone">Get response immediately</p>
+                    <a href="mailto:info@excelcomp.io" class="contact__card-text">info@excelcomp.io</a>
+                    <p class="contact__card-text">Get response immediately</p>
 
                 </div>
 
@@ -57,8 +77,8 @@
                     <div>
                         <img src="./assets/Icons/text.svg" alt="phone-icon"/>
                     </div>
-                    <p class="phone">+234 456 789 0123</p>
-                    <p class="phone">Get response immediately</p>
+                    <a href="sms:+2344567890123" class="contact__card-text">+234 456 789 0123</a>
+                    <p class="contact__card-text">Get response immediately</p>
 
                 </div>
               
@@ -71,11 +91,13 @@
     <footer class="terms-footer__wrapper">
         <div class="terms-footer container">
           <div class="terms-footer__top">
-            <img
-              src="assets/logo/Excel Comp LOGO.svg"
-              alt="Excel Comp logo"
-              class="logo logo--footer"
-            />
+            <a href="#">
+              <img
+                src="assets/logo/Excel Comp LOGO.svg"
+                alt="Excel Comp logo"
+                class="logo logo--footer"
+              />
+            </a>
             <nav class="header-nav footer-nav">
               <ul class="footer-nav__list" role="list">
                 <li class="footer-nav__list-item">
