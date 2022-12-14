@@ -12,8 +12,8 @@ module.exports = {
       // variables: true
     }),
     purgecss({
-      content: ["./src/Aboutus.html"],
-      css: ["./src/css/Aboutus.css"],
+      content: ["./src/Contactus.html"],
+      css: ["./src/css/Contactus.css"],
       variables: true
     }),
     // require("postcss-font-magician")({
