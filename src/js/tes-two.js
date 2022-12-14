@@ -381,3 +381,282 @@
 
 
   // })}}})}
+
+
+
+
+
+   // create a new Excel workbook object
+   const result_workbook = new ExcelJS.Workbook();
+
+   // Compare the two worksheets cell by cell and store the results in a new worksheet:
+   const resultsWorksheet =
+     result_workbook.addWorksheet("Results");
+
+   worksheet1.eachRow((row1, rowNumber) => {
+     const row2 = worksheet2.getRow(rowNumber);
+
+     row1.eachCell((cell1, cellNumber) => {
+       const cell2 = row2.getCell(cellNumber);
+
+       if (cell1.value !== cell2.value) {
+         resultsWorksheet.getCell(rowNumber, cellNumber).value =
+           "Different";
+       }
+     });
+   });
+   // Save the new workbook with the comparison results using the xlsx.writeFile() method:
+   result_workbook.xlsx.writeFile("comparisonResults.xlsx");
+
+
+
+
+
+
+
+
+
+//    // Create an instance of the Excel object
+// const excel = new ExcelJS.Workbook();
+
+// // // Load the two files and assign them to separate variables
+// // const file1 = excel.load('./file1.xlsx');
+// // const file2 = excel.load('./file2.xlsx');
+
+// // Create an empty results object
+// const results = {};
+
+// // Iterate over the rows and columns of the two files and compare their values
+// worksheet1.forEach((row, rowIndex) => {
+//   row.forEach((cell, columnIndex) => {
+// const comparisonResult = cell.equals(worksheet2[rowIndex][columnIndex]);
+// results[${rowIndex},${colIndex}] = comparisonResult;
+
+//   });
+// });
+
+// // worksheet1.forEach((row, rowIndex) => {
+// // row.forEach((cell, colIndex) => {
+// // const comparisonResult = cell.equals(worksheet2[rowIndex][colIndex]);
+// // results[${rowIndex},${colIndex}] = comparisonResult;
+// // });
+// // });
+
+// // Output the results object to a new file
+
+
+
+// workbook.getWorksheet('file1.xlsx')
+//                     .eachRow(function(row, rowNumber) {
+//                         workbook.getWorksheet('file2.xlsx')
+//                             .eachRow(function(row2, rowNumber2) {
+//                                 if (rowNumber === rowNumber2) {
+//                                     row.eachCell(function(cell, colNumber) {
+//                                         if (cell.value !== row2.getCell(colNumber).value) {
+//                                             result[`Row ${rowNumber}, Column 
+
+
+const worksheet2 = workbook2.getWorksheet(1);
+
+    for (let i = 1; i <= worksheet1.rowCount; i++) {
+      for (let j = 1; j <= worksheet1.columnCount; j++) {
+       if (worksheet1.getCell(i, j).value !== worksheet2.getCell(i, j).value) {
+        const cellAddress = `${i}${j}`;
+
+        comparisonResults[cellAddress] = {
+          firstFile: `${worksheet1.getCell(i, j).value}`,
+          secondFile: `${worksheet2.getCell(i, j).value}`
+        };
+
+        
+
+           console.log(comparisonResults[cellAddress] );
+
+
+
+                    }
+                  }
+                }
+
+
+
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
+
+
+workbook.eachSheet((worksheet, sheetId) => {
+  worksheet.eachRow((row, rowNumber) => {
+    row.eachCell((cell, colNumber) => {
+      if (cell.value !== worksheet.getCell(rowNumber, colNumber).value) {
+        const cellAddress = `${colNumber}${rowNumber}`;
+        comparisonResults[cellAddress] = {
+          firstFile: cell.value,
+          secondFile: worksheet.getCell(rowNumber, colNumber).value
+        };
+      }
+    });
+  });
+});
+
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
+const data = comparisonResults[cellAddress];
+
+// const data = {
+//   name: "John Doe",
+//   email: "johndoe@example.com",
+//   phone: "123-456-7890"
+// };
+
+const workbook = new ExcelJS.Workbook();
+const worksheet = workbook.addWorksheet("Sheet1");
+
+worksheet.addRow([
+  data.firstFileName,
+    data.firstFile,
+    data.secondFileName,
+    data.secondFile
+]);
+
+workbook.xlsx.writeFile("comparison-results.xlsx").then(function() {
+  console.log("Excel file saved!");
+});
+
+
+
+
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
+const workbookWriter = new ExcelJS.stream.xlsx.WorkbookWriter({
+  filename: 'comparison-results.xlsx'
+});
+const worksheet1 = workbookWriter.addWorksheet('Sheet1');
+
+Object.keys(comparisonResults).forEach(function (cellAddress) {
+  const data = comparisonResults[cellAddress];
+
+  worksheet1.addRow([
+    data.firstFileName,
+    data.firstFile,
+    data.secondFileName,
+    data.secondFile
+  ]);
+});
+
+workbookWriter.commit();
+
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
+
+// const comparisonResults = {};
+
+                
+                
+                
+                    
+                    
+                      
+
+// for (let i = 1; i <= worksheet1.rowCount; i++) {
+//   for (let j = 1; j <= worksheet2.columnCount; j++) {
+//     const cellAddress = `${i}${j}`;
+
+//     if (
+//       worksheet1.getCell(i, j).value !==
+//       worksheet2.getCell(i, j).value
+//     ) {
+//       comparisonResults[cellAddress] = {
+//         firstFileName: input_files_1[0].name,
+//         firstFile: `${worksheet1.getCell(i, j).value}`,
+//         secondFileName: input_files_2[0].name,
+//         secondFile: `${worksheet2.getCell(i, j).value}`,
+//       };
+
+//       console.log(comparisonResults[cellAddress]);
+// } else if (
+// worksheet1.getCell(i, j).value ===
+// worksheet2.getCell(i, j).value
+// ) {
+
+//   const equalFileInfoElement = document.querySelector(".equal-file-info");
+//   if (equalFileInfoElement) {
+//     equalFileInfoElement.textContent = "These files are equal!";
+//   }
+
+// }
+// }
+// }
+// const data_file = comparisonResults[cellAddress];
+
+// const cellAddress = `${i}${j}`;
+
+
+// // const data = comparisonResults[cellAddress];
+
+// const workbook = new ExcelJS.Workbook();
+// const worksheet = workbook.addWorksheet("Sheet1");
+
+// for (const cellAddress in comparisonResults) {
+// const data_file = comparisonResults[cellAddress];
+// worksheet.addRow([
+// data_file.firstFileName,
+// data_file.firstFile,
+// data_file.secondFileName,
+// data_file.secondFile,
+// ]);
+
+// workbook.xlsx
+// .writeFile("comparison-results.xlsx")
+// .then(function () {
+// console.log("Excel file saved!");
+// });
+
+
+// });
