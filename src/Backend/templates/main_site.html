@@ -38,7 +38,7 @@
           class="logo logo--header"
         />
         <div class="header__profile-section">
-          <a href="edit.html" class="">
+          <a href="{% url 'details' %}">
             <div class="avatar">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,8 +55,8 @@
 
           <div class="header__profile-section-text-container">
             <!-- TODO: MAKE THIS REFLECT WHAT THE USER ACTUALLY PUT AND DYNAMICALLY CHANGE -->
-            <p class="profile-name">Maria Ishimwe</p>
-            <p class="profile-email">maria.ishimwe22@gmail.com</p>
+            <p class="profile-name">{{ request.user.first_name }} {{ request.user.last_name }}</p>
+            <p class="profile-email">{{ request.user.email }}</p>
           </div>
         </div>
       </section>

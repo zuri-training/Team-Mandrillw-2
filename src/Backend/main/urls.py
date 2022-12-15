@@ -10,5 +10,6 @@ urlpatterns = [
     path("file/compare/", views.Compare, name="compare"),
     path("privacy/", views.privacy, name="privacy"),
     path("terms/", views.terms, name="terms"),
+    path("accounts/profile/details", views.details, name="details"),
     path("accounts/profile/edit", views.edit, name="edit"),
 ]

@@ -13,56 +13,83 @@ function autotab(current, to) {
 
 // Function to enable and disable a button
 
-// const formButton = document.getElementById("submit");
-// const formInput = document.getElementById("input");
+// Select the element whose parent's parent you want to target
+const element = document.querySelector(".input-field");
 
-// formInput.addEventListener("keypress", (e) => {
-//   console.log(e.currentTarget.value);
-//   if (value === "") {
-//     formButton.disabled = true;
-//   } else {
-//     formButton.disabled = false;
-//   }
-// });
+// Get a reference to the parent element
+const parent = element.parentElement;
 
+// Get a reference to the parent of the parent element
+const grandparent = parent.parentElement;
 
+// Get a reference to the parent of the parent of the parent element
+const greatgrandparent = grandparent.parentElement;
 
+// Select the input and button elements
+const input = document.querySelector(".input-field");
+const button = document.querySelector("#submit");
 
+// Add an event listener to the input that will
+// run a function when the input's value changes
+input.addEventListener("input", function () {
+  // If the input has text, add the "active-btn" class to the button
+  if (this.value) {
+    grandparent.classList.add("active-btn");
+  } else {
+    // Otherwise, remove the "active-btn" class from the grandparent
+    grandparent.classList.remove("active-btn");
+  }
+});
 
 // End of Function to enable and disable a button
 
+// PAssword and text toggle
+document
+  .querySelector(".toggle-password-visibility__toggle")
+  .addEventListener("click", (e) => {
+    const input = e.target.previousElementSibling;
+    const type = input.getAttribute("type");
+    input.setAttribute("type", type === "text" ? "password" : "text");
+  });
 
+// ENd of PAssword and text toggle
 
-document.querySelector('.toggle-password-visibility__toggle').addEventListener('click', (e) => {
-   const input = e.target.previousElementSibling;
-   const type = input.getAttribute('type');
-   input.setAttribute('type', type === 'text' ? 'password' : 'text');
-});
+// PAssword hiny
 
+// // Select the pass_input and pass_hint elements
+// const pass_input = document.querySelector('.sign-in-form__input--pasword');
+// const pass_hint = document.querySelector('.password-hint');
 
-
-
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-
-
+// // Add event listeners to the pass_input that will run
+// // a function when the pass_input receives or loses focus
+// pass_input.addEventListener('focus', function() {
+//   // When the pass_input receives focus, add the "show" class to the pass_hint
+//   pass_hint.classList.add('pass_hint--show');
+// });
+// pass_input.addEventListener('blur', function() {
+//   // When the pass_input loses focus, remove the "show" class from the pass_hint
+//   pass_hint.classList.remove('pass_hint--show');
+// });
+// ENd of PAssword and text toggle
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // function backtab(from, to) {
 //   var length = from.value.length;
