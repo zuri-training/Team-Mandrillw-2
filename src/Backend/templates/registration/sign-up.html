@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
+{% load socialaccount %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -71,7 +74,10 @@
         <button class="continue-to-google">
           <!-- TODO: CHange to actual google oauth when the website is hosted and has a domain name -->
           <img src="{% static 'assets/Icons/google.svg' %}" alt="" />
-          <p>Continue to Google</p>
+          <p>
+            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+
+          </p>
         </button>
 
         <p>Or</p>
@@ -112,6 +118,16 @@
               id="lastName"
               name="username"
               placeholder="@zuri"
+              required
+            />
+          </div>
+          <div class="sign-up-form__input">
+            <label> Email </label>
+            <input
+              type="text"
+              id="lastName"
+              name="email"
+              placeholder="name@example.com"
               required
             />
           </div>

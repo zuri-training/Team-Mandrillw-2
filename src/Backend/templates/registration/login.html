@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
+{% load socialaccount %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -72,12 +74,15 @@
         <h2 class="sign-in__title sign-in__title--desktop">Sign In</h2>
         <p class="sign-in__text">It's free and will always be free</p>
 
-        <button class="continue-to-google">
-          <!-- TODO: CHange to actual google oauth when the website is hosted and has a domain name -->
-          <img src="{% static 'assets/Icons/google.svg' %}" alt="" />
-          <p>Continue to Google</p>
-        </button>
 
+        <div class="btn btn-seconday">
+          <button id="google--button" class="btn btn-secondary">
+            <!-- TODO: CHange to actual google oauth when the website is hosted and has a domain name -->
+            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+          </button>
+        </div>
+
+        
         <p>Or</p>
         <!-- TODO: Add an "action" and "method" to ther form when the backend people do their thing -->
         <!-- SIgn In Form -->
@@ -118,7 +123,7 @@
               required
             />
             <p class="password-hint">Must be at least 6 characters long</p>
-            <a href="password-forgot.html" class="forgot-password txt-btn">Forgot your Password?</a>
+            <a href="{% url 'password_reset' %}" class="forgot-password txt-btn">Forgot your Password?</a>
           </div>
 
           <button type="submit" class="sign-in-form__button primary-button">

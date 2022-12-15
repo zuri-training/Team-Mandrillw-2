@@ -1,6 +1,6 @@
 @import "style.css";
 
-/* Terms and conditions STyles */
+/* HEader STyles */
 .header {
   position: sticky;
   top: 0;
@@ -9,56 +9,72 @@
   max-height: 2rem;
 }
 
-.header-nav__wrapper {
-  background-color: var(--clr-primary-100);
-  padding: 1rem 5rem;
+
+.header__wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 5rem;
+  background-color: var(--clr-primary-100);
 }
 
-.header-nav__list {
+.header__nav-list{
+  display: flex;
+  justify-content: space-evenly;
+  width: 33%;
+  
+  
+}
+
+.txt-btn--gray--darker:-moz-any-link {
+color: var(--gray-1100);
+}
+
+.txt-btn--gray--darker:any-link {
+color: var(--gray-1100);
+}
+.cta-section {
   display: flex;
   gap: 1rem;
 }
 
-.about-us{  
-  font-family: Georgia;
-  font-size: 48px;
+/* End of HEader and navbar styles */
+
+.about-us__heading {
+  font-size: var(--fs-5);
   font-weight: 700;
-  line-height: 64px;
   text-align: center;
-  padding-top: 72px;
-  color: #2A2A2A;
+  margin-block: 4rem 2rem;
 }
 
-.background-content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-top: 30px;
+.about-us__content-heading {
+  -webkit-margin-after: 1.875rem;
+          margin-block-end: 1.875rem;
+  font-size: calc(var(--fs-2) / 1.1);
 }
-
-
-
-
-
-
 
 .terms-footer__wrapper {
   min-height: 17.5rem;
   background-color: var(--clr-primary-100);
-  margin-block-start: 5rem;
+  -webkit-margin-before: 5rem;
+          margin-block-start: 5rem;
 }
 .terms-footer {
   display: grid;
   min-height: 17.5rem;
-  padding-block-start: 3rem;
+  -webkit-padding-before: 3rem;
+          padding-block-start: 3rem;
 }
 .terms-footer__top {
   display: flex;
   flex-direction: column;
+  width: -moz-fit-content;
   width: fit-content;
   gap: 2rem;
 }
@@ -68,6 +84,10 @@
 .footer-nav__list {
   display: flex;
   gap: 2.5rem;
+}
+.footer-nav__link:-moz-any-link {
+  font-weight: 700;
+  font-size: var(--fs-1);
 }
 .footer-nav__link:any-link {
   font-weight: 700;
@@ -86,11 +106,14 @@
   gap: 0.75rem;
 }
 .terms-footer__bottom-left > * {
+  height: -moz-fit-content;
   height: fit-content;
 }
 .terms-footer__bottom-left > *:last-child {
   border-left: 0.1rem solid var(--clr-primary-1000);
 
-  padding-inline-start: 0.75rem;
+  -webkit-padding-start: 0.75rem;
+
+          padding-inline-start: 0.75rem;
 }
-/* ENd of Footer 
+/* ENd of Footer */
