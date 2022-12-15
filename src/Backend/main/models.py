@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+#Creating models with the properties
 class File(models.Model):
     filename = models.Filefield(upload_to='uploads/')
     date_uploaded = models.DateTimeField(auto_now_add=True)
