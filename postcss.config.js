@@ -12,8 +12,8 @@ module.exports = {
       // variables: true
     }),
     purgecss({
-      content: ["./src/Contactus.html"],
-      css: ["./src/css/Contactus.css"],
+      content: ["./src/terms.html"],
+      css: ["./src/css/terms.css"],
       variables: true
     }),
     // require("postcss-font-magician")({

@@ -10,9 +10,9 @@
 
 .header-nav__wrapper {
   background-color: var(--clr-primary-100);
-  padding: 1rem 5rem;
+  padding: 1.25rem 5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
