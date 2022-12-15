@@ -1,12 +1,14 @@
 # Team-81-Excel-Comp-Project
 
 ## Introduction
+
 A platform that helps users compare the content of excel files.
 
 ## Project Name
 
+Excel_Comp.
 
-[Excel_Comp](https://zuri-training.github.io/Team-Mandrillw-2/src)
+To view a live preview of the site click [here](https://zuri-training.github.io/Team-Mandrillw-2/src "Excel Comp")
 
 ## Documentation
 
@@ -15,6 +17,7 @@ A platform that helps users compare the content of excel files.
 - To explore the data schema click [here](https://drawsql.app/teams/biscode/diagrams/zuri-data-schema)
 
 ## Technologies used
+
 - Design - Figma Python
 - Frontend - HTML5 HTML5 CSS3 CSS Javascript Javascript
 - Backend - Stack: Python Python
@@ -23,6 +26,7 @@ A platform that helps users compare the content of excel files.
 ## Features
 
 ### For **Unauthenticated** Users
+
 They are allowed to:
 
 1. Visit the platform to view basic information about it
@@ -31,12 +35,14 @@ They are allowed to:
 4. They are **not** allowed access to use until registered
 
 ### For **Authenticated** Users
+
 They are allowed to:
+
 1. Have Full access to the platform
 2. Upload csv/excel file
-4. Highlight duplicates in a single file
-5. Remove duplicates and return a single file
-6. Remove duplicates and return 2 files
-7. Highlight duplicates and return 2 files
-8. Show usage example to users
-9. Save data and come back to download
+3. Highlight duplicates in a single file
+4. Remove duplicates and return a single file
+5. Remove duplicates and return 2 files
+6. Highlight duplicates and return 2 files
+7. Show usage example to users
+8. Save data and come back to download
