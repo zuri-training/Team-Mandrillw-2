@@ -154,7 +154,7 @@ submitButton.addEventListener("click", () => {
 
                       if (equalFileInfoElement) {
                         equalFileInfoElement.textContent =
-                          "These files are equal!";
+                          "Downloading...";
                       }
                     }
                   }

@@ -173,7 +173,7 @@ body {
 }
 .equal-file-info {
   font-size: var(--fs-1);
-  color: var(--clr-error);
+  color: var(--clr-success-1);
 grid-column: 1 / -1;
 place-self: center;
 }
