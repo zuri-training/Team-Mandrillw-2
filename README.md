@@ -50,5 +50,8 @@ They are allowed to:
 8. Save data and come back to download
 
 
-# Acknowlegement 
-zuri team + Ingressive for Good
+### Acknowlegement 
+Zuri team + Ingressive for Good
+
+### Authors
+
