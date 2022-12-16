@@ -17,7 +17,7 @@
       "relo": "browser-sync reload --port 3021",
       "start": "npm-run-all copy --parallel watch serve",
       "build": "npm-run-all copy:html build:*",
-      "postbuild": "postcss ./src/css/terms.css -r --no-map",
+      "postbuild": "postcss ./src/css/brief.css -r --no-map",
       "pack": "webpack --config webpack.config.js"
    },
    "author": "",
