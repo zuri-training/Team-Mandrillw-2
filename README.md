@@ -48,3 +48,8 @@ They are allowed to:
 6. Highlight duplicates and return 2 files
 7. Show usage example to users
 8. Save data and come back to download
+
+
+# Acknowlegement 
+https://zuri.team/img/zuri-training-img.svg + https://www.vanguardngr.com/wp-content/uploads/2020/11/INGRESS.jpg
+
