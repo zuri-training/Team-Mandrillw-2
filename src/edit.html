@@ -100,69 +100,18 @@
 
             </div>
             <div class="my-profile__btn-container">
-              <a href="Edit-modal.html" class="primary-button--small">Edit Profile</a>
+              <button class="edit-modal-button primary-button--small">Edit Profile</button>
               
-              <!-- <dialog class="edit-modal" id="edit-modal">
-                <h2> Edit Profile</h2>
-    <form>
-        <p>Change Name</p>
-        <input type="text" name="change name" placeholder="Maria Ishimwe" required>
-        <p>Change Email</p>
-        <input type="email" name="email" placeholder="maria.ishimwe@gmail.comDee" required>
-        <p>Change Password</p>
-        <input type="password" name="password" placeholder="Team81Mandrillw2" required>
-        <p>Confirm password</p>
-        <input type="password" name="password" placeholder="Minimum of 6 character">
-        <button>Save</button>
-
-    </form>
-              </dialog> -->
-            
-              <button class="txt-btn--gray my-profile__btn">Log out</button></div>
-
-          </div>
-        </div>
-      </section>
-
-   
-
-      <!-- <section class="saved-files__wrapper">
-        <div class="saved-files container">
-          <h1 class="saved-files__title">Saved Files</h1>
-
-          <div class="saved-files__card">
-     
-            <div class="avatar avatar--saved-files"></div>
-            <div class="saved-files__text-container">
-           
-              <h3 class="saved-files__text-title">File title</h3>
-            </div>
-            <div class="saved-files__btn-container"></div>
-          </div>
-        </div>
-      </section> -->
-   
-   
+             
       <dialog class="edit-modal" id="edit-modal">
         <h2 class="edit-modal__title"> Edit Profile</h2>
 
 
+        <button class="edit-modal-close-button"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 28L40 40M16 40L28 28L16 40ZM40 16L27.9977 28L40 16ZM27.9977 28L16 16L27.9977 28Z" stroke="#67686A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          </button>
 
-        <!-- 
-
-<form>
-<p>Change Name</p>
-<input type="text" name="change name" placeholder="Maria Ishimwe" required>
-<p>Change Email</p>
-<input type="email" name="email" placeholder="maria.ishimwe@gmail.comDee" required>
-<p>Change Password</p>
-<input type="password" name="password" placeholder="Team81Mandrillw2" required>
-<p>Confirm password</p>
-<input type="password" name="password" placeholder="Minimum of 6 character">
-<button>Save</button>
-</form> 
-
--->
 
 
 <form action="" class="edit-modal-form">
@@ -241,7 +190,7 @@
 
          />
 
-         <button class="toggle-password-visibility__toggle" type="button"><span class=""><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class=""><path d="M12.01 20c-5.065 0-9.586-4.211-12.01-8.424 2.418-4.103 6.943-7.576 12.01-7.576 5.135 0 9.635 3.453 11.999 7.564-2.241 4.43-6.726 8.436-11.999 8.436zm-10.842-8.416c.843 1.331 5.018 7.416 10.842 7.416 6.305 0 10.112-6.103 10.851-7.405-.772-1.198-4.606-6.595-10.851-6.595-6.116 0-10.025 5.355-10.842 6.584zm10.832-4.584c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5zm0 1c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4z"/></svg></button>
+         <button class="toggle-password-visibility__toggle" type="button"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class=""><path d="M12.01 20c-5.065 0-9.586-4.211-12.01-8.424 2.418-4.103 6.943-7.576 12.01-7.576 5.135 0 9.635 3.453 11.999 7.564-2.241 4.43-6.726 8.436-11.999 8.436zm-10.842-8.416c.843 1.331 5.018 7.416 10.842 7.416 6.305 0 10.112-6.103 10.851-7.405-.772-1.198-4.606-6.595-10.851-6.595-6.116 0-10.025 5.355-10.842 6.584zm10.832-4.584c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5zm0 1c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4z"/></svg></button>
            
          </div>
          <!-- <p class="password-hint">Must be at least 6 characters long</p> -->
@@ -249,14 +198,39 @@
        <!-- End of Sign Up Form Password -->
 
 
-  <button type="submit" class="edit-modal__submit-btn primary-button">
-    Save
-  </button>
+  <button type="submit" class="edit-modal__submit-btn primary-button">Save</button>
 
   <!-- End of Sign Up Form Password -->
 </form>
-      </div>
+      
+</dialog>
 
+            
+              <button class="txt-btn--gray my-profile__btn">Log out</button></div>
+
+          </div>
+        </div>
+      </section>
+
+   
+
+      <!-- <section class="saved-files__wrapper">
+        <div class="saved-files container">
+          <h1 class="saved-files__title">Saved Files</h1>
+
+          <div class="saved-files__card">
+     
+            <div class="avatar avatar--saved-files"></div>
+            <div class="saved-files__text-container">
+           
+              <h3 class="saved-files__text-title">File title</h3>
+            </div>
+            <div class="saved-files__btn-container"></div>
+          </div>
+        </div>
+      </section> -->
+   
+   
 
     
     </main>
@@ -315,3 +289,24 @@
 
 
 
+
+
+<!-- 
+
+  // create a function to show the modal
+function showModal() {
+  // get the modal element
+  var modal = document.getElementById('myModal');
+
+  // show the modal
+  modal.style.display = "block";
+}
+
+
+// add an event listener to the onload event of the page
+window.onload = function() {
+  showModal();
+};
+
+
+ -->

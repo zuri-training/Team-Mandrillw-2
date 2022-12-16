@@ -9,7 +9,7 @@ const path = require("path");
 //  ];
 
 module.exports = {
-  entry: "./src/js/main-test.js",
+  entry: "./src/js/file-upload.js",
   dependencies: ["ExcelJS", "fs"],
   output: {
     filename: "main.js",

@@ -388,8 +388,22 @@ body
    /* border: .125rem solid; */
    box-shadow: var(--shadow-5);
    padding: 4rem;
+   position: relative;
 }
-  /* End of MOdal conatiner styles */
+  
+.success-modal__previous-btn {
+    background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.625rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+/* End of MOdal conatiner styles */
+
 
 
 

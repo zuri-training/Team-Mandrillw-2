@@ -65,7 +65,15 @@ body {
 .hero-heading--colored {
   color: var(--clr-secondary-600);
 }
-
+.hero-text {
+  text-align: center;
+}
+.go-to-brief {
+  display: inline-block;
+}
+.go-to-brief:hover {
+  color: var(--gray-1000);
+}
 .hero-text {
   margin-block: 1.75rem;
   font-size: var(--fs-1);
@@ -105,6 +113,9 @@ body {
   /* pointer-events: none; */
   /* position: relative; */
 }
+.file-upload__form-comp {
+  position: relative;
+}
 .file-upload__cancel {
   position: absolute;
   top: 0.5rem;
@@ -114,7 +125,7 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
-.active-btn + .file-upload__cancel {
+.active-input + .file-upload__cancel {
   visibility: visible;
   pointer-events: auto;
   cursor: pointer;

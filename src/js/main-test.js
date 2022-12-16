@@ -6,6 +6,24 @@ import filesave from "file-saver";
 const input_1 = document.querySelector(".inputfile_1");
 const input_2 = document.querySelector(".inputfile_2");
 
+// const input_all = document.querySelector(".input-field");
+
+// const wrapper = document.querySelectorAll(".");
+
+// // const 
+
+// input_all.addEventListener("input", function () {
+//   // If the input has text, add the "active-btn" class to the button
+//   if (this.value) {
+//     wrapper.classList.add("active-input");
+//   } else {
+//     // Otherwise, remove the "active-btn" class from the wrapper
+//     wrapper.classList.remove("active-input");
+//   }
+// });
+
+
+
 // Change name to the name of the uploaded files
 
 // INput 1
@@ -102,6 +120,28 @@ submitButton.addEventListener("click", () => {
               workbook2.xlsx.load(secondExcelFile).then(function () {
                 const worksheet2 = workbook2.getWorksheet(1);
 
+                // worksheet2.eachCell((cell, rowNumber, colNumber) => {
+                  //   // Give the cell a unique name based on its row and column indices
+                  //   const cellName = `Cell_${rowNumber}_${colNumber}`;
+                  //   cell.name = cellName;
+                  // });
+                  
+                  // Loop through each cell in the worksheet
+                  worksheet1.eachRow((row, rowNumber) => {
+                    row.eachCell((cell, colNumber) => {
+                      // Give each cell an exclusive name using its row and column numbers
+                      cell.name = `Cell Row: ${rowNumber}, Col: ${colNumber}`;
+                    });
+                  });
+                  
+                  // Loop through each cell in the worksheet
+                worksheet2.eachRow((row, rowNumber) => {
+                  row.eachCell((cell, colNumber) => {
+                    // Give each cell an exclusive name using its row and column numbers
+                    cell.name = `Cell Row: ${rowNumber}, Col: ${colNumber}`;
+                  });
+                });
+
                 const comparisonResults = {};
 
                 for (let i = 1; i <= worksheet1.rowCount; i++) {
@@ -119,21 +159,15 @@ submitButton.addEventListener("click", () => {
                         secondFileName: input_files_2[0].name,
                         secondCellName: `${worksheet2.getCell(i, j).name}`,
                         secondFile: `${worksheet2.getCell(i, j).value}`,
-
-
-
                       };
-//                       const cellName = worksheet1.getCell(i, j).name;
-//                       if (typeof cellName !== "undefined") {
-//   console.log(cellName);
-// } else {
-//   console.log("Cell does not have a name");
-// }
+                      //                       const cellName = worksheet1.getCell(i, j).name;
+                      //                       if (typeof cellName !== "undefined") {
+                      //   console.log(cellName);
+                      // } else {
+                      //   console.log("Cell does not have a name");
+                      // }
                       console.log(comparisonResults[cellAddress]);
-                    } 
-                    
-                    
-                    else if (Object.keys(comparisonResults).length === 0) {
+                    } else if (Object.keys(comparisonResults).length === 0) {
                       const equalFileInfoElement =
                         document.querySelector(".equal-file-info");
 
