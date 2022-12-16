@@ -51,5 +51,5 @@ They are allowed to:
 
 
 # Acknowlegement 
-https://zuri.team/img/zuri-training-img.svg + https://www.vanguardngr.com/wp-content/uploads/2020/11/INGRESS.jpg
-
+(https://zuri.team/img/zuri-training-img.svg) + (https://www.vanguardngr.com/wp-content/uploads/2020/11/INGRESS.jpg)
+- ([[https://drawsql.app/teams/biscode/diagrams/zuri-data-schema](https://www.vanguardngr.com/wp-content/uploads/2020/11/INGRESS.jpg)](https://zuri.team/img/zuri-training-img.svg)
