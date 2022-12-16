@@ -74,22 +74,13 @@
         <h2 class="sign-in__title sign-in__title--desktop">Sign In</h2>
         <p class="sign-in__text">It's free and will always be free</p>
 
-
-        <div class="btn btn-seconday">
-          <button id="google--button" class="btn btn-secondary">
-            <!-- TODO: CHange to actual google oauth when the website is hosted and has a domain name -->
-            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-          </button>
-        </div>
-
-        
-        <p>Or</p>
         <!-- TODO: Add an "action" and "method" to ther form when the backend people do their thing -->
         <!-- SIgn In Form -->
 
           {% for message in messages %}
-          <h1> {{ message }} </h1>
+          <h4> {{ message }} </h4>
           {% endfor %}
+
         <form method="POST" action="{% url 'login' %}" class="sign-in-form">
           {% csrf_token %}
          

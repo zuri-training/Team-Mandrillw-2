@@ -12,4 +12,5 @@ urlpatterns = [
     path("terms/", views.terms, name="terms"),
     path("accounts/profile/details", views.details, name="details"),
     path("accounts/profile/edit", views.edit, name="edit"),
+    # path("accounts/profile/upload/", views.upload, name="upload_image")
 ]

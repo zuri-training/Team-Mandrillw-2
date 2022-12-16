@@ -395,6 +395,11 @@ h6 {
   background-color: var(--clr-primary-400);
 }
 /* Text button styles */
+.txt-btn {
+  font-weight: 400;
+  color: var(--clr-primary-400);
+  display: inline-block;
+}
 .txt-btn:any-link {
   font-weight: 400;
   color: var(--clr-primary-400);
@@ -407,6 +412,11 @@ h6 {
 }
 .txt-btn:active {
   color: var(--clr-primary-600);
+}
+.txt-btn--gray {
+  font-weight: 400;
+  color: var(--gray-1000);
+  display: inline-block;
 }
 .txt-btn--gray:any-link {
   font-weight: 400;
@@ -465,6 +475,36 @@ h6 {
 
 /* SMall Outlined BUttons */
 
+.outlined-button {
+  background-color: transparent;
+  color: var(--clr-secondary-900);
+  padding: 1em;
+  border-radius: .625rem;
+  border: 0.125rem solid var(--clr-secondary-400);
+}
+
+.outlined-button:any-link {
+  background-color: transparent;
+  color: var(--clr-secondary-900);
+  padding: 1em;
+
+  border-radius: .625rem;
+
+  border: 0.125rem solid var(--clr-secondary-400);
+}
+
+.outlined-button:hover,
+.outlined-button:focus {
+  border: 0.125rem solid var(--clr-primary-500);
+  color: var(--clr-primary-700);
+  cursor: pointer;
+  transition: all 300ms var(--easeInOutCubic);
+}
+
+.outlined-button:active {
+  border: 0.125rem solid var(--clr-primary-1000);
+  color: var(--clr-primary-1000);
+}
 .outlined-button--small {
   background-color: transparent;
   color: var(--clr-secondary-900);

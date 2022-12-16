@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
+from .models import UserProfile
 
 from django.core.mail import send_mail 
 from django.conf import settings 
@@ -13,6 +14,7 @@ def index(request):
 
 @login_required(login_url='login')
 def details(request):
+
     return render(request, 'profile.html')
 
 def About(request):
@@ -79,3 +81,16 @@ def Signup(request):
 
 def error_404_handler(request, exception):
     return render(request, '404.html')
+
+
+# @login_required(login_url="login")
+# def upload(request):
+#     user = UserProfile.objects.get(user=request)
+#     if request.method == "POST":
+#         image = request.FILES.get('image')
+
+#         profile = UserProfile.objects.create(user = user, profile_pic = image)
+#         profile.save()
+#         return redirect('details')
+
+

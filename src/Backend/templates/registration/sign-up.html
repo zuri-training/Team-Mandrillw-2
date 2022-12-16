@@ -70,19 +70,13 @@
         </div>
         <h2 class="sign-up__title sign-up__title--desktop">Sign up</h2>
         <p class="sign-up__text">It's free and will always be free</p>
-
-        <button class="continue-to-google">
-          <!-- TODO: CHange to actual google oauth when the website is hosted and has a domain name -->
-          <img src="{% static 'assets/Icons/google.svg' %}" alt="" />
-          <p>
-            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-
-          </p>
-        </button>
-
-        <p>Or</p>
         <!-- TODO: Add an "action" and "method" to ther form when the backend people do their thing -->
         <!-- SIgn UP Form -->
+
+        {% for message in messages %}
+        <h4> {{ message }} </h4>
+        {% endfor %}
+
         <form method="POST" action="{% url 'signup' %}" class="sign-up-form">
           {% csrf_token %}
           <!-- Sign Up Form Names-->

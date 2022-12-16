@@ -2,9 +2,7 @@
 
 
 /* HEader and navbar styles */
-body {
-    background-color: var(--clr-primary-100);
-}
+
 .header__wrapper {
     position: sticky;
     top: 0;
@@ -379,22 +377,80 @@ margin-block-end: .5rem;
   }
   /* End of footer */
 
-/*.section{
-    background-color: #fff;
-    height: 533px;
-    width: 1296px;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    
 
-}*/
 
-/*@media screen and (max-width: 760px) {
-    .sec-zero{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-  }*/
+  /* MOdal conatiner styles */
+body
+{display: grid;place-content: center;place-items: center;}
+
+.modal-conatiner {
+   border-radius: 1.25rem;
+   /* border: .125rem solid; */
+   box-shadow: var(--shadow-5);
+   padding: 4rem;
+}
+  /* End of MOdal conatiner styles */
+
+
+
+
+  /* Success MOdal  styles */
+
+  .success-modal {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+  }
+  .success-modal__icon-container > svg{
+margin-inline: auto;
+  }
+
+  .success-modal__header {
+font-size: var(--fs-3);
+text-align: center;
+margin-block-start: 1.5rem;
+font-weight: 700;
+color: var(--clr-success-2);
+
+}
+  /* End of Success MOdal  styles */
+  
+  /* MOdal conatiner styles */
+  /* End of MOdal conatiner styles */
+  /* MOdal conatiner styles */
+  /* End of MOdal conatiner styles */
+
+
+
+
+
+
+
+
+
+  /* 
+  
+  
+if (navigator.share) {
+  navigator.share({
+    files: [file]
+  }).then(() => {
+    console.log("File was shared successfully");
+  })
+  .catch((error) => {
+    console.error("Error sharing file: ", error);
+  });
+} else {
+  console.error("Web Share API is not supported on this device");
+}  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  */
