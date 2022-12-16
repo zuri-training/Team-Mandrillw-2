@@ -40,87 +40,113 @@
         <nav class="header-nav">
           <ul class="header-nav__list" role="list">
             <li class="header-nav__list-item">
+                {% if user.is_authenticated %}
+                <div class="header__profile-section">
+                  <a href="{% url 'details' %}">
+
+                    <div class="avatar">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7.753 18.305c-.261-.586-.789-.991-1.871-1.241-2.293-.529-4.428-.993-3.393-2.945 3.145-5.942.833-9.119-2.489-9.119-3.388 0-5.644 3.299-2.489 9.119 1.066 1.964-1.148 2.427-3.393 2.945-1.084.25-1.608.658-1.867 1.246-1.405-1.723-2.251-3.919-2.251-6.31 0-5.514 4.486-10 10-10s10 4.486 10 10c0 2.389-.845 4.583-2.247 6.305z"
+                />
+              </svg>
+            </div>
+
+                  </a>
+
+                  <div class="header__profile-section-text-container">
+                    <!-- TODO: MAKE THIS REFLECT WHAT THE USER ACTUALLY PUT AND DYNAMICALLY CHANGE -->
+                    <p class="profile-name">{{ request.user.username }} </p>
+                  </div>
+                </div>
+                {% else %}
               <a href="{% url 'login' %}" class="outlined-button--small">Sign In</a>
             </li>
             <li class="header-nav__list-item">
               <a href="{% url 'signup' %}" class="primary-button--small">Sign Up</a>
             </li>
           </ul>
+          {% endif %}
         </nav>
       </section>
     </header>
     <main>
       <div class="terms-and-cond-text-container container">
         <h1 class="hero-title--terms-and-cond">Got a question? We have the answers</h1>
-      
+
         <!-- FAQ card one -->
         <div class="faq__card-container ">
            <section class="faq__card">
             <h4 class="faq__card-title">What is Excel Comp</h4>
             <p class="faq__card-text">Excel Comp is a tool that helps you to compare two excel documents or two excel sheets in one file online. It highlights all differences between the two files so that you can find changes quickly. It also allows you find and remove duplicates and blank cells and even merge the two files into one</p>
            </section>
-        
 
-        
+
+
 
 
       <!-- ENd of FAQ card one -->
 
         <!-- FAQ card two -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">What Types of Documents Can I Compare?</h4>
             <p class="faq__card-text">Using our online platform, you can compare excel documents side-by-side! the documents have to be in common excel file formats like xls, xlsx and csv.</p>
            </section>
-       
+
       <!-- ENd of FAQ card two -->
-      
+
 
         <!-- FAQ card three -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">Will I have to pay to use Excel Comp?</h4>
             <p class="faq__card-text">No! Excel Comp is free forever once you sign up</p>
            </section>
-     
+
       <!-- ENd of FAQ card three -->
-      
-      
+
+
 
         <!-- FAQ card four -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">Why Compare with Excel Comp</h4>
             <p class="faq__card-text">Our  comparison tool saves your work time and delivers a simple but functional result and offers you a variety of functions or choices to compare from and with.</p>
            </section>
-       
+
       <!-- ENd of FAQ card four -->
 
-      
+
 
         <!-- FAQ card five -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">Downloads</h4>
             <p class="faq__card-text">Easily compare your files and have them downloaded or saved on the cloud for you to access across multiple regions and devices.</p>
            </section>
-      
+
       <!-- ENd of FAQ card five -->
 
-      
+
 
         <!-- FAQ card six -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">How do I get started with Excel comp</h4>
             <p class="faq__card-text">Simply signup for free with your email and a password  begin to comparing your excel and spreadsheet files with ease.</p>
            </section>
-       
+
       <!-- ENd of FAQ card six -->
 
 
         <!-- FAQ card seven -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">How do I compare two excel files</h4>
             <ul class="faq__card-list">
@@ -131,18 +157,18 @@
                <li>Then click on compare</li>
             </ul>
            </section>
-        
+
       <!-- ENd of FAQ card seven -->
 
 
-      
+
 
 
 
 
 
         <!-- FAQ card eight -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">How do I compare sheets within  one excel file</h4>
             <ul class="faq__card-list">
@@ -153,33 +179,33 @@
                <li>Then click on compare</li>
             </ul>
            </section>
-       
+
       <!-- ENd of FAQ card eight -->
-      
-      
+
+
         <!-- FAQ card nine -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">Can I download my files in other formats</h4>
             <p class="faq__card-text">Yes you can! Excel Comp gives you the option to download your files in other formats like pdf or word</p>
            </section>
-        
+
       <!-- ENd of FAQ card nine -->
-      
-      
+
+
         <!-- FAQ card ten -->
-        
+
            <section class="faq__card">
             <h4 class="faq__card-title">How can I delete my files</h4>
             <p class="faq__card-text">Log in to your account and click on your profile to view or delete your saved files</p>
            </section>
-        
+
       <!-- ENd of FAQ card ten -->
-        
+
         </div>
     </main>
     <footer class="terms-footer__wrapper">
-      
+
       <div class="terms-footer container">
          <div class="terms-footer__top">
            <img
@@ -189,13 +215,23 @@
            />
            <nav class="header-nav footer-nav">
              <ul class="footer-nav__list" role="list">
+                 {% if user.is_authenticated %}
                <li class="footer-nav__list-item">
                  <a
-                   href="{% url 'index' %}"
+                   href="{% url 'compare' %}"
                    class="txt-btn--gray footer-nav__link"
                    >Home</a
                  >
                </li>
+               {% else %}
+               <li class="footer-nav__list-item">
+                  <a
+                    href="{% url 'index' %}"
+                    class="txt-btn--gray footer-nav__link"
+                    >Home</a
+                  >
+                </li>
+                {% endif %}
                <li class="footer-nav__list-item">
                  <a
                    href="{% url 'about_us' %}"
