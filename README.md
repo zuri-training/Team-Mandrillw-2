@@ -8,7 +8,7 @@ A platform that helps users compare the content of excel files.
 
 Excel_Comp.
 
-To view a live preview of the site click [here](https://zuri-training.github.io/Team-Mandrillw-2/src "Excel Comp")
+To view a live preview of the site click [here](http://teammandrillw2.pythonanywhere.com "Excel Comp")
 
 ## Documentation
 
