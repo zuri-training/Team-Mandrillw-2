@@ -102,77 +102,22 @@ margin-block-start: 1.5rem;
 }
 .my-profile__btn-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 /* PRofile styles */
 
 /* Edit PRofile styles */
 
-/* *{
-  padding: 0;
-  margin: 0;
 
-} */
-
-/* body{
-  width: 915px;
-  height: 713px;
-  background: #F5F5F5;
-  border-radius: 16px;
-}
-
-.editpage{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate( -50%, -50%);
-  left: calc(50% 50% 50%);
-  position: absolute;
-  width: 340px;
-  height: 591px;
-}
-
-.editpage h2 {
-font-size: 24px;
-text-align: center;
-margin: 40px;
-font-family: 'Georgia';
-font-weight: 700;
-line-height: 32px;
-color: #1B1C1F;
-}
-
-.editpage p {
-  font-size: 20px;
-  margin: 16px;   
-  font-family: 'Space Grotesk';
-
-}
-
-.editpage input {
-  font-family: 'Space Grotesk';
-  color: #B3B3B4;
-  font-size: 13px;
-  padding: 15px 10px;
-  width: 92%;
-  border: 2px solid #B3B3B4;
-  border-radius: 5px;
-  outline: none;
-}
-
-.editpage button{
-  font-family: 'Space Grotesk';
-  font-size: 20px;
-  color: #F6F6F6;
-  margin: 20px 0;
-  padding: 10px 15px;
-  width: 100%;
+.edit-modal {
+  border-radius: 0.625rem;
+  padding: 3rem;
+  margin: auto;
+  width: 60%;
+  position: relative;
   border: none;
-  border-radius: 8px;
-  background: #86BA94;
-  letter-spacing: 0.1px;
-  
-
-} */
+}
 .edit-modal__title {
   font-size: var(--fs-3);
   font-weight: 700;
@@ -182,7 +127,15 @@ color: #1B1C1F;
 }
 .edit-modal-form {
   display: grid;
-  
+
+}
+.edit-modal-close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .edit-modal-form__input {
 

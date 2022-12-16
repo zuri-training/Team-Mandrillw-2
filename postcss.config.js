@@ -12,8 +12,8 @@ module.exports = {
       // variables: true
     }),
     purgecss({
-      content: ["./src/terms.html"],
-      css: ["./src/css/terms.css"],
+      content: ["./src/brief.html"],
+      css: ["./src/css/brief.css"],
       variables: true
     }),
     // require("postcss-font-magician")({

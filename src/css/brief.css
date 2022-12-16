@@ -1,0 +1,54 @@
+@import "style.css";
+
+/* Terms and conditions STyles */
+/* HEader STyles */
+
+/* End of HEader and navbar styles */
+/* Content STyles */
+.brief-heading {
+  font-size: var(--fs-5);
+  font-weight: 500;
+  text-align: center;
+  margin-block: 5rem 2.25rem;
+}
+.brief-nested-list {
+  list-style: upper-alpha;
+}
+.brief-list {
+  margin-block: 2.5rem;
+  font-size: calc(var(--fs-1) * 1);
+}
+.brief-list > li {
+  margin-block: 1.25rem;
+  /* font-size: calc(var(--fs-1) * 1.2); */
+}
+.brief-nested-list {
+  -webkit-margin-start: 1.75rem;
+  margin-inline-start: 1.75rem;
+  -webkit-margin-before: 1.25rem;
+  margin-block-start: 1.25rem;
+
+  font-size: calc(var(--fs-1) / 1.1);
+}
+.brief-nested-list > * {
+  -webkit-margin-after: 1rem;
+  margin-block-end: 1rem;
+}
+/* End of Content STyles */
+/* Footer styles */
+.brief {
+  -webkit-margin-after: 5rem;
+  margin-block-end: 5rem;
+}
+.brief-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.brief-bottom > a {
+  width: 25%;
+}
+/* ENd of Footer styles */
+/* End of terms and conditions Styles */
